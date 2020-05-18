@@ -27,7 +27,7 @@ condition = (entier > 1) || (entier < 5); // si au moins 1 des 2 conditions renv
 console.log(condition);
 
 // ... d'en combiner autant que l'on souhaite (restons toutefois raisonnable)....
-condition = (entier >= 1) && (entier < 5) || (entier === 42) || (entier === 1337); 
+condition = (entier >= 1) && (entier < 5) || (entier === 42) || (entier === 1337);
 console.log(condition);
 
 // ... et de créer des groupes en les encapsulant dans un ensemble (parenthèses)
@@ -43,10 +43,9 @@ console.log(condition);
 
 var valeur = 42;
 
-if(valeur === 42) { // si "valeur" vaut 42, le code se trouvant dans le bloc suivant est exécuté, sinon le bloc est ignoré
+if (valeur === 42) { // si "valeur" vaut 42, le code se trouvant dans le bloc suivant est exécuté, sinon le bloc est ignoré
     console.log("Bonne réponse");
-}
-else { // sinon (cas par défaut), le bloc de code suivant est exécuté
+} else { // sinon (cas par défaut), le bloc de code suivant est exécuté
     console.error("Mauvaise réponse");
 }
 
@@ -55,13 +54,11 @@ else { // sinon (cas par défaut), le bloc de code suivant est exécuté
 
 valeur = 1337;
 
-if(valeur === 42) { // si "valeur" vaut 42
+if (valeur === 42) { // si "valeur" vaut 42
     console.log("Bonne réponse");
-}
-else if(valeur === 1337) { // sinon si "valeur" vaut 1337
+} else if (valeur === 1337) { // sinon si "valeur" vaut 1337
     console.warn("Réponse de L33t");
-}
-else { // sinon (cas par défaut)
+} else { // sinon (cas par défaut)
     console.error("Mauvaise réponse");
 }
 
@@ -69,15 +66,12 @@ else { // sinon (cas par défaut)
 
 valeur = 5000;
 
-if(valeur === 42 || valeur > 42000) { // si "valeur" vaut 42 ou est supérieure à 42000 
+if (valeur === 42 || valeur > 42000) { // si "valeur" vaut 42 ou est supérieure à 42000 
     console.log("Bonne réponse");
-}
-else if(valeur === 1337 || valeur > 133700) { // sinon si "valeur" vaut 1337 ou est supérieure à 133700
+} else if (valeur === 1337 || valeur > 133700) { // sinon si "valeur" vaut 1337 ou est supérieure à 133700
     console.warn("Réponse de champion");
-}
-else if((valeur + 2 * 4) === (valeur * 2 / 4)) { // si les 2 opérations retournent le même résultat
+} else if ((valeur + 2 * 4) === (valeur * 2 / 4)) { // si les 2 opérations retournent le même résultat
     console.log("Incroyable !");
-}
-else { // sinon (cas par défaut)
+} else { // sinon (cas par défaut)
     console.error("Mauvaise réponse");
 }
