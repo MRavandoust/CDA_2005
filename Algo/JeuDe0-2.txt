@@ -1,0 +1,35 @@
+VARIABLES
+
+choix_joueur EST UN ENTIER
+choix_ia EST UN ENTIER
+score_joueur EST UN ENTIER
+score_ia EST UN ENTIER
+
+Debut
+    tanque (score_ia EST IFERIEUR A 10) ET (score_joueur EST INFERIEUR A 10) ET (choix_joueur EST SUPERIEUR OU EGAL A 0)
+    FAIRE 
+        choix_ia <-- RANDOM
+        EDRIRE "Choisissez un chiffre ebntre 0, 1 et 2"
+        LIRE choix_joueur
+        Si choix_ia - choix_joueur EST EGAL A 2 Alors
+            score_ia +=1
+        Sinon choix_joueur - choix_ia EST EGAL A 2 Alors
+            score_joueur +=1
+        Sinon Si choix_ia - choix_joueur EST EGAL A 1 Alors
+            score_joueur +=1
+        Sinon Si choix_joueur - choix_ia EST EGAL A 1 Alors
+            score_ia +=1
+        Sinon Alors
+            ECRIRE "Aucun point attribué"
+        Fin Si
+
+        ECRIRE "Le score de l'ia est", score_ia
+        ECRIRE "Le score du joueur est", score_joueur
+
+        Si score_ia EST SUPERIEUR A score_joueur
+            ECRIRE "L'ia a gagné" 
+        Sinon
+            ECRIRE "Le joueur a gagné" 
+        Fin Si
+Fin
+	
