@@ -1,0 +1,25 @@
+// Recherche par dichotomie d'un élément dans un tableau classé
+
+VARIABLES
+    entier gauche, droite, milieu
+    String tableau[n]
+    String motRecherche 
+    Boolean trouve 
+
+Debut
+    trouve <-- false
+    gauche <-- 0
+    droite <-- n-1
+    milieu <-- -1
+    tanque (gauche <= droite && !trouve) FAIRE
+        milieu <-- (gauche + droite)/2
+        Si (tableau[milieu] === motRecherché) Alors
+            trouve <--true 
+        Sinon Si (tableau[milieu] > motRecherché) Alors
+            droite <-- milieu - 1
+        Sinon Si (tableau[milieu] < motRecherché) Alors
+            gauche <-- milieu + 1
+        Fin Si
+    Fin tanque
+    return milieu
+Fin
