@@ -1,0 +1,23 @@
+//Calcul d’intérêts
+
+
+Réel S , V1, V2, i
+Entier N, j 
+
+Début
+
+		écrire "Entrez la somme"
+		lire S
+		écrire "Entrez le taux d'intérêt"
+		lire i
+		écrire "Saisir le nombre des années"
+		lire N
+		V1 <-- S*(1 + N*i)
+	Pour j = 0 à N - 1
+		V2 <-- S*(1 + i)
+		S  <-- V2
+	Fin Pour
+		écrire "La somme acquis par la première formule est le" V1
+		écrire "La somme acquis par la deuxième formule est le" V2
+	
+Fin
