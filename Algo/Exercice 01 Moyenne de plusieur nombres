@@ -1,0 +1,23 @@
+Entier N, M, P <-- 1
+Réel R
+Chaine Q 
+
+Début
+		écrire  "Entrz le premièr nombre" 
+		lire  N 
+		
+	Repeter
+		écrire  "Entrez autre nombre"
+		lire  M 
+		N <-- N + M
+		P <-- P + 1 
+		écrire  "Souhaitez vous ajouter un autre nombre ? (Oui/Non) "
+		lire  Q
+	Jusqu'à
+		Q = Non
+		
+		R <-- N/P
+		écrire "La moyenne est le" R
+		
+
+Fin 
