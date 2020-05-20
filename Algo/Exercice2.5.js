@@ -1,3 +1,5 @@
+// Jeu de 0-2
+
 let choix_joueur;
 let choix_ia = 0;
 let score_joueur = 0;
