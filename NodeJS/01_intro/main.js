@@ -7,6 +7,7 @@ let version = '1.2.3';
 
 let beta = '0.4.2-rc';
 
+
 let testVersion = semver.parse(version);
 console.log(testVersion);
 testVersion.
