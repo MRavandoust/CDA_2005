@@ -114,8 +114,6 @@ console.log();
 
 //La différence de salaire entre les 2 précédents 
 {
-    let min = employees[0].getMonthlySalary();
-    let j = 0;
     for (let i = 0; i < employees.length - 1; i++) {
         console.log('La différence de salaire entre ' + i + ' et ' +
             (i + 1) + ' est :' + Math.abs(employees[i].getMonthlySalary() - employees[i + 1].getMonthlySalary()));
