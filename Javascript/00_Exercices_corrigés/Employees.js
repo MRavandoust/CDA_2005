@@ -35,9 +35,8 @@ class Employees {
 
     getSeniorityChiffre() {
         let now = new Date();
-        let embauche = new Date(this.hiredate.replace('-', ','));
-        let embaucheDate = embauche.getTime();
-        let diff = now - embaucheDate;
+        let embaucheDate = new Date(this.hiredate.replace('-', ','));
+        let diff = now.getTime() - embaucheDate.getTime();
         return diff;
     }
 
