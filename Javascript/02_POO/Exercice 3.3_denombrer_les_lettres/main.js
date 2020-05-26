@@ -23,8 +23,14 @@ if (lastCharacter !== '.') {
     return false;
 }
 
+const nombres = [];
 for (let i = 0; i < str.length; i++) {
     search = str.charAt(i);
+    result = str.split(search).length - 1;
+    nombres.push(result);
 }
 
-result = str.split(search).length - 1;
+for (let i = 0; i < nombres.length; i++) {
+    console.log('Lettre ' + str[i] + ' a trouve ' + nombres[i] + ' fois dans le text.');
+
+}
