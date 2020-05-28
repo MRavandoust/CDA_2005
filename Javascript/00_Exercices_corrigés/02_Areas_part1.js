@@ -39,7 +39,6 @@ class Point {
 
     }
 
-
     /**
      * Retourne une représentation textuelle du Point
      * @return string Les coordonnées du Point
@@ -47,9 +46,6 @@ class Point {
     toString() {
         return "(" + this.x + "," + this.y + ")";
     }
-
-
-
 
 }
 
