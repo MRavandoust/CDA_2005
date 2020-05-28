@@ -1,28 +1,41 @@
 class Employees {
+    /**
+     * 
+     * @param {id} _id 
+     * @param {nom} _lastname 
+     * @param {prenom} _firstname 
+     * @param {role} _role 
+     * @param {salaire} _salary 
+     * @param {dateDembauche} _hiredate 
+     */
     constructor(_id, _lastname, _firstname, _role, _salary, _hiredate) {
-        this.id = _id;
-        this.lastname = _lastname;
-        this.firstname = _firstname;
-        this.role = _role;
-        this.salary = _salary;
+        this.id = parseInt(_id); // NaN
+        this.lastname = _lastname || "Ano";
+        this.firstname = _firstname || "Nymous";
+        this.role = _role || "Boulanger";
+        this.salary = parseInt(_salary);
         this.hiredate = _hiredate;
-        this.email = _firstname.charAt(0).toLowerCase() + _lastname.toLowerCase() + '@email.fr';
+        this.email = (this.firstname[0] + this.lastname).toLowerCase() + '@email.fr';
     }
 
-
+    /**
+     * Récupèrer le salaire mensuel de l'employé
+     */
     getMonthlySalary() {
         return (this.salary / 12) * 0.75;
     }
 
+    /**
+     * Récupèrer l'anciennté de l'employé
+     */
     getSeniority() {
         let now = new Date();
-        let embaucheDate = new Date(this.hiredate.replace('-', ','));
-        let diff = now.getTime() - embaucheDate.getTime();
+        let diff = now.getTime() - this.hiredate.getTime();
         diff = Math.floor(diff / (1000 * 60 * 60 * 24));
-        let ans = Math.floor(diff / 365);
-        diff = diff - ans * 365;
-        let mois = Math.floor(diff / 30);
-        diff = diff - mois * 30;
+        let ans = Math.floor(diff / 365.25);
+        diff = diff - ans * 365.25;
+        let mois = Math.floor(diff / (365.25 / 12));
+        diff = Math.round(diff - mois * (365.25 / 12));
         let jour = diff;
         if (jour > 0 && mois > 0 && ans > 0) {
             return ans + " ans et " + mois + " mois et " + jour + " jours ";
@@ -30,12 +43,14 @@ class Employees {
             return mois + " mois et " + jour + " jours ";
         } else if (jour > 0 && mois == 0 && ans == 0) {
             return jour + " jours ";
+        } else {
+            return 'empoyé est un allien';
         }
     }
 
     getSeniorityChiffre() {
         let now = new Date();
-        let embaucheDate = new Date(this.hiredate.replace('-', ','));
+        let embaucheDate = new Date(this.hiredate);
         let diff = now.getTime() - embaucheDate.getTime();
         return diff;
     }
@@ -46,11 +61,11 @@ class Employees {
 //Le tableau de 5 employés
 
 const employees = [
-    new Employees(01, 'THOUVENOT', 'Nicolas', 'employe', 33500, '2017-04-19'),
-    new Employees(02, 'HAMZA', 'Reda', 'employe', 35000, '2015-09-15'),
-    new Employees(03, 'BOUDIER', 'Aurelien', 'employe', 35100, '2013-07-21'),
-    new Employees(04, 'RAVANDOUST', 'Masoud', 'employe', 33500, '2018-08-22'),
-    new Employees(05, 'JENNIARD', 'Jonathan', 'employe', 32000, '2015-04-19'),
+    new Employees(01, 'THOUVENOT', 'Nicolas', 'employe', 33500, new Date('2017-04-19')),
+    new Employees(02, 'HAMZA', 'Reda', 'employe', 35000, new Date('2015-09-15')),
+    new Employees(03, 'BOUDIER', 'Aurelien', 'employe', 35100, new Date('2013-07-21')),
+    new Employees(04, 'RAVANDOUST', 'Masoud', 'employe', 33500, new Date('2018-08-22')),
+    new Employees(05, 'JENNIARD', 'Jonathan', 'employe', 32000, new Date('2015-04-19'))
 ]
 
 console.log();
