@@ -1,7 +1,7 @@
 const Employee = require('./Models/Employee.js');
 
 
-var employe1 = new Employee.Employee();
+var employe1 = new Employee();
 
 let role = Employee.RoleParDefaut;
 

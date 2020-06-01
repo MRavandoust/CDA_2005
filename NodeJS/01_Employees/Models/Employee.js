@@ -148,6 +148,8 @@ employees.push(
     new Employee(5, 'D', 'Mike', 'Garagiste', 50000, new Date('2020-05-20')),
     new Employee(6, 'E', 'Gabi', 'Progamer', 1000000, new Date('2020-05-27')),
 );
+
+
 for(let i = 0; i < employees.length; i++) {
     console.log(employees[i].firstname + " " + employees[i].hiredate.toString());
     /*console.log(employees[i].getMonthlySalary());
