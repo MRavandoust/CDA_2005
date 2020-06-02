@@ -17,6 +17,9 @@ class Enterprise {
             return a._filter - b._filter;
         }
         this.employees.sort(f);
+        for (let i = 0; i < this.employees.length; i++) {
+            console.log(entr.employees[i]);
+        }
     }
 
     /**
@@ -31,14 +34,14 @@ class Enterprise {
      * 
      * @param int _id 
      */
-    read(_id) {
-        let m = 0,
-            for (let i = 0; i < Employees.length; i++) {
-                if (Employees[i].id = _id)
-                    m = i;
-            }
-        return Employees[m];
-    }
+    /* read(_id) {
+         let m = 0,
+             for (let i = 0; i < this.employees.length; i++) {
+                 if (Employees[i].id = _id)
+                     m = i;
+             }
+         return Employees[m];
+     }*/
 
     /**
      * Met à jour un employé
@@ -53,15 +56,15 @@ class Enterprise {
      * Supprime un employé
      * @param int _id 
      */
-    delete(_id) {
+    /*  delete(_id) {
         let m = 0,
-            for (let i = 0; i < Employees.length; i++) {
+            for (let i = 0; i < this.employees.length; i++) {
                 if (Employees[i].id = _id)
                     m = i;
             }
         Employees.splice(m, 1);
     }
-
+*/
 
     /**
      * 
@@ -86,12 +89,23 @@ class Enterprise {
         return this.employees.getHigherSalary - this.employees.getLowerSalary;
     }
 
-
-
-
-
-
 }
 
 
 module.exports = Enterprise;
+
+
+const employees1 = [
+    new Employee(01, 'THOUVENOT', 'Nicolas', 'employe', 33500, new Date('2017-04-19')),
+    new Employee(02, 'HAMZA', 'Reda', 'employe', 35000, new Date('2015-09-15')),
+    new Employee(03, 'BOUDIER', 'Aurelien', 'employe', 35100, new Date('2013-07-21')),
+    new Employee(04, 'RAVANDOUST', 'Masoud', 'employe', 33500, new Date('2018-08-22')),
+    new Employee(05, 'JENNIARD', 'Jonathan', 'employe', 32000, new Date('2015-04-19'))
+]
+
+const entr = new Enterprise();
+entr.employees = employees1;
+
+entr.create(new Employee(6, 'Emill', 'Nakarian', 'Developpeur', 40000, new Date('2010-05-26')));
+
+entr.readAll(this.id);
