@@ -5,7 +5,7 @@ const Employee = require('./Employee.js');
  */
 class Enterprise {
     constructor() {
-        this.employees = [];
+        this.employees = new Employee();
     }
 
     /**
@@ -13,14 +13,13 @@ class Enterprise {
      * @param  _filter 
      */
     readAll(_filter) {
-        let f = function(a, b) {
-            return a._filter - b._filter;
+        let tabl = [];
+        for (let i = 0; i < this.employees.length; i++) {
+            tabl.push(this.employees[i]._filter)
         }
-        this.employees.sort(f);
-        /*for (let i = 0; i < this.employees.length; i++) {
-            console.log(entr.employees[i]);
-        }*/
-        console.log(this.employees);
+        return tabl;
+        //this.employees.sort((a, b) => a._filter - b._filter);
+        //return this.employees[this.employees.length - 1]._filter;
     }
 
     /**
@@ -64,22 +63,19 @@ class Enterprise {
      * Supprime un employé
      * @param int _id 
      */
-    /*  delete(_id) {
-        let m = 0,
-            for (let i = 0; i < this.employees.length; i++) {
-                if (Employees[i].id = _id)
-                    m = i;
-            }
-        Employees.splice(m, 1);
+    delete(_id) {
+        _id = parseInt(_id);
+        let index = this.employees.findIndex(employee => employee.id == _id);
+        this.employees.splice(index, 1);
     }
-*/
+
 
     /**
      * 
      */
     getHigherSalary() {
         this.employees.sort((a, b) => a.salary - b.salary);
-        return this.employees[this.employees.length - 1];
+        return this.employees[this.employees.length - 1].salary;
     }
 
     /**
@@ -87,7 +83,7 @@ class Enterprise {
      */
     getLowerSalary() {
         this.employees.sort((a, b) => a.salary - b.salary);
-        return this.employees[0];
+        return this.employees[0].salary;
     }
 
     /**
@@ -113,8 +109,20 @@ entr.employees = employees1;
 
 entr.create(new Employee(6, 'Emill', 'Nakarian', 'Developpeur', 40000, new Date('2010-05-26')));
 
-entr.readAll(this.employees.id);
 
+for (let i = 0; i < this.employees; i++) {
+    console.log(entr.readAll(salary));
+}
+
+let x = entr.readAll(this.id)
+console.log(x);
+
+//console.log(entr.read(4));
+
+//entr.delete(3);
+//console.log(entr.employees);
+
+//console.log(entr.getHigherSalary());
 
 
 module.exports = Enterprise;
