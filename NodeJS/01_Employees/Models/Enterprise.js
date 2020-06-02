@@ -34,14 +34,22 @@ class Enterprise {
      * 
      * @param int _id 
      */
-    /* read(_id) {
-         let m = 0,
-             for (let i = 0; i < this.employees.length; i++) {
-                 if (Employees[i].id = _id)
-                     m = i;
-             }
-         return Employees[m];
-     }*/
+    read(_id) {
+
+        _id = parseInt(_id);
+
+        let result = this.employees.find(employee => employee.id == _id);
+
+        return result;
+
+        /*let m = 0,
+            for (let i = 0; i < Employees.length; i++) {
+                if (Employees[i].id = _id)
+                    m = i;
+            }
+        return Employees[m];*/
+    }
+
 
     /**
      * Met à jour un employé
@@ -109,3 +117,4 @@ entr.employees = employees1;
 entr.create(new Employee(6, 'Emill', 'Nakarian', 'Developpeur', 40000, new Date('2010-05-26')));
 
 entr.readAll(this.id);
+module.exports = Enterprise;
