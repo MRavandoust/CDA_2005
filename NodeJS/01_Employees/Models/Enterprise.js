@@ -32,12 +32,19 @@ class Enterprise {
      * @param int _id 
      */
     read(_id) {
-        let m = 0,
+        
+        _id = parseInt(_id);
+        
+        let result = this.employees.find(employee => employee.id == _id);
+        
+        return result;
+        
+        /*let m = 0,
             for (let i = 0; i < Employees.length; i++) {
                 if (Employees[i].id = _id)
                     m = i;
             }
-        return Employees[m];
+        return Employees[m];*/
     }
 
     /**
