@@ -46,10 +46,32 @@ class Enterprise {
      * @param  _filter le(s) filtre(s) à appliquer
      * @returns Employee[] La liste des employés trouvés ou une liste vide si aucune correspodance
      */
-    readAll(_filter) {
+    /* readAll(_filter) {
 
         return this.employees.filter(_filter);
+    } */
+
+
+    readAll(_filter) {
+        if (typeof _filter != 'string') {
+            return undefined;
+        }
+        if (_filter == "id") {
+            return this.employees.sort((a, b) => a.id - b.id);
+        } else if (_filter == "lastname") {
+            return this.employees.sort((a, b) => a.lastname - b.lastname);
+        } else if (_filter == "firstname") {
+            return this.employees.sort((a, b) => a.firstname - b.firstname);
+        } else if (_filter == "salary") {
+            return this.employees.sort((a, b) => a.salary - b.salary);
+        } else if (_filter == "hiredate") {
+            return this.employees.sort((a, b) => a.hiredate - b.hiredate);
+        } else {
+            return undefined;
+        }
     }
+
+
 
     /**
      * Recherche un employé par son identifiant
@@ -166,10 +188,10 @@ for (let i = 0; i < this.employees; i++) {
     console.log(entr.readAll(salary));
 }  */
 
-//entr.readAll('salary')
-//console.log(x);
+let x = entr.readAll("salary");
+console.log(x);
 
-console.log(entr.read(4));
+//console.log(entr.read(4));
 
 //entr.delete(3);
 //console.log(entr.employees);

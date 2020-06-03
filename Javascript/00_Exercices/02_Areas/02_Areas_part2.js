@@ -52,8 +52,7 @@
  * 
  * 4) Renvoyer true
  */
-class Area 
-{
+class Area {
     /**
      * Constructeur: Initialise une nouvelle instance de la classe "Area"
      * La largeur et la hauteur définissent respectivement le nombre de colonnes et de lignes. 
@@ -71,7 +70,7 @@ class Area
      * @returns Boolean true en cas de succès, false si l'ajout est impossible 
      */
     addPoint(_point) {
-        if ((typeof _point) !== 'Point') {
+        if (!(_point instanceof Point)) {
             return false;
         }
 
@@ -86,7 +85,7 @@ class Area
      * Les nouvelles coordonnées peuvent se trouver hors limites
      * @returns Boolean true en cas de succès, false en cas d'échec
      */
-    movePoint(/* déterminer les paramètres */) {
+    movePoint( /* déterminer les paramètres */ ) {
         // implémenter la méthode
     }
 
@@ -96,7 +95,7 @@ class Area
      * Chaque Point hors des limites est automatiquement déplacé dans les limites vers la position libre la plus proche
      * @returns int le nombre de points déplacés
      */
-    needAllInside(/* déterminer les paramètres */) {
+    needAllInside( /* déterminer les paramètres */ ) {
         // implémenter la méthode
     }
 }
