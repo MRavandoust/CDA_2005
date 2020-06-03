@@ -9,54 +9,104 @@ class Enterprise {
     }
 
     /**
-     * 
-     * @param  _filter 
+     * Valide un objet Employee
+     * @param Employee _employee
      */
-    readAll(_filter) {
-        let tabl = [];
-        for (let i = 0; i < this.employees.length; i++) {
-            tabl.push(this.employees[i]._filter)
+    isValid(_employee) {
+
+        //console.log(typeof _employee);
+        if (!(_employee instanceof Employee)) {
+            return false;
         }
-        return tabl;
-        //this.employees.sort((a, b) => a._filter - b._filter);
-        //return this.employees[this.employees.length - 1]._filter;
+
+        return true;
     }
 
+
+
     /**
-     * Créer un employé
+     * Créer un employé (valide les données de l'employé et l'ajoute à la collection)
      * @param Employee _employee 
+     * @returns Employee L'objet Employee ajouté
      */
     create(_employee) {
-        this.employees.push(_employee);
+
+        if (this.isValid(_employee)) {
+
+            // TO DO:  gestion automatique des identifiants
+
+            this.employees.push(_employee);
+        }
+
+        return _employee;
     }
 
     /**
-     * 
+     * Récupère une liste d'employés selon un ou plusieurs filtres
+     * @param  _filter le(s) filtre(s) à appliquer
+     * @returns Employee[] La liste des employés trouvés ou une liste vide si aucune correspodance
+     */
+    readAll(_filter) {
+
+        return this.employees.filter(_filter);
+    }
+
+    /**
+     * Recherche un employé par son identifiant
      * @param int _id 
+     * @returns Employee l'employé correspondant ou undefined si non trouvé
      */
     read(_id) {
-        _id = parseInt(_id);
 
-        let result = this.employees.find(employee => employee.id == _id);
+        let emp = this.employees.find(emp => emp.id === parseInt(_id));
 
-        return result;
+        if (emp !== undefined) {
+            // retourner une copie de l'employé
+            // cloner l'objet : let copie = Object.assign()
+            // moteur de recherche : MDN JS object assign
+            // moteur de recherche newbie: JS cloner objet
+        }
 
-        /*let m = 0,
-            for (let i = 0; i < Employees.length; i++) {
-                if (Employees[i].id = _id)
-                    m = i;
+        return undefined;
+
+        /*let i;
+        for(i = 0; i < this.employees.length; i++) {
+            let emp = this.employees[i];
+            if(emp.id === parseInt(_id)) {
+                return emp;
             }
-        return Employees[m];*/
+        }*/
+
+        /*for(emp of this.employees) {
+            if(emp.id === parseInt(_id)) {
+                return emp;
+            }
+        }*/
+
     }
 
 
     /**
-     * Met à jour un employé
+     * Valide les données et met à jour un employé de la collection
      * @param Employee _employee 
      */
     update(_employee) {
-        _employee.salary = newSalary;
 
+        if (!this.isValid(_employee)) {
+            return _employee;
+        }
+
+        if (_employee.id < 1 && _employee.id !== NaN) {
+            return _employee;
+        }
+
+        let exists = this.read(_employee.id);
+
+        if (exists !== undefined && exists === _employee) {
+
+        }
+
+        return _employee;
     }
 
     /**
@@ -114,8 +164,8 @@ for (let i = 0; i < this.employees; i++) {
     console.log(entr.readAll(salary));
 }
 
-let x = entr.readAll(this.id)
-console.log(x);
+entr.readAll('salary')
+    //console.log(x);
 
 //console.log(entr.read(4));
 
