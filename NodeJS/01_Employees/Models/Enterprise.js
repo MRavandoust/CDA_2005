@@ -61,6 +61,8 @@ class Enterprise {
         let emp = this.employees.find(emp => emp.id === parseInt(_id));
 
         if (emp !== undefined) {
+
+            return Object.assign({}, emp);
             // retourner une copie de l'employé
             // cloner l'objet : let copie = Object.assign()
             // moteur de recherche : MDN JS object assign
@@ -159,15 +161,15 @@ entr.employees = employees1;
 
 entr.create(new Employee(6, 'Emill', 'Nakarian', 'Developpeur', 40000, new Date('2010-05-26')));
 
-
+/*
 for (let i = 0; i < this.employees; i++) {
     console.log(entr.readAll(salary));
-}
+}  */
 
-entr.readAll('salary')
-    //console.log(x);
+//entr.readAll('salary')
+//console.log(x);
 
-//console.log(entr.read(4));
+console.log(entr.read(4));
 
 //entr.delete(3);
 //console.log(entr.employees);
