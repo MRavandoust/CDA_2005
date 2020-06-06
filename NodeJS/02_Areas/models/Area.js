@@ -37,6 +37,10 @@ class Area {
      */
     constructor(_width, _height) {
         // A vous de jouer
+        this.width = parseInt(_width);
+        this.height = parseInt(_height);
+        this.point = new Array(this.height * this.width);
+        //Array(parseInt(_width)).fill().map(x => Array(parseInt(_height)).fill());
     }
 
     /**
@@ -50,10 +54,24 @@ class Area {
             return false;
         }
 
-        // A vous de jouer
-
-        return true;
+        if (!this.point.includes(undefined)) {
+            return false;
+        }
+        let l = this.width * this.height;
+        let m = _point.y * this.width + _point.x;
+        if (m < l && this.point[m] == undefined) {
+            this.point.splice(m, 1, _point);
+            return true;
+        } else {
+            for (let i = 0; i < l; i++) {
+                if (this.point[i] == undefined) {
+                    this.point.splice(i, 1, _point);
+                    return true;
+                }
+            }
+        }
     }
+
 
 
     /**
@@ -61,8 +79,25 @@ class Area {
      * Les nouvelles coordonnées peuvent se trouver hors limites
      * @returns Boolean true en cas de succès, false en cas d'échec
      */
-    movePoint( /* déterminer les paramètres */ ) {
+    movePoint(_p1, _point) {
+        if (!(_point instanceof Point)) {
+            return false;
+        }
         // implémenter la méthode
+        let l = this.width * this.height;
+        let m = _point.y * this.width + _point.x;
+        let n = _p1.y * this.width + _p1.x;
+        if (this.point[m] == undefined) {
+            _p1.x = _point.x;
+            _p1.y = _point.y;
+            this.point.splice(m, 1, _p1);
+            delete this.point[n];
+            return true;
+        } else {
+            return false;
+        }
+
+
     }
 
 
@@ -71,9 +106,55 @@ class Area {
      * Chaque Point hors des limites est automatiquement déplacé dans les limites vers la position libre la plus proche
      * @returns int le nombre de points déplacés
      */
-    needAllInside( /* déterminer les paramètres */ ) {
+    needAllInside() {
         // implémenter la méthode
+        let nombre = 0;
+        let l = this.width * this.height;
+        for (let i = 0; i < l; i++) {
+            if (this.point[i] != undefined) {
+                if (this.point[i].x > this.width - 1 || this.point[i].y > this.height - 1) {
+                    let m = this.point[i].y * this.width + this.point[i].x;
+                    this.point[i].x = i % this.width;
+                    this.point[i].y = Math.floor(i / this.width);
+                    nombre += 1;
+                }
+            }
+        }
+        return nombre;
     }
 }
+
+
+/*
+let A = new Area(6, 6);
+//A[0] = p1;
+console.log(A.point);
+let p0 = new Point(2, 0);
+let p1 = new Point(4, 3);
+let p2 = new Point(2, 5);
+let p3 = new Point(0, 5);
+let p4 = new Point(2, 8);
+let p5 = new Point(6, 0);
+let p6 = new Point(6, 2);
+let p7 = new Point(6, 2);
+
+//console.log(p1.distance(p2));
+A.addPoint(p1);
+A.addPoint(p2);
+A.addPoint(p3);
+A.point[5] = 'xxx';
+A.addPoint(p4);
+A.addPoint(p6);
+A.addPoint(p7);
+A.addPoint(p0);
+A.addPoint(p5);
+console.log(A.point);
+let p8 = new Point(3, 3);
+A.movePoint(p1, p8);
+console.log(A.point);
+console.log();
+console.log(A.needAllInside());
+console.log(A.point);
+*/
 
 module.exports = Area;

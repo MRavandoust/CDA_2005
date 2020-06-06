@@ -5,7 +5,7 @@ const Employee = require('./Employee.js');
  */
 class Enterprise {
     constructor() {
-        this.employees = new Employee();
+        this.employees = [];
     }
 
     /**

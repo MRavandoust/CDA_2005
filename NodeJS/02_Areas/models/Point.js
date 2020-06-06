@@ -36,6 +36,15 @@
          this.y = _point.y;
      }
 
+
+     /**
+      * 
+      * calcile la distance du "Point" fourni en argument à l'instance actuelle
+      */
+     distance(_point) {
+         return Math.sqrt(Math.pow((this.x - _point.x), 2) + Math.pow((this.y - _point.y), 2));
+     }
+
      /**
       * Les coordonnées de l'instance actuelle et du "Point" fourni en argument sont échangées
       */
@@ -46,5 +55,8 @@
      }
 
  }
+
+
+
 
  module.exports = Point;
