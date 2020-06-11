@@ -39,11 +39,11 @@
 class Point {
 
     /** @var int x Abscisse */
-    #
+    //#
     x;
 
     /** @var int y Ordonnée */
-    #
+    //#
     y;
 
     /**
