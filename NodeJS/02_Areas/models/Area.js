@@ -42,8 +42,74 @@ class Area {
         this.size = this.height * this.width;
         this.point = [];
         this.point.push(new Point(0, 0));
-        //Array(parseInt(_width)).fill().map(x => Array(parseInt(_height)).fill());
     }
+
+
+
+    /**
+     * Vérifie si la zone dispose d'emplacements libres
+     * @returns Boolean true si au moins 1 emplacement est disponible. false si la zone est pleine
+     */
+    hasFreeSpace() {
+        return (this.points.length < this.size);
+    }
+
+    /**
+     * Vérifie la disponibilité de l'emplacement aux coordonnées indiquées en argument.
+     * @param int _x abscisses
+     * @param int _y ordonnées
+     * @returns Boolean true si l'emplacement est libre, sinon false.
+     */
+    isFreeXY(_x, _y) {
+        return this.points.find(p => p.x === _x && p.y === _y) === undefined;
+    }
+
+    /**
+     * Vérifie si l'emplacement aux coordonnées du point fourni en argument est libre.
+     * @param Point _point le Point qui contient les coordonnées à contrôler
+     * @returns Boolean true si l'emplacement est libre, sinon false.
+     */
+    isFree(_point) {
+        return this.isFreeXY(_point.x, _point.y);
+    }
+
+    /**
+     * Retourne la 1ère position libre dans la zone
+     */
+    firstFreeLocation() {
+
+        let result = [];
+
+        for (let x = 0; x < this.width; x++) {
+            for (let y = 0; y < this.height; y++) {
+                if (this.isFreeXY(x, y)) {
+                    result.push(new Point(x, y));
+                }
+            }
+        }
+
+        return result.sort(this.closestFromOrigin)[0];
+    }
+
+    /**
+     * Vérifie la disponibilité des coordonnées du Point en argument
+     * Si emplacement utilisé, déplace le Point vers un emplacement libre
+     * @param Point _point 
+     */
+    moveToFreeLocation(_point) {
+
+        if (!this.isFree(_point)) {
+            let free = this.firstFreeLocation();
+
+            if (free !== undefined) {
+                _point.copy(free);
+            }
+        }
+    }
+
+
+
+
 
     /**
      * Ajoute un "Point" dans la zone
@@ -52,7 +118,7 @@ class Area {
      * @returns Boolean true en cas de succès, false si l'ajout est impossible 
      */
     addPoint(_point) {
-        if (!(_point instanceof Point)) { // || !this.point.includes(undefined)
+        if (!(_point instanceof Point) || this.length >= this.size) { // || !this.point.includes(undefined)
             return false;
         }
 
@@ -83,12 +149,9 @@ class Area {
         }
         // implémenter la méthode
         let m = _point.y * this.width + _point.x;
-        let n = _p1.y * this.width + _p1.x;
         if (this.point[m] == undefined) {
             _p1.x = _point.x;
             _p1.y = _point.y;
-            this.point.splice(m, 1, _p1);
-            delete this.point[n];
             return true;
         } else {
             return false;
@@ -109,7 +172,7 @@ class Area {
         for (let i = 0; i < this.size; i++) {
             if (this.point[i] != undefined) {
                 if (this.point[i].x > this.width - 1 || this.point[i].y > this.height - 1) {
-                    let m = this.point[i].y * this.width + this.point[i].x;
+                    //let m = this.point[i].y * this.width + this.point[i].x;
                     this.point[i].x = i % this.width;
                     this.point[i].y = Math.floor(i / this.width);
                     nombre += 1;
@@ -117,6 +180,30 @@ class Area {
             }
         }
         return nombre;
+    }
+
+
+
+
+    /**
+     * Callback de tri par distance par rapport au point d'origine (à utiliser avec Point[].sort())
+     * @param {Point} _p1 
+     * @param {Point} _p2 
+     */
+    closestFromOrigin(_p1, _p2) {
+
+        let compareDistance = (_x1, _x2) => (_x1 < _x2 ? -1 : (_x1 > _x2 ? 1 : 0));
+
+        let d1 = _p1.distanceFromOrigin();
+        let d2 = _p2.distanceFromOrigin();
+        let d = compareDistance(d1, d2);
+
+        switch (d) {
+            case 0:
+                return compareDistance(_p1.x, _p2.x);
+            default:
+                return d;
+        }
     }
 }
 

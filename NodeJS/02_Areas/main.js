@@ -17,15 +17,15 @@ let p6 = new Point(6, 2);
 let p7 = new Point(6, 2);
 
 //console.log(p1.distance(p2));
+A.addPoint(p0);
 A.addPoint(p1);
 A.addPoint(p2);
 A.addPoint(p3);
 A.point[5] = 'xxx';
 A.addPoint(p4);
+A.addPoint(p5);
 A.addPoint(p6);
 A.addPoint(p7);
-A.addPoint(p0);
-A.addPoint(p5);
 console.log(A.point);
 console.log('p1 (avant move) : ' + p1.toString());
 let p8 = new Point(3, 3);
