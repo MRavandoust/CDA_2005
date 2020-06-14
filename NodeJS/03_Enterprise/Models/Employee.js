@@ -42,40 +42,44 @@
  */
 class Employee {
     /** @var int id Identifiant de l'employé */
-    #
-    id;
+    #id;
 
     /** @var string lastname Patronyme de l'employé */
-    #
-    lastname;
+    #lastname;
 
     /** @var string firstname Prénom de l'employé */
-    #
-    firstname;
+    #firstname;
 
     /** @var string email Adresse email de l'employé */
-    #
-    email;
+    #email;
 
     /** @var string role Fonction de l'employé dans l'entreprise (emploi occupé) */
-    #
-    role;
+    #role;
 
     /** @var int salary Salaire Annuel Brut de l'employé */
-    #
-    salary;
+    #salary;
 
     /**
      * 
      * @param Object _employee un objet quelconque // ex: { lastname: "Joe", ....}
      */
     constructor(_employee) {
-        // si l'argument _employee n'est pas fourni, _employee = un objet litéral vide (pour éviter les erreurs de référence)
-        _employee = _employee || {};
+       // si l'argument _employee n'est pas fourni, _employee = un objet litéral vide
+       _employee = _employee || {};
 
-        // On passe par le mutateur pour assigner l'email
-        // Si l'objet "_employee" ne contient pas d'attribut public "email" --> on envoie "ano@nymous.fr" à la place 
-        this.setEmail(_employee.email || "ano@nymous.fr");
+       this.#id         = parseInt(_employee.id || 0); 
+       this.#lastname   = _employee.lastname || "Doe";
+       this.#firstname  = _employee.firstname || "John";
+       this.#role       = _employee.role || "Unknown";
+       this.#salary     = parseInt(_employee.salary || 0);
+
+       // Calcul de l'email
+       this.#email      = (this.#firstname[0] + this.#lastname).toLowerCase() + "@email.fr";
+
+       // Recréation de l'objet Date à partir de la date fournie
+       if(_employee.hiredate !== undefined) {
+           this.hiredate = new Date(_employee.hiredate);
+       }
     }
 
     /**
@@ -102,7 +106,7 @@ class Employee {
             return;
         }
 
-        if (false) { /** @todo REGEX si l'email ne correspond pas au format email attendu */
+        if (!/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(_email)) { /** @todo REGEX si l'email ne correspond pas au format email attendu */
             return;
         }
 

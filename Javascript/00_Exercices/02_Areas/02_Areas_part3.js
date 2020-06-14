@@ -39,12 +39,10 @@
 class Point {
 
     /** @var int x Abscisse */
-    //#
-    x;
+    //#x;
 
     /** @var int y Ordonnée */
-    //#
-    y;
+    //#y;
 
     /**
      * Constructeur: Initialise une nouvelle instance de la classe "Point"
@@ -61,7 +59,7 @@ class Point {
      * @return string Les coordonnées du Point
      */
     toString() {
-        return "(" + this.x + "," + this.y + ")";
+        return "(" + this.#x + "," + this.#y + ")";
     }
 
     /**

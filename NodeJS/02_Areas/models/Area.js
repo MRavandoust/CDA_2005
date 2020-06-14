@@ -40,8 +40,8 @@ class Area {
         this.width = parseInt(_width);
         this.height = parseInt(_height);
         this.size = this.height * this.width;
-        this.point = [];
-        this.point.push(new Point(0, 0));
+        this.points = [];
+        this.points.push(new Point(0, 0));
     }
 
 
@@ -123,13 +123,13 @@ class Area {
         }
 
         let m = _point.y * this.width + _point.x;
-        if (m < this.size && this.point[m] == undefined) {
-            this.point.splice(m, 1, _point);
+        if (m < this.size && this.points[m] == undefined) {
+            this.points.splice(m, 1, _point);
             return true;
         } else {
             for (let i = 0; i < this.size; i++) {
-                if (this.point[i] == undefined) {
-                    this.point.splice(i, 1, _point);
+                if (this.points[i] == undefined) {
+                    this.points.splice(i, 1, _point);
                     return true;
                 }
             }
@@ -149,7 +149,7 @@ class Area {
         }
         // implémenter la méthode
         let m = _point.y * this.width + _point.x;
-        if (this.point[m] == undefined) {
+        if (this.points[m] == undefined) {
             _p1.x = _point.x;
             _p1.y = _point.y;
             return true;
@@ -170,11 +170,11 @@ class Area {
         // implémenter la méthode
         let nombre = 0;
         for (let i = 0; i < this.size; i++) {
-            if (this.point[i] != undefined) {
-                if (this.point[i].x > this.width - 1 || this.point[i].y > this.height - 1) {
+            if (this.points[i] != undefined) {
+                if (this.points[i].x > this.width - 1 || this.points[i].y > this.height - 1) {
                     //let m = this.point[i].y * this.width + this.point[i].x;
-                    this.point[i].x = i % this.width;
-                    this.point[i].y = Math.floor(i / this.width);
+                    this.points[i].x = i % this.width;
+                    this.points[i].y = Math.floor(i / this.width);
                     nombre += 1;
                 }
             }
