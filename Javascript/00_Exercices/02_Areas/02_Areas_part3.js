@@ -39,10 +39,10 @@
 class Point {
 
     /** @var int x Abscisse */
-    //#x;
+    #x;
 
     /** @var int y Ordonnée */
-    //#y;
+    #y;
 
     /**
      * Constructeur: Initialise une nouvelle instance de la classe "Point"
