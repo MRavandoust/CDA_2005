@@ -8,9 +8,9 @@ class Door extends Point {
 
     #isOpen;
 
-    constructor(_x, _y) {
+    constructor(_x, _y, _isOpen) {
         super(_x, _y);
-        this.#isOpen = false;
+        this.#isOpen = _isOpen || false;
     }
 
     getIsOpen() {
