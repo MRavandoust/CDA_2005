@@ -44,6 +44,8 @@ class Area {
         this.points.push(new Point(0, 0));
     }
 
+    
+
 
 
     /**
