@@ -138,7 +138,7 @@ class Point {
      * @returns int distance par rapport à la coordonnée (0,0)
      */
     distanceFromOrigin() {
-        return (this.#x + this.#y);
+        return (Math.abs(this.#x) + Math.abs(this.#y));
     }
 
 }
