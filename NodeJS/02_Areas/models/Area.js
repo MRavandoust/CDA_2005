@@ -124,7 +124,7 @@ class Area {
             return false;
         }
 
-        let m = _point.y * this.width + _point.x;
+    /*    let m = _point.y * this.width + _point.x;
         if (m < this.size && this.points[m] == undefined) {
             this.points.splice(m, 1, _point);
             return true;
@@ -135,7 +135,13 @@ class Area {
                     return true;
                 }
             }
-        }
+        }  */
+
+        this.moveToFreeLocation(_point);
+
+        return this.points.push(_point) > 0;
+
+
     }
 
 
