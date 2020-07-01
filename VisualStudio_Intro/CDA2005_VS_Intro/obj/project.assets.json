@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\CDA2005_VS_Intro\\CDA2005_VS_Intro\\CDA2005_VS_Intro.csproj",
+      "projectUniqueName": "D:\\GitHub\\CDA_2005\\VisualStudio_Intro\\CDA2005_VS_Intro\\CDA2005_VS_Intro.csproj",
       "projectName": "CDA2005_VS_Intro",
-      "projectPath": "D:\\GitHub\\CDA2005_VS_Intro\\CDA2005_VS_Intro\\CDA2005_VS_Intro.csproj",
+      "projectPath": "D:\\GitHub\\CDA_2005\\VisualStudio_Intro\\CDA2005_VS_Intro\\CDA2005_VS_Intro.csproj",
       "packagesPath": "C:\\Users\\MRavandoust\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\CDA2005_VS_Intro\\CDA2005_VS_Intro\\obj\\",
+      "outputPath": "D:\\GitHub\\CDA_2005\\VisualStudio_Intro\\CDA2005_VS_Intro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
