@@ -1,0 +1,13 @@
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\bin\Release\netcoreapp3.1\CDA2005_VS_Intro.exe
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\bin\Release\netcoreapp3.1\CDA2005_VS_Intro.deps.json
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\bin\Release\netcoreapp3.1\CDA2005_VS_Intro.runtimeconfig.json
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\bin\Release\netcoreapp3.1\CDA2005_VS_Intro.runtimeconfig.dev.json
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\bin\Release\netcoreapp3.1\CDA2005_VS_Intro.dll
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\bin\Release\netcoreapp3.1\CDA2005_VS_Intro.pdb
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\obj\Release\netcoreapp3.1\CDA2005_VS_Intro.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\obj\Release\netcoreapp3.1\CDA2005_VS_Intro.AssemblyInfoInputs.cache
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\obj\Release\netcoreapp3.1\CDA2005_VS_Intro.AssemblyInfo.cs
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\obj\Release\netcoreapp3.1\CDA2005_VS_Intro.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\obj\Release\netcoreapp3.1\CDA2005_VS_Intro.dll
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\obj\Release\netcoreapp3.1\CDA2005_VS_Intro.pdb
+D:\GitHub\CDA_2005\VisualStudio_Intro\CDA2005_VS_Intro\obj\Release\netcoreapp3.1\CDA2005_VS_Intro.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\bin\Debug\netcoreapp3.1\Test_Property.exe
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\bin\Debug\netcoreapp3.1\Test_Property.deps.json
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\bin\Debug\netcoreapp3.1\Test_Property.runtimeconfig.json
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\bin\Debug\netcoreapp3.1\Test_Property.runtimeconfig.dev.json
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\bin\Debug\netcoreapp3.1\Test_Property.dll
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\bin\Debug\netcoreapp3.1\Test_Property.pdb
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.AssemblyInfoInputs.cache
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.AssemblyInfo.cs
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.dll
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.pdb
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.genruntimeconfig.cache
