@@ -10,3 +10,4 @@ D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test
 D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.dll
 D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.pdb
 D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.genruntimeconfig.cache
+D:\GitHub\CDA_2005\VisualStudio_Intro\Test_Property\obj\Debug\netcoreapp3.1\Test_Property.csprojAssemblyReference.cache
