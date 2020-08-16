@@ -141,6 +141,7 @@ class Point {
         return (Math.abs(this.#x) + Math.abs(this.#y));
     }
 
+    
 }
 
 module.exports = Point;
