@@ -40,4 +40,4 @@ CREATE TABLE cities
     city_name VARCHAR(128) NOT NULL,
     country_code CHAR(2) NOT NULL
 )
-ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;;
+ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
