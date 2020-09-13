@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(images/bg_motif.gif);
+    background-repeat: inherit;
+}
+
+@font-face {
+    font-family: channel-webfont;
+    src: url('fonts/channel-webfont.ttf'),
+         url('fonts/channel-webfont.eot'); /* IE9+ */
+    }
+
+    @font-face {
+        font-family: Caitlin;
+        src: url('fonts/Caitlin.ttf'),    
+    }
+
+    @font-face {
+        font-family: AB_Exp_by_III_wildcard_III;
+        src: url('fonts/AB_Exp_by_III_wildcard_III.ttf'),    
+    }
+
+
+header
+{
+    height: 73px;
+    background-color: rgba(0, 0, 0, 0.6) ;
+    opacity: 0.9;
+    border-bottom: white solid 1px;
+    padding: 0px;
+    
+}
+
+#logo
+{
+    height: 200px;
+    margin-top: 56px;
+    margin-left: 200px;
+}
+
+nav
+{
+    height: 100%;
+    float:right;
+    margin-left: 30px;
+    
+}
+
+.menu
+{
+    height: 100%;
+   
+}
+
+.menu a
+{
+    color: white;
+    font-family: channel-webfont;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu li
+{
+ 
+    display:inline-block;
+    padding:7px 50px 0px 0px;
+    
+}
+
+.menu li :hover
+{
+    color: red;
+}
+
+.menu li ul
+{
+    position:absolute;
+    visibility:hidden;
+
+}
+.menu li ul li
+{
+    height: 50px;
+    width: 220px;
+    display:block;
+    background-color:  rgba(0, 0, 0, 0.4) ;
+    border: 1px white;
+    border: white solid 1px;
+    padding: 0px 15px;
+}
+.menu li:hover > ul
+{
+    visibility:visible;
+}
+
+
+section 
+{
+    width: 900px;
+    height: 1000px;
+    margin: auto;
+    background-color: rgba(96,125,139,0.5);
+    background-image: url(images/bg_g.png);
+    background-size:33%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    
+    
+}
+
+#main_img
+{
+    width: 850px;
+    margin-top: 20px;
+    
+}
+
+
+article
+{
+    text-align: center;
+
+}
+#txt1
+{
+    width: 850px;
+    height: 35px;
+    font-family: channel-webfont;
+    font-size: 15px;
+    color: rgba(96,125,139,1);
+    background-color: white;
+    margin: 0px 0px 0px 25px;
+}
+
+.box
+{
+    width: 260px;
+    text-align: center;
+    margin: 15px 15px 10px 15px;
+    display: inline-block;
+}
+
+h4
+{
+    font-family:channel-webfont ;
+    color: white;
+    padding-top: 16px;
+    
+}
+
+.txt2
+{
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+.icon_img
+{
+    float: right;
+}
+
+.button
+{
+    width: 100px;
+    height: 35px;
+    background-color:#AEAEAE ;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+
