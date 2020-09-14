@@ -24,23 +24,29 @@ body{
 
 header
 {
-    height: 73px;
+    position: fixed;
+    top: 0px;
+    height: 41px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.6) ;
     opacity: 0.9;
     border-bottom: white solid 1px;
-    padding: 0px;
-    
+    padding-top: 40px; 
 }
 
 #logo
 {
     height: 200px;
-    margin-top: 56px;
+    margin-top: 25px;
     margin-left: 16%;
 }
 
 nav
 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transition: align-items .2s;
     height: 100%;
     float:right;
     margin-left: 30px;
@@ -99,13 +105,12 @@ nav
 section 
 {
     width: 900px;
-    margin: auto;
+    margin: 83px auto 0px auto;
     background-color: rgba(96,125,139,0.5);
     background-image: url(images/bg_g.png);
-
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+
     
     
 }
