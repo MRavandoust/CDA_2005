@@ -36,7 +36,7 @@ header
 {
     height: 200px;
     margin-top: 56px;
-    margin-left: 200px;
+    margin-left: 16%;
 }
 
 nav
@@ -99,11 +99,11 @@ nav
 section 
 {
     width: 900px;
-    height: 1000px;
     margin: auto;
     background-color: rgba(96,125,139,0.5);
     background-image: url(images/bg_g.png);
-    background-size:33%;
+
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     
@@ -129,7 +129,7 @@ article
     height: 35px;
     font-family: channel-webfont;
     font-size: 15px;
-    color: rgba(96,125,139,1);
+    color: red;
     background-color: white;
     margin: 0px 0px 0px 25px;
 }
@@ -142,11 +142,30 @@ article
     display: inline-block;
 }
 
+h3
+{
+    font-family:channel-webfont ;
+    color: white;
+    margin-bottom: -5px;
+    
+}
+
 h4
 {
     font-family:channel-webfont ;
     color: white;
     padding-top: 16px;
+    
+}
+
+h5
+{
+    font-family:channel-webfont ;
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 10px;
+   
     
 }
 
@@ -174,3 +193,55 @@ h4
     padding: 12px 15px;
 }
 
+.button:hover
+{
+    background-color: red ;
+    color: black;
+}
+
+#nav_bar
+{
+    width: 30%;
+    background-color: rgba(84,110,122 ,0.6);
+    margin: 10px 6px;
+    padding-bottom: 20px;
+    float: left;
+}
+
+#nav_liste
+{
+    width: 100%;
+    border-top:#8A8887 solid 2px ;
+}
+
+.liste_icon
+{
+    margin-right : 15px; 
+    margin-left : 60px
+}
+
+
+#nav_liste tr td
+{
+    height: 30px;
+    border-bottom:#8A8887 solid 2px ;
+    color: black;
+    text-align: left;
+}
+
+#cad_bar
+{
+    width: 65%;
+    background-color: rgba(84,110,122 ,0.6);
+    margin: 10px 6px;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+#txt3 img
+{
+    float: left;
+    margin: 0px 10px;
+    border: 5px solid white;
+    width: 200px;
+}
