@@ -164,16 +164,13 @@ h5
     color: white;
     text-align: left;
     font-size: 12px;
-    margin-top: 10px;
-   
-    
+    margin-top: 10px;  
 }
 
 .txt2
 {
     text-align: center;
     margin-bottom: 25px;
-
 }
 
 .icon_img
@@ -183,20 +180,35 @@ h5
 
 .button
 {
-    width: 100px;
-    height: 35px;
     background-color:#AEAEAE ;
     color: white;
     text-align: center;
     margin: 20px auto;
     text-decoration: none;
     padding: 12px 15px;
+    transition: 0.5s;
 }
+
 
 .button:hover
 {
     background-color: red ;
     color: black;
+    Transform: rotate(30deg);
+    transition: 0.5s;
+    padding: 17px 20px;
+    font-size: 18px;
+}
+
+#rot
+{
+    transition: 0.5s;
+}
+
+#rot:hover
+{
+    transition: 0.5s;
+    transform: rotate(-5deg);
 }
 
 #nav_bar
@@ -244,4 +256,51 @@ h5
     margin: 0px 10px;
     border: 5px solid white;
     width: 200px;
+}
+
+footer
+{
+    background-color:rgba(96,125,139,0.1);
+    height: 100px;
+}
+
+footer img
+{
+    width: 240px;
+}
+
+#nav_foot
+{
+    height: 100%;
+    font-size: 7px;
+    float: left;
+    margin-top: 30px;
+ 
+}
+
+.menu_foot
+{
+    height: 100%;
+   
+}
+
+.menu_foot a
+{
+    color: white;
+    font-family: channel-webfont;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.menu_foot li
+{
+ 
+    display:inline-block;
+    padding:7px 50px 0px 0px;
+    
+}
+
+.menu_foot li :hover
+{
+    color: red;
 }
