@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-image: url(images/bg_motif.gif);
-    background-repeat: inherit;
+    background-repeat: repeat;
 }
 
 @font-face {
@@ -28,9 +28,8 @@ header
     top: 0px;
     height: 41px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6) ;
-    opacity: 0.9;
-    border-bottom: white solid 1px;
+    background-color: rgba(0, 0, 0, 0.5) ;
+    border-bottom: white solid 2px;
     padding-top: 40px; 
 }
 
