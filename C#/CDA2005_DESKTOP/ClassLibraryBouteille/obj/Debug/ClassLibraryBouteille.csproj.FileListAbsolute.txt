@@ -1,0 +1,5 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryBouteille\bin\Debug\ClassLibraryBouteille.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryBouteille\bin\Debug\ClassLibraryBouteille.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryBouteille\obj\Debug\ClassLibraryBouteille.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryBouteille\obj\Debug\ClassLibraryBouteille.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryBouteille\obj\Debug\ClassLibraryBouteille.pdb

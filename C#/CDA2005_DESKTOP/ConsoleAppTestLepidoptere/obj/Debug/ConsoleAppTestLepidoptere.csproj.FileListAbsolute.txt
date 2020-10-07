@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\obj\Debug\ConsoleAppTestLepidoptere.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\obj\Debug\ConsoleAppTestLepidoptere.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\bin\Debug\ConsoleAppTestLepidoptere.exe.config
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\bin\Debug\ConsoleAppTestLepidoptere.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\bin\Debug\ConsoleAppTestLepidoptere.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\bin\Debug\ClassLibraryLepidoptere.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\bin\Debug\ClassLibraryLepidoptere.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\obj\Debug\ConsoleAppTestLepidoptere.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\obj\Debug\ConsoleAppTestLepidoptere.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestLepidoptere\obj\Debug\ConsoleAppTestLepidoptere.pdb

@@ -11,8 +11,12 @@ namespace ConsoleAppTestLepidoptere
     {
         static void Main(string[] args)
         {
-            Lepidoptere l = new Lepidoptere();
-            l.SeDeplacer();
+            Lepidoptere georges = new Lepidoptere();
+            georges.SeDeplacer();
+            georges.SeMetamorphoser();
+            georges.SeDeplacer();
+
         }
+
     }
 }

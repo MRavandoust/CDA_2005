@@ -13,6 +13,7 @@ namespace ClassLibraryLepidoptere
         {
             return true;
         }
-       
+
+        public abstract StadeDevolution DonTonProchainEtat();
     }
 }
