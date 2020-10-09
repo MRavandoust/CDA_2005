@@ -35,7 +35,7 @@ namespace ConsoleAppTestZoo
             mesAnimauxDuZoo.Add(new Perroquet(new DateTime(2017, 06, 10, 0, 0, 0)));
 
 
-            lesAnimaux.Sort();
+            lesAnimaux.Reverse();
 
             //foreach (AnimalDuZoo a in lesAnimaux)
             //{
