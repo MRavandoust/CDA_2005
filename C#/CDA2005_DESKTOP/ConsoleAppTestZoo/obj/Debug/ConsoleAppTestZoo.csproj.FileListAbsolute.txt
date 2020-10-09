@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\bin\Debug\ConsoleAppTestZoo.exe.config
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\bin\Debug\ConsoleAppTestZoo.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\bin\Debug\ConsoleAppTestZoo.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\bin\Debug\ClassLibraryZoo.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\bin\Debug\ClassLibraryZoo.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\obj\Debug\ConsoleAppTestZoo.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\obj\Debug\ConsoleAppTestZoo.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\obj\Debug\ConsoleAppTestZoo.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\obj\Debug\ConsoleAppTestZoo.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestZoo\obj\Debug\ConsoleAppTestZoo.pdb
