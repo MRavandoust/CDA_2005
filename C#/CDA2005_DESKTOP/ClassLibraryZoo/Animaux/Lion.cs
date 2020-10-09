@@ -10,14 +10,16 @@ namespace ClassLibraryZoo.Animaux
     public class Lion : AnimalDuZoo
     {
         private DateTime dateDeNaissance;
+        private bool estNeeAuZoo;
 
         public Lion()
         {
         }
 
-        public Lion(DateTime dateDeNaissance)
+        public Lion(DateTime dateDeNaissance, bool estNeeAuZoo):base(dateDeNaissance, estNeeAuZoo)
         {
             this.dateDeNaissance = dateDeNaissance;
+            this.estNeeAuZoo = true;
         }
 
         public void Manger()

@@ -3,26 +3,26 @@
   <Class Name="ClassLibraryZoo.Animaux.Lapin">
     <Position X="1.25" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAABAAAAABEAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAABAAAAAhEAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Animaux\Lapin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassLibraryZoo.Animaux.Lion">
     <Position X="3.25" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAABAAAAAAEAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAABAAAAAgEAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Animaux\Lion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassLibraryZoo.Animaux.Perroquet">
     <Position X="5.5" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAABAAAAAAEAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAABAAAAAgEAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Animaux\Perroquet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassLibraryZoo.Animaux.AnimalDuZoo">
-    <Position X="2" Y="0.75" Width="4.25" />
+    <Position X="2" Y="1" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAQAAAAAAAAgEAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Animaux\AnimalDuZoo.cs</FileName>

@@ -8,19 +8,19 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryZoo.Animaux
 {
-    public abstract class AnimalDuZoo:IDeplacable, IParler, IComparable<DateTime>
+    public abstract class AnimalDuZoo : IDeplacable, IParler, IComparable<AnimalDuZoo>
     {
-        private DateTime dateDeNaissance;
-        bool estNeeAuZoo;
+        public DateTime dateDeNaissance;
+        public bool estNeeAuZoo;
 
-        protected AnimalDuZoo():this(DateTime.Today,false)
+        protected AnimalDuZoo() : this(DateTime.Today, false)
         {
         }
 
-        protected AnimalDuZoo(DateTime dateDeNaissance, bool v)
+        protected AnimalDuZoo(DateTime dateDeNaissance, bool estNeeAuZoo)
         {
             this.dateDeNaissance = dateDeNaissance;
-            //this.estNeeAuZoo = estNeeAuZoo;
+            this.estNeeAuZoo = estNeeAuZoo;
         }
 
 
@@ -28,16 +28,14 @@ namespace ClassLibraryZoo.Animaux
 
         public abstract bool PeutParler();
 
-        
 
-        public int CompareTo(DateTime other)
-        {
-            return this.dateDeNaissance.CompareTo(other);
-        }
 
-        public int CompareTo(object obj)
+        public int CompareTo(AnimalDuZoo other)
         {
-            throw new NotImplementedException();
+            if (this.dateDeNaissance > other.dateDeNaissance)
+                return 1;
+            return this.dateDeNaissance.CompareTo(other.dateDeNaissance);
         }
     }
+
 }

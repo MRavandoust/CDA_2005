@@ -10,14 +10,16 @@ namespace ClassLibraryZoo.Animaux
     public class Perroquet : AnimalDuZoo
     {
         private DateTime dateDeNaissance;
+        private bool estNeeAuZoo;
 
         public Perroquet()
         {
         }
 
-        public Perroquet(DateTime dateDeNaissance)
+        public Perroquet(DateTime dateDeNaissance, bool estNeeAuZoo): base(dateDeNaissance, estNeeAuZoo) 
         {
             this.dateDeNaissance = dateDeNaissance;
+            this.estNeeAuZoo = true;
         }
         public void Manger()
         {

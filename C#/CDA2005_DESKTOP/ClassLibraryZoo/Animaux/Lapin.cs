@@ -11,14 +11,16 @@ namespace ClassLibraryZoo.Animaux
     {
         int lgOreilleEnCm;
         private DateTime dateDeNaissance;
+        private bool estNeeAuZoo;
 
         public Lapin()
         {
         }
 
-        public Lapin(DateTime dateDeNaissance)
+        public Lapin(DateTime dateDeNaissance, bool estNeeAuZoo): base(dateDeNaissance, estNeeAuZoo)
         {
             this.dateDeNaissance = dateDeNaissance;
+            this.estNeeAuZoo = true;
         }
 
         public void Manger()

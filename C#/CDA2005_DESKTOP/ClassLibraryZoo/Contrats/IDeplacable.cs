@@ -8,7 +8,6 @@ namespace ClassLibraryZoo.Contrats
 {
     public interface IDeplacable
     {
-        int CompareTo(object obj);
         bool SeDeplacer();
     }
 }
