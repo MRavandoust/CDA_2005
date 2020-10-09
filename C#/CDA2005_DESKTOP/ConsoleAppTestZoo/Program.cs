@@ -53,6 +53,7 @@ namespace ConsoleAppTestZoo
                 Console.WriteLine("Garien ne rest pas sur place");
             }
 
+
             //et qui va appeller les secours? 
             Gardien gardien1 = new Gardien();
             if (gardien1.PeutParler())
