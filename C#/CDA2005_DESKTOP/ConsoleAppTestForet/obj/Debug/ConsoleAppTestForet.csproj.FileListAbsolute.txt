@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\bin\Debug\ConsoleAppTestForet.exe.config
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\bin\Debug\ConsoleAppTestForet.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\bin\Debug\ConsoleAppTestForet.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\bin\Debug\ClassLibraryForet.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\bin\Debug\ClassLibraryForet.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\obj\Debug\ConsoleAppTestForet.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\obj\Debug\ConsoleAppTestForet.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\obj\Debug\ConsoleAppTestForet.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\obj\Debug\ConsoleAppTestForet.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestForet\obj\Debug\ConsoleAppTestForet.pdb
