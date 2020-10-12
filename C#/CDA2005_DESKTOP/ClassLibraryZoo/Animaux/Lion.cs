@@ -27,11 +27,6 @@ namespace ClassLibraryZoo.Animaux
             throw new System.NotImplementedException();
         }
 
-        public override bool PeutParler()
-        {
-            Console.WriteLine("Je ne parle pas");
-            return false;
-        }
 
         public override bool SeDeplacer()
         {

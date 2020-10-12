@@ -14,7 +14,7 @@ namespace ClassLibraryZoo.Employes
             throw new NotImplementedException();
         }
 
-        public bool PeutParler()
+        public bool Parler()
         {
             Console.WriteLine("Je parle");
             return true;

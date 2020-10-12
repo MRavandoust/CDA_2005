@@ -12,9 +12,23 @@ namespace ClassLibraryForet
         private EnumFormeFeuille formeDeFeuille;
         private EnumCouleur couleurDeFeuille;
 
-        public Feuille(int nbNervures)
+
+        public Feuille()
+        {
+            this.nbNervures = 2;
+            this.formeDeFeuille = EnumFormeFeuille.ovale;
+            this.couleurDeFeuille = EnumCouleur.Vert;
+
+
+        }
+
+        public Feuille(int nbNervures, EnumFormeFeuille formeDeFeuille)
         {
             this.nbNervures = nbNervures;
+            this.formeDeFeuille = formeDeFeuille;
+            this.couleurDeFeuille = EnumCouleur.Vert;
+
+            
         }
 
         public Feuille(int nbNervures, EnumFormeFeuille formeDeFeuille, EnumCouleur couleurDeFeuille)
@@ -26,6 +40,9 @@ namespace ClassLibraryForet
 
         public int NbNervures { get => nbNervures; 
             //set => nbNervures = value; 
+        }
+        public EnumFormeFeuille FormeDeFeuille { get => formeDeFeuille;
+            //set => formeDeFeuille = value; 
         }
 
         public void Tomber()

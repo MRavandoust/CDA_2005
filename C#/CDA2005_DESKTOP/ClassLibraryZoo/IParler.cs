@@ -7,6 +7,6 @@ namespace ClassLibraryZoo
 {
     public interface IParler
     {
-        bool PeutParler();
+        bool Parler();
     }
 }

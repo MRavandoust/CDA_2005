@@ -1,6 +1,5 @@
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryZoo\bin\Debug\ClassLibraryZoo.dll
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryZoo\bin\Debug\ClassLibraryZoo.pdb
-D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryZoo\obj\Debug\ClassLibraryZoo.csprojAssemblyReference.cache
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryZoo\obj\Debug\ClassLibraryZoo.csproj.CoreCompileInputs.cache
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryZoo\obj\Debug\ClassLibraryZoo.dll
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryZoo\obj\Debug\ClassLibraryZoo.pdb

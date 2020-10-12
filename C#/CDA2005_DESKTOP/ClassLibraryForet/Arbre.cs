@@ -9,25 +9,35 @@ namespace ClassLibraryForet
     public class Arbre
     {
         int hauteur;
-        private List<Feuille> feuilles = new List<Feuille>();
+        private List<Feuille> feuilles;
+        private EnumFormeFeuille formeFeuilleImpose;
 
-        public Arbre(int hauteur)
+        public Arbre(int hauteur,EnumFormeFeuille _formeFeuille)
         {
             this.hauteur = hauteur;
-            //this.feuilles = new List<Feuille>();
+            this.feuilles = new List<Feuille>();
+            formeFeuilleImpose = _formeFeuille;
         }
 
         public Arbre(int hauteur, List<Feuille> feuilles) //ouvre porte aggregation
         {
             //a faire
             this.hauteur = hauteur;
+            //verifier feuille 
             this.feuilles = feuilles;
         }
 
         public void AddFeuille(Feuille f)
         {
-            //a faire
-            feuilles.Add(f);
+            if (f.FormeDeFeuille.Equals(this.formeFeuilleImpose))
+            {
+                //a faire
+                feuilles.Add(f);
+            }
+            else
+            {
+                //
+            }
         }
 
         public int Hauteur { get => hauteur; 

@@ -1,0 +1,5 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryForet\obj\Debug\ClassLibraryForet.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryForet\bin\Debug\ClassLibraryForet.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryForet\bin\Debug\ClassLibraryForet.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryForet\obj\Debug\ClassLibraryForet.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryForet\obj\Debug\ClassLibraryForet.pdb

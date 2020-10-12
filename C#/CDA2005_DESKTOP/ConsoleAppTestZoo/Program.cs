@@ -80,30 +80,22 @@ namespace ConsoleAppTestZoo
             /********************** et qui va appeller les secours? ********************/
 
             Gardien gardien1 = new Gardien();
-            if (gardien1.PeutParler())
+            if (gardien1.Parler())
             {
                 Console.WriteLine("Garien appele les secours");
             }
 
             List<IParler> parlant = new List<IParler>();
-
-            foreach (AnimalDuZoo animal in lesAnimaux)
-            {
-                if (animal.PeutParler())
-                {
-                    parlant.Add((IParler)animal);
-                }
-            }
-
             parlant.Add(gardien1);
+            parlant.Add(new Perroquet());
 
-            Console.WriteLine("Qui appelle au secoure :\n");
             foreach (IParler parleur in parlant)
             {
-                Console.WriteLine($"{parleur.GetType().Name} :\n");
-                parleur.PeutParler();
-                Console.WriteLine("\n");
+                parleur.Parler();
+          
             }
+
+            
 
 
 

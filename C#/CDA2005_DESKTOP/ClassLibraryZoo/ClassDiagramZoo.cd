@@ -3,14 +3,14 @@
   <Class Name="ClassLibraryZoo.Animaux.Lapin">
     <Position X="1.25" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAABAAAAAhEAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAABAAAAAhEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Animaux\Lapin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassLibraryZoo.Animaux.Lion">
     <Position X="3.25" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAABAAAAAgEAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAABAAAAAgEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Animaux\Lion.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -20,11 +20,12 @@
       <HashCode>AAAAgAAAAAAAAAAAABAAAAAgEAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Animaux\Perroquet.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ClassLibraryZoo.Animaux.AnimalDuZoo">
     <Position X="2" Y="1" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAQAAAAAAAAgEAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAQAAAAAAAAgEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Animaux\AnimalDuZoo.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -40,7 +41,7 @@
   <Interface Name="ClassLibraryZoo.Contrats.IDeplacable">
     <Position X="7" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Contrats\IDeplacable.cs</FileName>
     </TypeIdentifier>
   </Interface>

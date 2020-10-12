@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryZoo.Animaux
 {
-    public class Perroquet : AnimalDuZoo
+    public class Perroquet : AnimalDuZoo,IParler
     {
         private DateTime dateDeNaissance;
         private bool estNeeAuZoo;
@@ -26,7 +26,7 @@ namespace ClassLibraryZoo.Animaux
             throw new System.NotImplementedException();
         }
 
-        public override bool PeutParler()
+        public bool Parler()
         {
             Console.WriteLine("Je parle");
             return true;

@@ -1,0 +1,2 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestSortTableau\obj\Debug\ConsoleAppTestSortTableau.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppTestSortTableau\obj\Debug\ConsoleAppTestSortTableau.csproj.CoreCompileInputs.cache

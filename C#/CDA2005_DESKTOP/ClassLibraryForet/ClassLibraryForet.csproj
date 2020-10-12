@@ -45,9 +45,6 @@
     <Compile Include="EnumCouleur.cs" />
     <Compile Include="EnumFormeFeuille.cs" />
     <Compile Include="Feuille.cs" />
-    <Compile Include="FeuilleOvale.cs" />
-    <Compile Include="FeuilleOvaleRouge.cs" />
-    <Compile Include="FeuilleOvaleVert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

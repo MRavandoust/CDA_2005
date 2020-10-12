@@ -15,9 +15,12 @@
   <Class Name="ClassLibraryForet.Arbre">
     <Position X="0.5" Y="1" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQQAAAAEAAAAAAAAEAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAQQAAAAEAAAAAAAAEAAA=</HashCode>
       <FileName>Arbre.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="formeFeuilleImpose" />
+    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="feuilles" />
     </ShowAsCollectionAssociation>
@@ -25,19 +28,23 @@
   <Class Name="ClassLibraryForet.Feuille">
     <Position X="5.75" Y="0.75" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAEAACAAEAAgAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAEAACAAEAAgAAAAAAAAACAAAAAgAAAAAAAA=</HashCode>
       <FileName>Feuille.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="couleurDeFeuille" />
+      <Field Name="formeDeFeuille" />
+    </ShowAsAssociation>
   </Class>
   <Enum Name="ClassLibraryForet.EnumFormeFeuille">
-    <Position X="10.75" Y="0.75" Width="2" />
+    <Position X="10.25" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAEAAgAAAAAACAAAA=</HashCode>
       <FileName>EnumFormeFeuille.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ClassLibraryForet.EnumCouleur">
-    <Position X="11" Y="3" Width="1.5" />
+    <Position X="10.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAABAEAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EnumCouleur.cs</FileName>
