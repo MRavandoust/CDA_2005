@@ -40,11 +40,14 @@ namespace ClassLibraryForet
         //    this.feuilles = feuilles;
         //}
 
+        /***************************** Add feuille en Private *******************************/
         private void AddFeuille(Feuille f)
         {
             Feuilles.Add(f);
         }
 
+
+        /***************************** Add feuille Public *******************************/
         public void AddFeuille(int _nbNervures, EnumFormeFeuille _formeDeFeuille , EnumCouleur _couleurFeuille)
         {
             this.AddFeuille(new Feuille(_nbNervures, _formeDeFeuille, _couleurFeuille));
@@ -65,6 +68,8 @@ namespace ClassLibraryForet
             return resu;
         }
 
+
+        /***************************** Passer en automne *******************************/
         public void PasserEnAutomne()
         {
             foreach(Feuille f in Feuilles)
@@ -73,11 +78,12 @@ namespace ClassLibraryForet
             }
         }
 
-        public  Feuille this [int i]
+        /***************************** Indexeur sur feuilles *******************************/
+        public Feuille this [int i]
         {
             get { return  feuilles[i]; }
-           // set { };
-            
+            //set {feuilles[i] = value; };
+
         }
 
     }

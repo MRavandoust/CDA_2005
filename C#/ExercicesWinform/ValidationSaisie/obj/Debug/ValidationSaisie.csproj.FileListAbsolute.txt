@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Debug\ValidationSaisie.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Debug\ValidationSaisie.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Debug\ValidationSaisie.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.FrmValidation.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.csprojAssemblyReference.cache

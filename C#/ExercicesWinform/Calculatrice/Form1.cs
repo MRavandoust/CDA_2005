@@ -17,7 +17,7 @@ namespace Calculatrice
             InitializeComponent();
         }
 
-        static int chiffre = 0;
+        int chiffre = 0;
         private void Numbers(object sender, EventArgs e)
         {
             txtAffichage.Text += ((Button)sender).Text + "+";

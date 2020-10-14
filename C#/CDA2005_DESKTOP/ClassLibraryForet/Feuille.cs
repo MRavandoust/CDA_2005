@@ -13,6 +13,7 @@ namespace ClassLibraryForet
         private EnumCouleur couleurDeFeuille;
 
 
+        /***************************** Constructeur par defaut *******************************/
         public Feuille()
         {
             this.nbNervures = 2;
@@ -20,6 +21,7 @@ namespace ClassLibraryForet
             this.couleurDeFeuille = EnumCouleur.Vert;
         }
 
+        /************************ Constructeur avec deux parametres ***********************/
         public Feuille(int nbNervures, EnumFormeFeuille formeDeFeuille)
         {
             this.nbNervures = nbNervures;
@@ -27,6 +29,7 @@ namespace ClassLibraryForet
             this.couleurDeFeuille = EnumCouleur.Vert; 
         }
 
+        /************************** Constructeur avec trois parametres ***********************/
         public Feuille(int nbNervures, EnumFormeFeuille formeDeFeuille, EnumCouleur couleurDeFeuille)
         {
             this.nbNervures = nbNervures;
@@ -42,12 +45,14 @@ namespace ClassLibraryForet
             //set => formeDeFeuille = value; 
         }
         
-
+        /***************************** Tomber la Feuille *******************************/
         public void Tomber()
         {
             Console.WriteLine("Je tombe");
         }
 
+
+        /************************* Prendre couleur d'automne ***************************/
         public void PrendsTesCouleursDAutomne()
         {
             if (this.couleurDeFeuille.Equals(EnumCouleur.Jaune))
@@ -59,6 +64,8 @@ namespace ClassLibraryForet
                 this.couleurDeFeuille = EnumCouleur.Jaune;
             }
         }
+
+        /****************** Override ToString pour la classe Feuille ********************/
         public override string ToString()
         {
             return  base.ToString() +" Nombre de nervures: " + nbNervures + " Forme de feuille: " + formeDeFeuille + " Couleur de feuille: " + couleurDeFeuille;
