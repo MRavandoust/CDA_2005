@@ -8,15 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using ClassLibraryToolsVerification;
 
 namespace ValidationSaisie
 {
     public partial class FrmValidation : Form
     {
-        Regex nomRegex = new Regex(@"[a-zA-Z]{2,30}");
-        Regex dateRegex = new Regex(@"(\d{2})/(\d{2})/(\d{4})");
-        Regex montantRegex = new Regex(@"(\d+\.\d{2})");
-        Regex codePostalRegex = new Regex(@"\d{5}");
         public FrmValidation()
         {
             InitializeComponent();
@@ -27,6 +24,7 @@ namespace ValidationSaisie
 
         }
 
+        // ---------------------------------  Watermark du champs de la date ------------------------------
         private void txtDate_Enter(object sender, EventArgs e)
         {
             if (txtDate.Text == "JJ/MM/AAAA")
@@ -44,7 +42,7 @@ namespace ValidationSaisie
                 txtDate.ForeColor = Color.Silver;
             }
 
-            if (!dateRegex.IsMatch(txtDate.Text))
+            if (!ClassVerifications.VerifDate(txtDate.Text))
             {
                 MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
                 txtDate.Focus();
@@ -53,6 +51,8 @@ namespace ValidationSaisie
                 
         }
 
+
+        // --------------------------------  Button de validation -----------------------------------------
         private void btnValider_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Nom : " + txtNom.Text + "\n" 
@@ -62,9 +62,11 @@ namespace ValidationSaisie
         }
 
 
+
+        // ----------------------  Verification du Nom en quittant le champs du nom ----------------------------
         private void txtNom_Leave(object sender, EventArgs e)
         {
-            if (!nomRegex.IsMatch(txtNom.Text))
+            if (!ClassVerifications.Name(this.txtNom.Text))
             {
                 MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
                 txtNom.Focus();
@@ -73,9 +75,11 @@ namespace ValidationSaisie
                 
         }
 
+
+        // ---------------  Verification du montant en quittant le champs du montant ---------------------------
         private void txtMontant_Leave(object sender, EventArgs e)
         {
-            if (!montantRegex.IsMatch(txtMontant.Text))
+            if (!ClassVerifications.Montant(txtMontant.Text))
             {
                 MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
                 txtMontant.Focus();
@@ -83,9 +87,12 @@ namespace ValidationSaisie
             }
         }
 
+
+
+        // ---------------  Verification du code postal en quittant le champs du code postal -----------------
         private void txtCodePostal_Leave(object sender, EventArgs e)
         {
-            if (!codePostalRegex.IsMatch(txtCodePostal.Text))
+            if (!ClassVerifications.CodePostal(txtCodePostal.Text))
             {
                 MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
                 txtCodePostal.Focus();
@@ -93,17 +100,17 @@ namespace ValidationSaisie
             }
         }
 
+
+        // --------------------------  Confirmation de la Fin d'application  ------------------------------
         private void FrmValidation_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult x = MessageBox.Show("Fin de l'application ?", "Fin", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(x != DialogResult.Yes)
-                e.Cancel = true;
-
-           // Application.Exit();
-           // else
-                
+                e.Cancel = true;  
         }
 
+
+        // ------------------------------------  Vider tout les champs  -------------------------------------
         private void btnEffacer_Click(object sender, EventArgs e)
         {
             txtNom.Text = "";

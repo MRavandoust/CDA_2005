@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryFacture\ClassLibraryFacture.csproj">
+      <Project>{3af5f045-e5ef-4bfa-9d9f-ab1c4923a98b}</Project>
+      <Name>ClassLibraryFacture</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibraryToolsVerification\ClassLibraryToolsVerification.csproj">
+      <Project>{ace157dd-e084-409c-b84f-3c86600d3657}</Project>
+      <Name>ClassLibraryToolsVerification</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

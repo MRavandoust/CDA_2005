@@ -8,3 +8,8 @@ D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSais
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.exe
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.pdb
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Debug\ClassLibraryFacture.dll
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Debug\ClassLibraryToolsVerification.dll
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Debug\ClassLibraryFacture.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Debug\ClassLibraryToolsVerification.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Debug\ValidationSaisie.csproj.CopyComplete

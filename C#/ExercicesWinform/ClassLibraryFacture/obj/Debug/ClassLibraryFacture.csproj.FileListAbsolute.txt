@@ -1,0 +1,5 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryFacture\bin\Debug\ClassLibraryFacture.dll
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryFacture\bin\Debug\ClassLibraryFacture.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryFacture\obj\Debug\ClassLibraryFacture.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryFacture\obj\Debug\ClassLibraryFacture.dll
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryFacture\obj\Debug\ClassLibraryFacture.pdb
