@@ -9,8 +9,8 @@ namespace ClassLibraryZoo.Animaux
 {
     public class Perroquet : AnimalDuZoo,IParler
     {
-        private DateTime dateDeNaissance;
-        private bool estNeeAuZoo;
+        //private DateTime dateDeNaissance;
+        //private bool estNeeAuZoo;
 
         public Perroquet()
         {

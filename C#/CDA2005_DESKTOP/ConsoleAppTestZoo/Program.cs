@@ -26,6 +26,7 @@ namespace ConsoleAppTestZoo
 
             foreach(AnimalDuZoo a in mesAnimauxDuZoo)
             {
+                
                 a.SeDeplacer();
             }
 
@@ -94,9 +95,6 @@ namespace ConsoleAppTestZoo
                 parleur.Parler();
           
             }
-
-            
-
 
 
         }

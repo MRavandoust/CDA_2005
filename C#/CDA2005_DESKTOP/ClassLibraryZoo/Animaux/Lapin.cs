@@ -10,8 +10,8 @@ namespace ClassLibraryZoo.Animaux
     public class Lapin : AnimalDuZoo
     {
         int lgOreilleEnCm;
-        private DateTime dateDeNaissance;
-        private bool estNeeAuZoo;
+        //private DateTime dateDeNaissance;
+        //private bool estNeeAuZoo;
 
         public Lapin()
         {

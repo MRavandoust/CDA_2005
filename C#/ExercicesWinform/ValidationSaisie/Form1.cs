@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using ClassLibraryToolsVerification;
+using ClassLibraryFacture;
 
 namespace ValidationSaisie
 {
@@ -24,81 +25,82 @@ namespace ValidationSaisie
 
         }
 
-        // ---------------------------------  Watermark du champs de la date ------------------------------
-        private void txtDate_Enter(object sender, EventArgs e)
-        {
-            if (txtDate.Text == "JJ/MM/AAAA")
-            {
-                txtDate.Text = "";
-                txtDate.ForeColor = Color.Black;
-            }
-        }
+        
 
-        private void txtDate_Leave(object sender, EventArgs e)
-        {
-            if (txtDate.Text == "")
-            {
-                txtDate.Text = "JJ/MM/AAAA";
-                txtDate.ForeColor = Color.Silver;
-            }
-
-            if (!ClassVerifications.VerifDate(txtDate.Text))
-            {
-                MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
-                txtDate.Focus();
-                txtDate.SelectAll();
-            }
-                
-        }
-
-
-        // --------------------------------  Button de validation -----------------------------------------
-        private void btnValider_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Nom : " + txtNom.Text + "\n" 
-                + "Date : " + txtDate.Text + "\n" 
-                + "Montant : " + txtMontant.Text + "\n" 
-                + "Code Postal : " + txtCodePostal.Text , "Récapitulatif");
-        }
-
-
-
-        // ----------------------  Verification du Nom en quittant le champs du nom ----------------------------
-        private void txtNom_Leave(object sender, EventArgs e)
+        // ----------------------  Verification du Nom  ----------------------------
+        private void txtNom_TextChanged(object sender, EventArgs e)
         {
             if (!ClassVerifications.Name(this.txtNom.Text))
             {
-                MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
+
+                errorProvider1.SetError(txtNom, "Le text doit etre entre 2 à 30 lettres");
+                errorProvider2.SetError(txtNom, "");
                 txtNom.Focus();
-                txtNom.SelectAll();
             }
-                
+            else
+            {
+                errorProvider1.SetError(txtNom, "");
+                errorProvider2.SetError(txtNom, "Correct");
+            }
         }
 
 
-        // ---------------  Verification du montant en quittant le champs du montant ---------------------------
-        private void txtMontant_Leave(object sender, EventArgs e)
+
+        // ----------------------  Verification de la date ----------------------------
+        private void txtDate_TextChanged(object sender, EventArgs e)
+        {
+            if (!ClassVerifications.VerifDate(txtDate.Text))
+            {
+                errorProvider1.SetError(txtDate, "Le montant دoit être un nombre avec deux décimales");
+                errorProvider2.SetError(txtDate, "");
+                txtDate.Focus();
+                //txtDate.SelectAll();
+            }
+            else
+            {
+                errorProvider1.SetError(txtDate, "");
+                errorProvider2.SetError(txtDate, "Correct");
+            }
+        }
+
+
+        // ----------------------  Verification du montant ----------------------------
+        private void txtMontant_TextChanged_1(object sender, EventArgs e)
         {
             if (!ClassVerifications.Montant(txtMontant.Text))
             {
-                MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
+                errorProvider1.SetError(txtMontant, "Le montant دoit être un nombre avec deux décimales");
+                errorProvider2.SetError(txtMontant, "");
                 txtMontant.Focus();
-                txtMontant.SelectAll();
+                //txtMontant.SelectAll();
+            }
+            else
+            {
+                errorProvider1.SetError(txtMontant, "");
+                errorProvider2.SetError(txtMontant, "Correct");
             }
         }
 
 
 
         // ---------------  Verification du code postal en quittant le champs du code postal -----------------
-        private void txtCodePostal_Leave(object sender, EventArgs e)
+        private void txtCodePostal_TextChanged(object sender, EventArgs e)
         {
             if (!ClassVerifications.CodePostal(txtCodePostal.Text))
             {
-                MessageBox.Show("Le texte saisi n'est pas conforme à la réglementation", "Attention");
+                errorProvider1.SetError(txtCodePostal, "Le code postale doit être  chiffres");
+                errorProvider2.SetError(txtCodePostal, "");
                 txtCodePostal.Focus();
-                txtCodePostal.SelectAll();
+                //txtCodePostal.SelectAll();
+            }
+            else
+            {
+                errorProvider1.SetError(txtCodePostal, "");
+                errorProvider2.SetError(txtCodePostal, "Correct");
             }
         }
+
+
 
 
         // --------------------------  Confirmation de la Fin d'application  ------------------------------
@@ -110,14 +112,58 @@ namespace ValidationSaisie
         }
 
 
+
+
+        // --------------------------------  Button de validation -----------------------------------------
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            if (txtNom.Text == "" || txtDate.Text == "" || txtMontant.Text == "" || txtCodePostal.Text == "")
+            {
+                MessageBox.Show("Il faut remplir tout les champs!");
+                txtNom.Focus();
+                return;
+            }
+                
+
+            Facture MaFactur = new Facture(txtNom.Text, DateTime.Parse(txtDate.Text), Convert.ToDouble(txtMontant.Text), Convert.ToInt32(txtCodePostal.Text));
+
+            if (MaFactur.DateIsValid())
+            {
+                MessageBox.Show("Nom : " + txtNom.Text + "\n"
+                + "Date : " + txtDate.Text + "\n"
+                + "Montant : " + txtMontant.Text + "\n"
+                + "Code Postal : " + txtCodePostal.Text, "Récapitulatif");
+            }
+            else
+            {
+                MessageBox.Show("La date n'est pas Valid");
+                txtDate.Focus();
+            }
+            
+        }
+
+
+
+
+
         // ------------------------------------  Vider tout les champs  -------------------------------------
         private void btnEffacer_Click(object sender, EventArgs e)
         {
             txtNom.Text = "";
+            errorProvider1.SetError(txtNom, "");
+            errorProvider2.SetError(txtNom, "");
             txtDate.Text = "";
+            errorProvider1.SetError(txtDate, "");
+            errorProvider2.SetError(txtDate, "");
             txtMontant.Text = "";
+            errorProvider1.SetError(txtMontant, "");
+            errorProvider2.SetError(txtMontant, "");
             txtCodePostal.Text = "";
+            errorProvider1.SetError(txtCodePostal, "");
+            errorProvider2.SetError(txtCodePostal, "");
             txtNom.Focus();
         }
+
+        
     }
 }

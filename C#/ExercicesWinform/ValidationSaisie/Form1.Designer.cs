@@ -30,6 +30,8 @@ namespace ValidationSaisie
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmValidation));
             this.lblNom = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
@@ -40,6 +42,11 @@ namespace ValidationSaisie
             this.txtCodePostal = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.btnEffacer = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNom
@@ -83,36 +90,34 @@ namespace ValidationSaisie
             // 
             this.txtNom.Location = new System.Drawing.Point(117, 39);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(240, 20);
+            this.txtNom.Size = new System.Drawing.Size(179, 20);
             this.txtNom.TabIndex = 0;
-            this.txtNom.Leave += new System.EventHandler(this.txtNom_Leave);
+            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // txtDate
             // 
-            this.txtDate.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtDate.ForeColor = System.Drawing.SystemColors.Desktop;
             this.txtDate.Location = new System.Drawing.Point(117, 71);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(240, 20);
+            this.txtDate.Size = new System.Drawing.Size(179, 20);
             this.txtDate.TabIndex = 1;
-            this.txtDate.Text = "JJ/MM/AAAA";
-            this.txtDate.Enter += new System.EventHandler(this.txtDate_Enter);
-            this.txtDate.Leave += new System.EventHandler(this.txtDate_Leave);
+            this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
             // 
             // txtMontant
             // 
             this.txtMontant.Location = new System.Drawing.Point(117, 100);
             this.txtMontant.Name = "txtMontant";
-            this.txtMontant.Size = new System.Drawing.Size(240, 20);
+            this.txtMontant.Size = new System.Drawing.Size(179, 20);
             this.txtMontant.TabIndex = 2;
-            this.txtMontant.Leave += new System.EventHandler(this.txtMontant_Leave);
+            this.txtMontant.TextChanged += new System.EventHandler(this.txtMontant_TextChanged_1);
             // 
             // txtCodePostal
             // 
             this.txtCodePostal.Location = new System.Drawing.Point(117, 131);
             this.txtCodePostal.Name = "txtCodePostal";
-            this.txtCodePostal.Size = new System.Drawing.Size(240, 20);
+            this.txtCodePostal.Size = new System.Drawing.Size(179, 20);
             this.txtCodePostal.TabIndex = 3;
-            this.txtCodePostal.Leave += new System.EventHandler(this.txtCodePostal_Leave);
+            this.txtCodePostal.TextChanged += new System.EventHandler(this.txtCodePostal_TextChanged);
             // 
             // btnValider
             // 
@@ -126,7 +131,7 @@ namespace ValidationSaisie
             // 
             // btnEffacer
             // 
-            this.btnEffacer.Location = new System.Drawing.Point(204, 181);
+            this.btnEffacer.Location = new System.Drawing.Point(256, 181);
             this.btnEffacer.Name = "btnEffacer";
             this.btnEffacer.Size = new System.Drawing.Size(153, 23);
             this.btnEffacer.TabIndex = 5;
@@ -134,11 +139,31 @@ namespace ValidationSaisie
             this.btnEffacer.UseVisualStyleBackColor = true;
             this.btnEffacer.Click += new System.EventHandler(this.btnEffacer_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            this.errorProvider2.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider2.Icon")));
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(325, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "(JJ/MM/AAAA)";
+            // 
             // FrmValidation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 228);
+            this.ClientSize = new System.Drawing.Size(421, 228);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEffacer);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtCodePostal);
@@ -154,9 +179,18 @@ namespace ValidationSaisie
             this.Name = "FrmValidation";
             this.Text = "Les contrôles";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmValidation_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        
+
+        private void TxtCodePostal_Leave(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void txtDate_Enter_1(object sender, EventArgs e)
@@ -176,6 +210,9 @@ namespace ValidationSaisie
         private System.Windows.Forms.TextBox txtCodePostal;
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.Button btnEffacer;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

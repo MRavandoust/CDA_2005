@@ -35,7 +35,7 @@ namespace ClassLibraryToolsVerification
         // ---------------  Verification du montant -----------------
         public static bool Montant(string _montant)
         {
-            Regex montantRegex = new Regex(@"^\d+\.(\d{2})$");
+            Regex montantRegex = new Regex(@"^\d+\,(\d{2})$");
             if (montantRegex.IsMatch(_montant))
                 return true;
             else
