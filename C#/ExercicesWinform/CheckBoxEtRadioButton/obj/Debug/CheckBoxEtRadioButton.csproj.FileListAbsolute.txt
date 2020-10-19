@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\bin\Debug\CheckBoxEtRadioButton.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\bin\Debug\CheckBoxEtRadioButton.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\bin\Debug\CheckBoxEtRadioButton.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\obj\Debug\CheckBoxEtRadioButton.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\obj\Debug\CheckBoxEtRadioButton.Form1.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\obj\Debug\CheckBoxEtRadioButton.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\obj\Debug\CheckBoxEtRadioButton.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\obj\Debug\CheckBoxEtRadioButton.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\obj\Debug\CheckBoxEtRadioButton.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CheckBoxEtRadioButton\obj\Debug\CheckBoxEtRadioButton.pdb
