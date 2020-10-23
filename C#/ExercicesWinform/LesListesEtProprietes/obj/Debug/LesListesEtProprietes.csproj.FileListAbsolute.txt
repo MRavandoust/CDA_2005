@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\bin\Debug\LesListesEtProprietes.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\bin\Debug\LesListesEtProprietes.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\bin\Debug\LesListesEtProprietes.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Debug\LesListesEtProprietes.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Debug\LesListesEtProprietes.LesListes.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Debug\LesListesEtProprietes.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Debug\LesListesEtProprietes.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Debug\LesListesEtProprietes.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Debug\LesListesEtProprietes.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Debug\LesListesEtProprietes.pdb

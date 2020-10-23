@@ -38,11 +38,7 @@ namespace CheckBoxEtRadioButton
                 
                 gBoxFond.Visible = true;
             }
-            else
-            {
-                chkBoxCouleurFond.Checked = false;
-                gBoxFond.Visible = false;
-            }
+            
             
         }
 

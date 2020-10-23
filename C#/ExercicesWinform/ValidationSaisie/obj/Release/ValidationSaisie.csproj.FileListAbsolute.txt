@@ -1,0 +1,15 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Release\ValidationSaisie.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Release\ValidationSaisie.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Release\ValidationSaisie.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Release\ClassLibraryFacture.dll
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Release\ClassLibraryToolsVerification.dll
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Release\ClassLibraryFacture.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\bin\Release\ClassLibraryToolsVerification.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.FrmValidation.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ValidationSaisie\obj\Release\ValidationSaisie.pdb
