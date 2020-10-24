@@ -32,20 +32,20 @@
             this.txtPhrase = new System.Windows.Forms.TextBox();
             this.lblResultat = new System.Windows.Forms.Label();
             this.gBChoix = new System.Windows.Forms.GroupBox();
-            this.chkBoxCouleurFond = new System.Windows.Forms.CheckBox();
-            this.chkBoxCouleurCaracteres = new System.Windows.Forms.CheckBox();
             this.chkBoxCasse = new System.Windows.Forms.CheckBox();
+            this.chkBoxCouleurCaracteres = new System.Windows.Forms.CheckBox();
+            this.chkBoxCouleurFond = new System.Windows.Forms.CheckBox();
             this.gBoxFond = new System.Windows.Forms.GroupBox();
-            this.gBoxCaracteres = new System.Windows.Forms.GroupBox();
-            this.gBoxCasse = new System.Windows.Forms.GroupBox();
-            this.rButtonRougeF = new System.Windows.Forms.RadioButton();
-            this.rButtonVertF = new System.Windows.Forms.RadioButton();
             this.rButtonBleuF = new System.Windows.Forms.RadioButton();
+            this.rButtonVertF = new System.Windows.Forms.RadioButton();
+            this.rButtonRougeF = new System.Windows.Forms.RadioButton();
+            this.gBoxCaracteres = new System.Windows.Forms.GroupBox();
+            this.rButtonNoirC = new System.Windows.Forms.RadioButton();
             this.rButtonRoogeC = new System.Windows.Forms.RadioButton();
             this.rButtonVertC = new System.Windows.Forms.RadioButton();
-            this.rButtonNoirC = new System.Windows.Forms.RadioButton();
-            this.rButtonMin = new System.Windows.Forms.RadioButton();
+            this.gBoxCasse = new System.Windows.Forms.GroupBox();
             this.rButtonMaj = new System.Windows.Forms.RadioButton();
+            this.rButtonMin = new System.Windows.Forms.RadioButton();
             this.gBChoix.SuspendLayout();
             this.gBoxFond.SuspendLayout();
             this.gBoxCaracteres.SuspendLayout();
@@ -72,6 +72,7 @@
             // lblResultat
             // 
             this.lblResultat.AutoSize = true;
+            this.lblResultat.BackColor = System.Drawing.SystemColors.Control;
             this.lblResultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultat.Location = new System.Drawing.Point(22, 129);
             this.lblResultat.Name = "lblResultat";
@@ -91,16 +92,16 @@
             this.gBChoix.TabStop = false;
             this.gBChoix.Text = "Choix";
             // 
-            // chkBoxCouleurFond
+            // chkBoxCasse
             // 
-            this.chkBoxCouleurFond.AutoSize = true;
-            this.chkBoxCouleurFond.Location = new System.Drawing.Point(19, 43);
-            this.chkBoxCouleurFond.Name = "chkBoxCouleurFond";
-            this.chkBoxCouleurFond.Size = new System.Drawing.Size(120, 20);
-            this.chkBoxCouleurFond.TabIndex = 0;
-            this.chkBoxCouleurFond.Text = "Couleur du fond";
-            this.chkBoxCouleurFond.UseVisualStyleBackColor = true;
-            this.chkBoxCouleurFond.CheckedChanged += new System.EventHandler(this.chkBoxCouleurFond_CheckedChanged);
+            this.chkBoxCasse.AutoSize = true;
+            this.chkBoxCasse.Location = new System.Drawing.Point(19, 96);
+            this.chkBoxCasse.Name = "chkBoxCasse";
+            this.chkBoxCasse.Size = new System.Drawing.Size(66, 20);
+            this.chkBoxCasse.TabIndex = 2;
+            this.chkBoxCasse.Text = "Casse";
+            this.chkBoxCasse.UseVisualStyleBackColor = true;
+            this.chkBoxCasse.CheckedChanged += new System.EventHandler(this.chkBoxCasse_CheckedChanged);
             // 
             // chkBoxCouleurCaracteres
             // 
@@ -113,16 +114,16 @@
             this.chkBoxCouleurCaracteres.UseVisualStyleBackColor = true;
             this.chkBoxCouleurCaracteres.CheckedChanged += new System.EventHandler(this.chkBoxCouleurCaracteres_CheckedChanged);
             // 
-            // chkBoxCasse
+            // chkBoxCouleurFond
             // 
-            this.chkBoxCasse.AutoSize = true;
-            this.chkBoxCasse.Location = new System.Drawing.Point(19, 96);
-            this.chkBoxCasse.Name = "chkBoxCasse";
-            this.chkBoxCasse.Size = new System.Drawing.Size(66, 20);
-            this.chkBoxCasse.TabIndex = 2;
-            this.chkBoxCasse.Text = "Casse";
-            this.chkBoxCasse.UseVisualStyleBackColor = true;
-            this.chkBoxCasse.CheckedChanged += new System.EventHandler(this.chkBoxCasse_CheckedChanged);
+            this.chkBoxCouleurFond.AutoSize = true;
+            this.chkBoxCouleurFond.Location = new System.Drawing.Point(19, 43);
+            this.chkBoxCouleurFond.Name = "chkBoxCouleurFond";
+            this.chkBoxCouleurFond.Size = new System.Drawing.Size(120, 20);
+            this.chkBoxCouleurFond.TabIndex = 0;
+            this.chkBoxCouleurFond.Text = "Couleur du fond";
+            this.chkBoxCouleurFond.UseVisualStyleBackColor = true;
+            this.chkBoxCouleurFond.CheckedChanged += new System.EventHandler(this.chkBoxCouleurFond_CheckedChanged);
             // 
             // gBoxFond
             // 
@@ -137,42 +138,17 @@
             this.gBoxFond.Text = "Fond";
             this.gBoxFond.Visible = false;
             // 
-            // gBoxCaracteres
+            // rButtonBleuF
             // 
-            this.gBoxCaracteres.Controls.Add(this.rButtonNoirC);
-            this.gBoxCaracteres.Controls.Add(this.rButtonRoogeC);
-            this.gBoxCaracteres.Controls.Add(this.rButtonVertC);
-            this.gBoxCaracteres.Location = new System.Drawing.Point(144, 233);
-            this.gBoxCaracteres.Name = "gBoxCaracteres";
-            this.gBoxCaracteres.Size = new System.Drawing.Size(116, 110);
-            this.gBoxCaracteres.TabIndex = 4;
-            this.gBoxCaracteres.TabStop = false;
-            this.gBoxCaracteres.Text = "Caractères";
-            this.gBoxCaracteres.Visible = false;
-            // 
-            // gBoxCasse
-            // 
-            this.gBoxCasse.Controls.Add(this.rButtonMaj);
-            this.gBoxCasse.Controls.Add(this.rButtonMin);
-            this.gBoxCasse.Location = new System.Drawing.Point(266, 267);
-            this.gBoxCasse.Name = "gBoxCasse";
-            this.gBoxCasse.Size = new System.Drawing.Size(116, 76);
-            this.gBoxCasse.TabIndex = 4;
-            this.gBoxCasse.TabStop = false;
-            this.gBoxCasse.Text = "Casse";
-            this.gBoxCasse.Visible = false;
-            // 
-            // rButtonRougeF
-            // 
-            this.rButtonRougeF.AutoSize = true;
-            this.rButtonRougeF.Location = new System.Drawing.Point(6, 21);
-            this.rButtonRougeF.Name = "rButtonRougeF";
-            this.rButtonRougeF.Size = new System.Drawing.Size(67, 20);
-            this.rButtonRougeF.TabIndex = 0;
-            this.rButtonRougeF.TabStop = true;
-            this.rButtonRougeF.Text = "Rouge";
-            this.rButtonRougeF.UseVisualStyleBackColor = true;
-            this.rButtonRougeF.CheckedChanged += new System.EventHandler(this.rButtonRougeF_CheckedChanged);
+            this.rButtonBleuF.AutoSize = true;
+            this.rButtonBleuF.Location = new System.Drawing.Point(6, 73);
+            this.rButtonBleuF.Name = "rButtonBleuF";
+            this.rButtonBleuF.Size = new System.Drawing.Size(53, 20);
+            this.rButtonBleuF.TabIndex = 0;
+            this.rButtonBleuF.TabStop = true;
+            this.rButtonBleuF.Text = "Bleu";
+            this.rButtonBleuF.UseVisualStyleBackColor = true;
+            this.rButtonBleuF.CheckedChanged += new System.EventHandler(this.rButtonBleuF_CheckedChanged);
             // 
             // rButtonVertF
             // 
@@ -186,17 +162,42 @@
             this.rButtonVertF.UseVisualStyleBackColor = true;
             this.rButtonVertF.CheckedChanged += new System.EventHandler(this.rButtonVertF_CheckedChanged);
             // 
-            // rButtonBleuF
+            // rButtonRougeF
             // 
-            this.rButtonBleuF.AutoSize = true;
-            this.rButtonBleuF.Location = new System.Drawing.Point(6, 73);
-            this.rButtonBleuF.Name = "rButtonBleuF";
-            this.rButtonBleuF.Size = new System.Drawing.Size(53, 20);
-            this.rButtonBleuF.TabIndex = 0;
-            this.rButtonBleuF.TabStop = true;
-            this.rButtonBleuF.Text = "Bleu";
-            this.rButtonBleuF.UseVisualStyleBackColor = true;
-            this.rButtonBleuF.CheckedChanged += new System.EventHandler(this.rButtonBleuF_CheckedChanged);
+            this.rButtonRougeF.AutoSize = true;
+            this.rButtonRougeF.Location = new System.Drawing.Point(6, 21);
+            this.rButtonRougeF.Name = "rButtonRougeF";
+            this.rButtonRougeF.Size = new System.Drawing.Size(67, 20);
+            this.rButtonRougeF.TabIndex = 0;
+            this.rButtonRougeF.TabStop = true;
+            this.rButtonRougeF.Text = "Rouge";
+            this.rButtonRougeF.UseVisualStyleBackColor = true;
+            this.rButtonRougeF.CheckedChanged += new System.EventHandler(this.rButtonRougeF_CheckedChanged);
+            // 
+            // gBoxCaracteres
+            // 
+            this.gBoxCaracteres.Controls.Add(this.rButtonNoirC);
+            this.gBoxCaracteres.Controls.Add(this.rButtonRoogeC);
+            this.gBoxCaracteres.Controls.Add(this.rButtonVertC);
+            this.gBoxCaracteres.Location = new System.Drawing.Point(144, 233);
+            this.gBoxCaracteres.Name = "gBoxCaracteres";
+            this.gBoxCaracteres.Size = new System.Drawing.Size(116, 110);
+            this.gBoxCaracteres.TabIndex = 4;
+            this.gBoxCaracteres.TabStop = false;
+            this.gBoxCaracteres.Text = "Caractères";
+            this.gBoxCaracteres.Visible = false;
+            // 
+            // rButtonNoirC
+            // 
+            this.rButtonNoirC.AutoSize = true;
+            this.rButtonNoirC.Location = new System.Drawing.Point(6, 73);
+            this.rButtonNoirC.Name = "rButtonNoirC";
+            this.rButtonNoirC.Size = new System.Drawing.Size(51, 20);
+            this.rButtonNoirC.TabIndex = 0;
+            this.rButtonNoirC.TabStop = true;
+            this.rButtonNoirC.Text = "Noir";
+            this.rButtonNoirC.UseVisualStyleBackColor = true;
+            this.rButtonNoirC.CheckedChanged += new System.EventHandler(this.rButtonNoirC_CheckedChanged);
             // 
             // rButtonRoogeC
             // 
@@ -222,29 +223,17 @@
             this.rButtonVertC.UseVisualStyleBackColor = true;
             this.rButtonVertC.CheckedChanged += new System.EventHandler(this.rButtonVertC_CheckedChanged);
             // 
-            // rButtonNoirC
+            // gBoxCasse
             // 
-            this.rButtonNoirC.AutoSize = true;
-            this.rButtonNoirC.Location = new System.Drawing.Point(6, 73);
-            this.rButtonNoirC.Name = "rButtonNoirC";
-            this.rButtonNoirC.Size = new System.Drawing.Size(51, 20);
-            this.rButtonNoirC.TabIndex = 0;
-            this.rButtonNoirC.TabStop = true;
-            this.rButtonNoirC.Text = "Noir";
-            this.rButtonNoirC.UseVisualStyleBackColor = true;
-            this.rButtonNoirC.CheckedChanged += new System.EventHandler(this.rButtonNoirC_CheckedChanged);
-            // 
-            // rButtonMin
-            // 
-            this.rButtonMin.AutoSize = true;
-            this.rButtonMin.Location = new System.Drawing.Point(9, 21);
-            this.rButtonMin.Name = "rButtonMin";
-            this.rButtonMin.Size = new System.Drawing.Size(93, 20);
-            this.rButtonMin.TabIndex = 0;
-            this.rButtonMin.TabStop = true;
-            this.rButtonMin.Text = "Minuscules";
-            this.rButtonMin.UseVisualStyleBackColor = true;
-            this.rButtonMin.CheckedChanged += new System.EventHandler(this.rButtonMin_CheckedChanged);
+            this.gBoxCasse.Controls.Add(this.rButtonMaj);
+            this.gBoxCasse.Controls.Add(this.rButtonMin);
+            this.gBoxCasse.Location = new System.Drawing.Point(266, 267);
+            this.gBoxCasse.Name = "gBoxCasse";
+            this.gBoxCasse.Size = new System.Drawing.Size(116, 76);
+            this.gBoxCasse.TabIndex = 4;
+            this.gBoxCasse.TabStop = false;
+            this.gBoxCasse.Text = "Casse";
+            this.gBoxCasse.Visible = false;
             // 
             // rButtonMaj
             // 
@@ -257,6 +246,18 @@
             this.rButtonMaj.Text = "Majuscules";
             this.rButtonMaj.UseVisualStyleBackColor = true;
             this.rButtonMaj.CheckedChanged += new System.EventHandler(this.rButtonMaj_CheckedChanged);
+            // 
+            // rButtonMin
+            // 
+            this.rButtonMin.AutoSize = true;
+            this.rButtonMin.Location = new System.Drawing.Point(9, 21);
+            this.rButtonMin.Name = "rButtonMin";
+            this.rButtonMin.Size = new System.Drawing.Size(93, 20);
+            this.rButtonMin.TabIndex = 0;
+            this.rButtonMin.TabStop = true;
+            this.rButtonMin.Text = "Minuscules";
+            this.rButtonMin.UseVisualStyleBackColor = true;
+            this.rButtonMin.CheckedChanged += new System.EventHandler(this.rButtonMin_CheckedChanged);
             // 
             // Form1
             // 
@@ -271,7 +272,7 @@
             this.Controls.Add(this.txtPhrase);
             this.Controls.Add(this.lblTitr);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "CheckBox st RadioButton";
             this.gBChoix.ResumeLayout(false);

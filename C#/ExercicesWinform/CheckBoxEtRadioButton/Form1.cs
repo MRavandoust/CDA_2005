@@ -17,20 +17,25 @@ namespace CheckBoxEtRadioButton
             InitializeComponent();
         }
 
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        string firstText = "";
         private void txtPhrase_TextChanged(object sender, EventArgs e)
         {
             lblResultat.Text = txtPhrase.Text;
             gBChoix.Enabled = true;
-            if(lblResultat.Text=="")
+            if (lblResultat.Text == "")
+            {
+                chkBoxCouleurFond.Checked = false;
+                chkBoxCouleurCaracteres.Checked = false;
+                chkBoxCasse.Checked = false;
                 gBChoix.Enabled = false;
-        }
+                gBoxFond.Visible = false;
+                gBoxCaracteres.Visible = false;
+                gBoxCasse.Visible = false;
 
+            }
+            firstText = lblResultat.Text;
+        }
+        
         private void chkBoxCouleurFond_CheckedChanged(object sender, EventArgs e)
         {
             if (chkBoxCouleurFond.Checked)
@@ -38,8 +43,17 @@ namespace CheckBoxEtRadioButton
                 
                 gBoxFond.Visible = true;
             }
-            
-            
+            else
+            {
+                
+                chkBoxCouleurFond.Checked = false;
+                gBoxFond.Visible = false;
+                rButtonRougeF.Checked = false;
+                rButtonVertF.Checked = false;
+                rButtonBleuF.Checked = false;
+                lblResultat.BackColor = Color.Empty;
+            }
+
         }
 
         private void chkBoxCouleurCaracteres_CheckedChanged(object sender, EventArgs e)
@@ -53,6 +67,10 @@ namespace CheckBoxEtRadioButton
             {
                 chkBoxCouleurCaracteres.Checked = false;
                 gBoxCaracteres.Visible = false;
+                rButtonRoogeC.Checked = false;
+                rButtonVertC.Checked = false;
+                rButtonNoirC.Checked = false;
+                lblResultat.ForeColor = Color.Black;
             }
         }
 
@@ -67,6 +85,10 @@ namespace CheckBoxEtRadioButton
             {
                 chkBoxCasse.Checked = false;
                 gBoxCasse.Visible = false;
+                rButtonMin.Checked = false;
+                rButtonMaj.Checked = false;
+                lblResultat.Text = firstText;
+
             }
         }
 

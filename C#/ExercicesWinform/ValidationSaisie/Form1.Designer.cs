@@ -177,6 +177,7 @@ namespace ValidationSaisie
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmValidation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Les contrôles";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmValidation_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

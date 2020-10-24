@@ -117,7 +117,7 @@ namespace ValidationSaisie
         // --------------------------------  Button de validation -----------------------------------------
         private void btnValider_Click(object sender, EventArgs e)
         {
-            if (txtNom.Text == "" || txtDate.Text == "" || txtMontant.Text == "" || txtCodePostal.Text == "")
+               if (txtNom.Text == "" || txtDate.Text == "" || txtMontant.Text == "" || txtCodePostal.Text == "")
             {
                 MessageBox.Show("Il faut remplir tout les champs!");
                 txtNom.Focus();
