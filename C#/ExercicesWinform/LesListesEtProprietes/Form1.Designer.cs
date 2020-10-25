@@ -34,7 +34,6 @@
             this.lblProprietes = new System.Windows.Forms.Label();
             this.txtNouvelElement = new System.Windows.Forms.TextBox();
             this.txtIndex = new System.Windows.Forms.TextBox();
-            this.txtListe = new System.Windows.Forms.TextBox();
             this.btnAjoutListe = new System.Windows.Forms.Button();
             this.btnSelectionner = new System.Windows.Forms.Button();
             this.btnViderListe = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.txtItemsCount = new System.Windows.Forms.TextBox();
             this.txtSelectedIndex = new System.Windows.Forms.TextBox();
             this.txtText = new System.Windows.Forms.TextBox();
+            this.listBoxLst = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblNouvelElement
@@ -91,7 +91,8 @@
             this.txtNouvelElement.Location = new System.Drawing.Point(18, 66);
             this.txtNouvelElement.Name = "txtNouvelElement";
             this.txtNouvelElement.Size = new System.Drawing.Size(214, 26);
-            this.txtNouvelElement.TabIndex = 1;
+            this.txtNouvelElement.TabIndex = 0;
+            this.txtNouvelElement.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNouvelElement_KeyPress);
             // 
             // txtIndex
             // 
@@ -99,14 +100,7 @@
             this.txtIndex.Name = "txtIndex";
             this.txtIndex.Size = new System.Drawing.Size(59, 26);
             this.txtIndex.TabIndex = 1;
-            // 
-            // txtListe
-            // 
-            this.txtListe.Location = new System.Drawing.Point(16, 233);
-            this.txtListe.Multiline = true;
-            this.txtListe.Name = "txtListe";
-            this.txtListe.Size = new System.Drawing.Size(214, 152);
-            this.txtListe.TabIndex = 1;
+            this.txtIndex.TextChanged += new System.EventHandler(this.txtIndex_TextChanged);
             // 
             // btnAjoutListe
             // 
@@ -116,6 +110,7 @@
             this.btnAjoutListe.TabIndex = 2;
             this.btnAjoutListe.Text = "Ajout Liste";
             this.btnAjoutListe.UseVisualStyleBackColor = true;
+            this.btnAjoutListe.Click += new System.EventHandler(this.btnAjoutListe_Click);
             // 
             // btnSelectionner
             // 
@@ -125,6 +120,7 @@
             this.btnSelectionner.TabIndex = 2;
             this.btnSelectionner.Text = "Séléctionner";
             this.btnSelectionner.UseVisualStyleBackColor = true;
+            this.btnSelectionner.Click += new System.EventHandler(this.btnSelectionner_Click);
             // 
             // btnViderListe
             // 
@@ -134,6 +130,7 @@
             this.btnViderListe.TabIndex = 2;
             this.btnViderListe.Text = "Vider la Liste";
             this.btnViderListe.UseVisualStyleBackColor = true;
+            this.btnViderListe.Click += new System.EventHandler(this.btnViderListe_Click);
             // 
             // lblItemsCount
             // 
@@ -186,11 +183,22 @@
             this.txtText.Size = new System.Drawing.Size(147, 26);
             this.txtText.TabIndex = 4;
             // 
+            // listBoxLst
+            // 
+            this.listBoxLst.FormattingEnabled = true;
+            this.listBoxLst.ItemHeight = 20;
+            this.listBoxLst.Location = new System.Drawing.Point(20, 232);
+            this.listBoxLst.Name = "listBoxLst";
+            this.listBoxLst.Size = new System.Drawing.Size(211, 144);
+            this.listBoxLst.TabIndex = 5;
+            this.listBoxLst.SelectedIndexChanged += new System.EventHandler(this.listBoxLst_SelectedIndexChanged);
+            // 
             // LesListes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 398);
+            this.Controls.Add(this.listBoxLst);
             this.Controls.Add(this.txtText);
             this.Controls.Add(this.txtSelectedIndex);
             this.Controls.Add(this.txtItemsCount);
@@ -201,7 +209,6 @@
             this.Controls.Add(this.btnSelectionner);
             this.Controls.Add(this.btnAjoutListe);
             this.Controls.Add(this.txtIndex);
-            this.Controls.Add(this.txtListe);
             this.Controls.Add(this.txtNouvelElement);
             this.Controls.Add(this.lblIndexElement);
             this.Controls.Add(this.lblProprietes);
@@ -210,7 +217,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LesListes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Les Listes et leurs propriétés";
+            this.Load += new System.EventHandler(this.LesListes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +233,6 @@
         private System.Windows.Forms.Label lblProprietes;
         private System.Windows.Forms.TextBox txtNouvelElement;
         private System.Windows.Forms.TextBox txtIndex;
-        private System.Windows.Forms.TextBox txtListe;
         private System.Windows.Forms.Button btnAjoutListe;
         private System.Windows.Forms.Button btnSelectionner;
         private System.Windows.Forms.Button btnViderListe;
@@ -234,6 +242,7 @@
         private System.Windows.Forms.TextBox txtItemsCount;
         private System.Windows.Forms.TextBox txtSelectedIndex;
         private System.Windows.Forms.TextBox txtText;
+        private System.Windows.Forms.ListBox listBoxLst;
     }
 }
 
