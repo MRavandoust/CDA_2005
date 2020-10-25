@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\bin\Debug\ListBoxComboBox.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\bin\Debug\ListBoxComboBox.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\bin\Debug\ListBoxComboBox.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\obj\Debug\ListBoxComboBox.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\obj\Debug\ListBoxComboBox.Form1.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\obj\Debug\ListBoxComboBox.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\obj\Debug\ListBoxComboBox.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\obj\Debug\ListBoxComboBox.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\obj\Debug\ListBoxComboBox.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ListBoxComboBox\obj\Debug\ListBoxComboBox.pdb
