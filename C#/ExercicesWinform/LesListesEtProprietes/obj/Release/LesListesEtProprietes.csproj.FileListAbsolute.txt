@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\bin\Release\LesListesEtProprietes.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\bin\Release\LesListesEtProprietes.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\bin\Release\LesListesEtProprietes.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Release\LesListesEtProprietes.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Release\LesListesEtProprietes.LesListes.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Release\LesListesEtProprietes.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Release\LesListesEtProprietes.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Release\LesListesEtProprietes.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Release\LesListesEtProprietes.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\LesListesEtProprietes\obj\Release\LesListesEtProprietes.pdb

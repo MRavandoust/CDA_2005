@@ -27,10 +27,18 @@ namespace LesListesEtProprietes
             }
             else
             {
-                listBoxLst.Items.Add(txtNouvelElement.Text);
-                txtNouvelElement.Text = "";
-                txtNouvelElement.Focus();
-                txtItemsCount.Text = listBoxLst.Items.Count.ToString();
+                if (listBoxLst.FindString(txtNouvelElement.Text) == -1)
+                {
+                    listBoxLst.Items.Add(txtNouvelElement.Text);
+                    txtNouvelElement.Text = "";
+                    txtNouvelElement.Focus();
+                    txtItemsCount.Text = listBoxLst.Items.Count.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("This word is alreedy exist in the list");
+                }
+                
             }
 
         }
@@ -42,11 +50,20 @@ namespace LesListesEtProprietes
 
                 if (txtNouvelElement.Text != "")
                 {
-                    listBoxLst.Items.Add(txtNouvelElement.Text);
-                    txtNouvelElement.Text = "";
-                    txtNouvelElement.Focus();
-                    e.Handled = true;
-                    txtItemsCount.Text = listBoxLst.Items.Count.ToString();
+                    if (listBoxLst.FindString(txtNouvelElement.Text) == -1)
+                    {
+                        listBoxLst.Items.Add(txtNouvelElement.Text);
+                        txtNouvelElement.Text = "";
+                        txtNouvelElement.Focus();
+                        e.Handled = true;
+                        txtItemsCount.Text = listBoxLst.Items.Count.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("This word is alreedy exist in the list");
+                        e.Handled = true;
+                    }
+                    
                 }
                 else
                 {

@@ -74,6 +74,7 @@
             this.comboSource.Size = new System.Drawing.Size(227, 24);
             this.comboSource.TabIndex = 0;
             this.comboSource.SelectedIndexChanged += new System.EventHandler(this.comboSource_SelectedIndexChanged);
+            this.comboSource.TextChanged += new System.EventHandler(this.comboSource_TextChanged);
             // 
             // listBoxCible
             // 
@@ -161,7 +162,7 @@
             this.Controls.Add(this.lblCible);
             this.Controls.Add(this.lblSource);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

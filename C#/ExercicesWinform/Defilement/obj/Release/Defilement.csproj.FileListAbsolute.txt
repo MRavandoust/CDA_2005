@@ -1,0 +1,9 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\bin\Release\Defilement.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\bin\Release\Defilement.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\bin\Release\Defilement.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Release\Defilement.Form1.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Release\Defilement.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Release\Defilement.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Release\Defilement.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Release\Defilement.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Release\Defilement.pdb
