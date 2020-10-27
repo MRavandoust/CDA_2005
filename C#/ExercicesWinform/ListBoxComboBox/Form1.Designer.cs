@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblSource = new System.Windows.Forms.Label();
             this.lblCible = new System.Windows.Forms.Label();
             this.comboSource = new System.Windows.Forms.ComboBox();
@@ -38,6 +39,8 @@
             this.btnGauche = new System.Windows.Forms.Button();
             this.btnBas = new System.Windows.Forms.Button();
             this.btnHaut = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSource
@@ -71,10 +74,11 @@
             "Espagne"});
             this.comboSource.Location = new System.Drawing.Point(11, 47);
             this.comboSource.Name = "comboSource";
-            this.comboSource.Size = new System.Drawing.Size(227, 24);
+            this.comboSource.Size = new System.Drawing.Size(218, 24);
             this.comboSource.TabIndex = 0;
             this.comboSource.SelectedIndexChanged += new System.EventHandler(this.comboSource_SelectedIndexChanged);
             this.comboSource.TextChanged += new System.EventHandler(this.comboSource_TextChanged);
+            this.comboSource.Click += new System.EventHandler(this.comboSource_Click);
             // 
             // listBoxCible
             // 
@@ -88,6 +92,7 @@
             // 
             // btnDroite
             // 
+            this.btnDroite.Enabled = false;
             this.btnDroite.Location = new System.Drawing.Point(258, 47);
             this.btnDroite.Name = "btnDroite";
             this.btnDroite.Size = new System.Drawing.Size(69, 24);
@@ -118,6 +123,7 @@
             // 
             // btnGauche
             // 
+            this.btnGauche.Enabled = false;
             this.btnGauche.Location = new System.Drawing.Point(258, 237);
             this.btnGauche.Name = "btnGauche";
             this.btnGauche.Size = new System.Drawing.Size(69, 24);
@@ -128,6 +134,7 @@
             // 
             // btnBas
             // 
+            this.btnBas.Enabled = false;
             this.btnBas.Image = global::ListBoxComboBox.Properties.Resources.Down;
             this.btnBas.Location = new System.Drawing.Point(461, 297);
             this.btnBas.Name = "btnBas";
@@ -138,6 +145,7 @@
             // 
             // btnHaut
             // 
+            this.btnHaut.Enabled = false;
             this.btnHaut.Image = global::ListBoxComboBox.Properties.Resources.Up1;
             this.btnHaut.Location = new System.Drawing.Point(416, 297);
             this.btnHaut.Name = "btnHaut";
@@ -145,6 +153,10 @@
             this.btnHaut.TabIndex = 6;
             this.btnHaut.UseVisualStyleBackColor = true;
             this.btnHaut.Click += new System.EventHandler(this.btnHaut_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -166,7 +178,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +196,7 @@
         private System.Windows.Forms.Button btnGauche;
         private System.Windows.Forms.Button btnHaut;
         private System.Windows.Forms.Button btnBas;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

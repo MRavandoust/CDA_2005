@@ -15,14 +15,6 @@ namespace ListBoxComboBox
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            btnDroite.Enabled = false;
-            btnHaut.Enabled = false;
-            btnGauche.Enabled = false;
-            btnBas.Enabled = false;
             if (comboSource.Items.Count == 0) btnDroiteAll.Enabled = false;
             if (listBoxCible.Items.Count == 0) btnGaucheAll.Enabled = false;
         }
@@ -49,9 +41,10 @@ namespace ListBoxComboBox
             btnGaucheAll.Enabled = true;
             if (comboSource.Items.Count == 0)
                 btnDroiteAll.Enabled = false;
-            else
-                btnDroite.Enabled = true;
+
+
         }
+
 
         private void btnDroiteAll_Click(object sender, EventArgs e)
         {
@@ -70,11 +63,12 @@ namespace ListBoxComboBox
         {
             if (listBoxCible.SelectedIndex != -1)
                 btnGauche.Enabled = true;
-            if (listBoxCible.SelectedIndex > 0)
+
+            if (listBoxCible.SelectedIndex > 0 && listBoxCible.SelectedIndex != -1)
                 btnHaut.Enabled = true;
             else
                 btnHaut.Enabled = false;
-            if (listBoxCible.SelectedIndex < listBoxCible.Items.Count - 1)
+            if (listBoxCible.SelectedIndex < listBoxCible.Items.Count - 1 && listBoxCible.SelectedIndex != -1)
                 btnBas.Enabled = true;
             else
                 btnBas.Enabled = false;
@@ -133,8 +127,34 @@ namespace ListBoxComboBox
 
         private void comboSource_TextChanged(object sender, EventArgs e)
         {
-            btnDroite.Enabled = true;
+            if (comboSource.FindStringExact(comboSource.Text) == -1)
+            {
+                errorProvider1.SetError(comboSource, "");
+            }
+            else
+            {
+                errorProvider1.SetError(comboSource, "Ce texte déjà existe dans la liste");
+            }
         }
 
+        private void comboSource_Click(object sender, EventArgs e)
+        {
+            if (comboSource.Text != "")
+            {
+                if (comboSource.FindStringExact(comboSource.Text) == -1 && listBoxCible.FindStringExact(comboSource.Text) == -1)
+                {
+                    comboSource.Items.Add(comboSource.Text);
+                    comboSource.Text = "";
+                    comboSource.Focus();
+                }
+                else
+                {
+                    comboSource.Text = "";
+                    comboSource.Focus();
+                }
+
+            }
+
+        }
     }
 }

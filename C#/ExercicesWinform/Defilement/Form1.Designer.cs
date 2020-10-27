@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblRouge = new System.Windows.Forms.Label();
             this.lblVert = new System.Windows.Forms.Label();
             this.lblBleu = new System.Windows.Forms.Label();
@@ -42,7 +41,8 @@
             this.lblColorVert = new System.Windows.Forms.Label();
             this.lblColorBleu = new System.Windows.Forms.Label();
             this.lblFinalColor = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblCouleurFin = new System.Windows.Forms.Label();
+            this.lblCouleurFinal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownRouge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownBleu)).BeginInit();
@@ -77,8 +77,9 @@
             // 
             // hScrollRouge
             // 
+            this.hScrollRouge.LargeChange = 1;
             this.hScrollRouge.Location = new System.Drawing.Point(88, 56);
-            this.hScrollRouge.Maximum = 264;
+            this.hScrollRouge.Maximum = 255;
             this.hScrollRouge.Name = "hScrollRouge";
             this.hScrollRouge.Size = new System.Drawing.Size(202, 27);
             this.hScrollRouge.TabIndex = 1;
@@ -86,8 +87,9 @@
             // 
             // hScrollVert
             // 
+            this.hScrollVert.LargeChange = 1;
             this.hScrollVert.Location = new System.Drawing.Point(88, 105);
-            this.hScrollVert.Maximum = 264;
+            this.hScrollVert.Maximum = 255;
             this.hScrollVert.Name = "hScrollVert";
             this.hScrollVert.Size = new System.Drawing.Size(202, 27);
             this.hScrollVert.TabIndex = 1;
@@ -95,8 +97,9 @@
             // 
             // hScrollBleu
             // 
+            this.hScrollBleu.LargeChange = 1;
             this.hScrollBleu.Location = new System.Drawing.Point(88, 147);
-            this.hScrollBleu.Maximum = 264;
+            this.hScrollBleu.Maximum = 255;
             this.hScrollBleu.Name = "hScrollBleu";
             this.hScrollBleu.Size = new System.Drawing.Size(202, 27);
             this.hScrollBleu.TabIndex = 1;
@@ -169,17 +172,30 @@
             this.lblFinalColor.Size = new System.Drawing.Size(477, 94);
             this.lblFinalColor.TabIndex = 4;
             // 
-            // timer1
+            // lblCouleurFin
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.lblCouleurFin.AutoSize = true;
+            this.lblCouleurFin.Location = new System.Drawing.Point(18, 316);
+            this.lblCouleurFin.Name = "lblCouleurFin";
+            this.lblCouleurFin.Size = new System.Drawing.Size(116, 16);
+            this.lblCouleurFin.TabIndex = 5;
+            this.lblCouleurFin.Text = "Code de couleur : ";
+            // 
+            // lblCouleurFinal
+            // 
+            this.lblCouleurFinal.AutoSize = true;
+            this.lblCouleurFinal.Location = new System.Drawing.Point(131, 316);
+            this.lblCouleurFinal.Name = "lblCouleurFinal";
+            this.lblCouleurFinal.Size = new System.Drawing.Size(0, 16);
+            this.lblCouleurFinal.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 333);
+            this.ClientSize = new System.Drawing.Size(517, 341);
+            this.Controls.Add(this.lblCouleurFinal);
+            this.Controls.Add(this.lblCouleurFin);
             this.Controls.Add(this.lblFinalColor);
             this.Controls.Add(this.lblColorBleu);
             this.Controls.Add(this.lblColorVert);
@@ -194,11 +210,10 @@
             this.Controls.Add(this.lblVert);
             this.Controls.Add(this.lblRouge);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownRouge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownVert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownBleu)).EndInit();
@@ -222,7 +237,8 @@
         private System.Windows.Forms.Label lblColorVert;
         private System.Windows.Forms.Label lblColorBleu;
         private System.Windows.Forms.Label lblFinalColor;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblCouleurFin;
+        private System.Windows.Forms.Label lblCouleurFinal;
     }
 }
 

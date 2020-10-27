@@ -20,6 +20,12 @@ namespace LesListesEtProprietes
 
         private void btnAjoutListe_Click(object sender, EventArgs e)
         {
+            AjoutText();
+            btnAjoutListe.Enabled = false;
+        }
+
+        private void AjoutText()
+        {
             if (txtNouvelElement.Text == "")
             {
                 MessageBox.Show("Ce Champs ne pas être vide");
@@ -27,20 +33,19 @@ namespace LesListesEtProprietes
             }
             else
             {
-                if (listBoxLst.FindString(txtNouvelElement.Text) == -1)
+                if (listBoxLst.FindStringExact(txtNouvelElement.Text) == -1)
                 {
                     listBoxLst.Items.Add(txtNouvelElement.Text);
                     txtNouvelElement.Text = "";
                     txtNouvelElement.Focus();
                     txtItemsCount.Text = listBoxLst.Items.Count.ToString();
+                    btnViderListe.Enabled = true;
                 }
                 else
                 {
                     MessageBox.Show("This word is alreedy exist in the list");
                 }
-                
             }
-
         }
 
         private void txtNouvelElement_KeyPress(object sender, KeyPressEventArgs e)
@@ -50,20 +55,21 @@ namespace LesListesEtProprietes
 
                 if (txtNouvelElement.Text != "")
                 {
-                    if (listBoxLst.FindString(txtNouvelElement.Text) == -1)
+                    if (listBoxLst.FindStringExact(txtNouvelElement.Text) == -1)
                     {
                         listBoxLst.Items.Add(txtNouvelElement.Text);
                         txtNouvelElement.Text = "";
                         txtNouvelElement.Focus();
                         e.Handled = true;
                         txtItemsCount.Text = listBoxLst.Items.Count.ToString();
+                        btnViderListe.Enabled = true;
+                        btnAjoutListe.Enabled = false;
                     }
                     else
                     {
                         MessageBox.Show("This word is alreedy exist in the list");
                         e.Handled = true;
                     }
-                    
                 }
                 else
                 {
@@ -83,11 +89,10 @@ namespace LesListesEtProprietes
                 listBoxLst.SelectedIndex = index;
                 txtIndex.Text = "";
                 txtIndex.Focus();
-
             }
             else
             {
-                MessageBox.Show("L'index doit être moin de " + listBoxLst.Items.Count.ToString()) ;
+                MessageBox.Show("L'index doit être moin de " + listBoxLst.Items.Count.ToString());
                 txtIndex.Text = "";
                 txtIndex.Focus();
             }
@@ -107,21 +112,42 @@ namespace LesListesEtProprietes
             txtSelectedIndex.Text = "";
             txtText.Text = "";
             txtItemsCount.Text = "";
-
+            txtNouvelElement.Text = "";
+            btnViderListe.Enabled = false;
+            
         }
 
-        private void LesListes_Load(object sender, EventArgs e)
-        {
-            btnSelectionner.Enabled = false;
-        }
 
         private void txtIndex_TextChanged(object sender, EventArgs e)
         {
+            int index;
             Regex isNumber = new Regex(@"^\d$");
-            
-            if (isNumber.IsMatch(txtIndex.Text))
-                    btnSelectionner.Enabled = true;
-            if (txtIndex.Text == "") btnSelectionner.Enabled = false;
+            if (txtIndex.Text == "")
+            {
+                index = -1;
+            }
+            else
+                index = Convert.ToInt32(txtIndex.Text);
+            if (isNumber.IsMatch(txtIndex.Text) && index < listBoxLst.Items.Count)
+            {
+                btnSelectionner.Enabled = true;
+                errorProvider1.SetError(txtIndex, "");
+            }
+            else
+            {
+                errorProvider1.SetError(txtIndex, "L'index doit être un chiffr et mins de " + listBoxLst.Items.Count.ToString());
+            }
+
+            if (txtIndex.Text == "")
+            {
+                errorProvider1.SetError(txtIndex, "");
+                btnSelectionner.Enabled = false;
+            }
+        }
+
+        private void txtNouvelElement_TextChanged(object sender, EventArgs e)
+        {
+            btnAjoutListe.Enabled = true;
         }
     }
 }
