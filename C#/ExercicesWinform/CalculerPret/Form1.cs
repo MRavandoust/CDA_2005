@@ -51,8 +51,30 @@ namespace CalculerPret
 
         //--- Calculer le montant de remboursement et mise à jour de la vue en chengement de la périodicité -------
         private void listBoxPeriodicite_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {  
             MiseAJourApp();
+            if(Convert.ToInt32(lblScroll.Text) <12)
+            {
+                switch (MoisDeDuree())
+                {
+                    case 1:
+                        lblScroll.Text = "1";
+                        break;
+                    case 2:
+                        lblScroll.Text = "2";
+                        break;
+                    case 3:
+                        lblScroll.Text = "3";
+                        break;
+                    case 6:
+                        lblScroll.Text = "6";
+                        break;
+                    case 12:
+                        lblScroll.Text = "12";
+                        break;
+                }
+            }
+            
             CalculeRemboursement();
         }
 
