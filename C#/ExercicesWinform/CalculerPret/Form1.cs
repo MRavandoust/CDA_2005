@@ -42,6 +42,24 @@ namespace CalculerPret
         //----------- Calculer le montant de remboursement et mise à jour de la vue par défilement -------------
         private void hScrollBarDureeMois_Scroll(object sender, ScrollEventArgs e)
         {
+            switch (MoisDeDuree())
+            {
+                case 1:
+                    hScrollBarDureeMois.LargeChange = 1;
+                    break;
+                case 2:
+                    hScrollBarDureeMois.LargeChange = 2;
+                    break;
+                case 3:
+                    hScrollBarDureeMois.LargeChange = 3;
+                    break;
+                case 6:
+                    hScrollBarDureeMois.LargeChange = 6;
+                    break;
+                case 12:
+                    hScrollBarDureeMois.LargeChange = 12;
+                    break;
+            }
             lblScroll.Text = ChiffreDuree();
             MiseAJourApp();
             CalculeRemboursement();
@@ -244,7 +262,5 @@ namespace CalculerPret
             txtCapital.Text = "00";
             listBoxPeriodicite.SelectedIndex = 0;
         }
-
-        
     }
 }
