@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculerPret", "CalculerPre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Synthese", "Synthese", "{4AAA972E-7E9B-411D-9D48-E75F8AA9F34A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCalculPret", "ClassLibraryCalculPret\ClassLibraryCalculPret.csproj", "{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{252932EC-7E14-4CF9-A007-37E66ECAD892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252932EC-7E14-4CF9-A007-37E66ECAD892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252932EC-7E14-4CF9-A007-37E66ECAD892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +113,7 @@ Global
 		{ABF83CF8-FB8F-416D-978B-50273EB86818} = {D7891986-C0A6-4E6A-B2FD-DD2099159ABB}
 		{252932EC-7E14-4CF9-A007-37E66ECAD892} = {4AAA972E-7E9B-411D-9D48-E75F8AA9F34A}
 		{4AAA972E-7E9B-411D-9D48-E75F8AA9F34A} = {D7891986-C0A6-4E6A-B2FD-DD2099159ABB}
+		{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1} = {4AAA972E-7E9B-411D-9D48-E75F8AA9F34A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18FB61CE-8F67-48AB-A760-0D1F1BD00CD1}

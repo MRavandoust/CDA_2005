@@ -1,0 +1,13 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\bin\Debug\CalculerPret.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\bin\Debug\CalculerPret.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\bin\Debug\CalculerPret.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.FormEmprunt.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\bin\Debug\ClassLibraryCalculPret.dll
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\bin\Debug\ClassLibraryCalculPret.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\obj\Debug\CalculerPret.csproj.CopyComplete
