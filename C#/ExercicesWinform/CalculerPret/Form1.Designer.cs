@@ -49,6 +49,8 @@
             this.lblMontant = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblArchive = new System.Windows.Forms.Label();
+            this.cbArchive = new System.Windows.Forms.ComboBox();
             this.gBoxTauxDInteret.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -57,7 +59,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(21, 37);
+            this.lblName.Location = new System.Drawing.Point(21, 75);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(37, 16);
             this.lblName.TabIndex = 0;
@@ -66,7 +68,7 @@
             // lblCapital
             // 
             this.lblCapital.AutoSize = true;
-            this.lblCapital.Location = new System.Drawing.Point(18, 89);
+            this.lblCapital.Location = new System.Drawing.Point(21, 120);
             this.lblCapital.Name = "lblCapital";
             this.lblCapital.Size = new System.Drawing.Size(110, 16);
             this.lblCapital.TabIndex = 0;
@@ -74,7 +76,7 @@
             // 
             // lblDuree
             // 
-            this.lblDuree.Location = new System.Drawing.Point(18, 142);
+            this.lblDuree.Location = new System.Drawing.Point(21, 159);
             this.lblDuree.Name = "lblDuree";
             this.lblDuree.Size = new System.Drawing.Size(130, 40);
             this.lblDuree.TabIndex = 0;
@@ -91,7 +93,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(159, 34);
+            this.txtName.Location = new System.Drawing.Point(162, 72);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(176, 22);
             this.txtName.TabIndex = 0;
@@ -99,7 +101,7 @@
             // 
             // txtCapital
             // 
-            this.txtCapital.Location = new System.Drawing.Point(159, 83);
+            this.txtCapital.Location = new System.Drawing.Point(162, 114);
             this.txtCapital.Name = "txtCapital";
             this.txtCapital.Size = new System.Drawing.Size(176, 22);
             this.txtCapital.TabIndex = 1;
@@ -125,7 +127,7 @@
             // lblScroll
             // 
             this.lblScroll.AutoSize = true;
-            this.lblScroll.Location = new System.Drawing.Point(172, 145);
+            this.lblScroll.Location = new System.Drawing.Point(175, 162);
             this.lblScroll.Name = "lblScroll";
             this.lblScroll.Size = new System.Drawing.Size(0, 16);
             this.lblScroll.TabIndex = 0;
@@ -133,12 +135,13 @@
             // hScrollBarDureeMois
             // 
             this.hScrollBarDureeMois.LargeChange = 1;
-            this.hScrollBarDureeMois.Location = new System.Drawing.Point(224, 145);
+            this.hScrollBarDureeMois.Location = new System.Drawing.Point(227, 162);
             this.hScrollBarDureeMois.Maximum = 180;
+            this.hScrollBarDureeMois.Minimum = 1;
             this.hScrollBarDureeMois.Name = "hScrollBarDureeMois";
             this.hScrollBarDureeMois.Size = new System.Drawing.Size(194, 26);
             this.hScrollBarDureeMois.TabIndex = 3;
-            this.hScrollBarDureeMois.Value = 1;
+            this.hScrollBarDureeMois.Value = 3;
             this.hScrollBarDureeMois.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarDureeMois_Scroll);
             // 
             // gBoxTauxDInteret
@@ -245,11 +248,30 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
+            // lblArchive
+            // 
+            this.lblArchive.AutoSize = true;
+            this.lblArchive.Location = new System.Drawing.Point(21, 29);
+            this.lblArchive.Name = "lblArchive";
+            this.lblArchive.Size = new System.Drawing.Size(53, 16);
+            this.lblArchive.TabIndex = 0;
+            this.lblArchive.Text = "Archive";
+            // 
+            // cbArchive
+            // 
+            this.cbArchive.FormattingEnabled = true;
+            this.cbArchive.Location = new System.Drawing.Point(162, 26);
+            this.cbArchive.Name = "cbArchive";
+            this.cbArchive.Size = new System.Drawing.Size(174, 24);
+            this.cbArchive.TabIndex = 6;
+            this.cbArchive.SelectedIndexChanged += new System.EventHandler(this.cbArchive_SelectedIndexChanged);
+            // 
             // FormEmprunt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 342);
+            this.Controls.Add(this.cbArchive);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.gBoxTauxDInteret);
@@ -264,12 +286,14 @@
             this.Controls.Add(this.lblMontant);
             this.Controls.Add(this.lblNombreDRembours);
             this.Controls.Add(this.lblRemboursement);
+            this.Controls.Add(this.lblArchive);
             this.Controls.Add(this.lblName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEmprunt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emprunts";
+            this.Load += new System.EventHandler(this.FormEmprunt_Load);
             this.gBoxTauxDInteret.ResumeLayout(false);
             this.gBoxTauxDInteret.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -301,6 +325,8 @@
         private System.Windows.Forms.Label lblMontant;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ComboBox cbArchive;
+        private System.Windows.Forms.Label lblArchive;
     }
 }
 
