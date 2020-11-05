@@ -51,6 +51,9 @@
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblArchive = new System.Windows.Forms.Label();
             this.cbArchive = new System.Windows.Forms.ComboBox();
+            this.lblRemboursMnotant = new System.Windows.Forms.Label();
+            this.lblRemboursTotal = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.gBoxTauxDInteret.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -216,7 +219,7 @@
             // 
             this.lblNombreDRembours.AutoSize = true;
             this.lblNombreDRembours.ForeColor = System.Drawing.Color.Red;
-            this.lblNombreDRembours.Location = new System.Drawing.Point(446, 243);
+            this.lblNombreDRembours.Location = new System.Drawing.Point(591, 248);
             this.lblNombreDRembours.Name = "lblNombreDRembours";
             this.lblNombreDRembours.Size = new System.Drawing.Size(0, 16);
             this.lblNombreDRembours.TabIndex = 0;
@@ -224,18 +227,18 @@
             // lblRemboursement
             // 
             this.lblRemboursement.AutoSize = true;
-            this.lblRemboursement.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemboursement.Location = new System.Drawing.Point(513, 243);
+            this.lblRemboursement.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemboursement.Location = new System.Drawing.Point(363, 246);
             this.lblRemboursement.Name = "lblRemboursement";
-            this.lblRemboursement.Size = new System.Drawing.Size(141, 18);
+            this.lblRemboursement.Size = new System.Drawing.Size(207, 18);
             this.lblRemboursement.TabIndex = 0;
-            this.lblRemboursement.Text = "Remboursements";
+            this.lblRemboursement.Text = "Nombre de remboursements :";
             // 
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
             this.lblMontant.ForeColor = System.Drawing.Color.Red;
-            this.lblMontant.Location = new System.Drawing.Point(540, 282);
+            this.lblMontant.Location = new System.Drawing.Point(591, 280);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(0, 16);
             this.lblMontant.TabIndex = 0;
@@ -266,6 +269,35 @@
             this.cbArchive.TabIndex = 6;
             this.cbArchive.SelectedIndexChanged += new System.EventHandler(this.cbArchive_SelectedIndexChanged);
             // 
+            // lblRemboursMnotant
+            // 
+            this.lblRemboursMnotant.AutoSize = true;
+            this.lblRemboursMnotant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemboursMnotant.Location = new System.Drawing.Point(394, 278);
+            this.lblRemboursMnotant.Name = "lblRemboursMnotant";
+            this.lblRemboursMnotant.Size = new System.Drawing.Size(176, 18);
+            this.lblRemboursMnotant.TabIndex = 0;
+            this.lblRemboursMnotant.Text = "Chaque remboursement :";
+            // 
+            // lblRemboursTotal
+            // 
+            this.lblRemboursTotal.AutoSize = true;
+            this.lblRemboursTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemboursTotal.Location = new System.Drawing.Point(412, 309);
+            this.lblRemboursTotal.Name = "lblRemboursTotal";
+            this.lblRemboursTotal.Size = new System.Drawing.Size(159, 18);
+            this.lblRemboursTotal.TabIndex = 0;
+            this.lblRemboursTotal.Text = "Remboursement total :";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.ForeColor = System.Drawing.Color.Red;
+            this.lblTotal.Location = new System.Drawing.Point(591, 311);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 16);
+            this.lblTotal.TabIndex = 0;
+            // 
             // FormEmprunt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,7 +316,10 @@
             this.Controls.Add(this.lblCapital);
             this.Controls.Add(this.lblScroll);
             this.Controls.Add(this.lblMontant);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblNombreDRembours);
+            this.Controls.Add(this.lblRemboursTotal);
+            this.Controls.Add(this.lblRemboursMnotant);
             this.Controls.Add(this.lblRemboursement);
             this.Controls.Add(this.lblArchive);
             this.Controls.Add(this.lblName);
@@ -327,6 +362,9 @@
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ComboBox cbArchive;
         private System.Windows.Forms.Label lblArchive;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblRemboursTotal;
+        private System.Windows.Forms.Label lblRemboursMnotant;
     }
 }
 

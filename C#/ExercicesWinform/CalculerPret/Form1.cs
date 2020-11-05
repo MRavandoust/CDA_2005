@@ -53,6 +53,8 @@ namespace CalculerPret
             lblNombreDRembours.Text = cp.NombreDRemboursement().ToString();
             CalculTaux();
             lblMontant.Text = cp.MontanDRemboursement();
+            double montant = cp.Capital * (cp.Taux / (1 - Math.Pow((1 + cp.Taux), -cp.NombreDRemboursement())));
+            lblTotal.Text = (cp.NombreDRemboursement() * montant).ToString("N")  + "€";
         }
 
 
