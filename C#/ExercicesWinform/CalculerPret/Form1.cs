@@ -311,7 +311,6 @@ namespace CalculerPret
         {
             string filePath = @"D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\emprunt.txt";
             List<string> emprunts = new List<string>();
-            //List<Pret> pret = new List<Pret>();
             emprunts = File.ReadAllLines(filePath).ToList();
             foreach (string emprunt in emprunts)
             {

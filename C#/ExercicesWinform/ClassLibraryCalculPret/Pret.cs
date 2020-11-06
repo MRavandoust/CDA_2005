@@ -18,6 +18,15 @@ namespace ClassLibraryCalculPret
 
 
 
+        private enum Periode
+        {
+            Mensuelle = 1,
+            Bimestrielle = 2,
+            Trimestrielle = 3,
+            Semestrielle = 6,
+            Annuelle = 12
+        }
+
         /// <summary>
         /// -----------------------Les properties ----------------------------------------------
         /// </summary>
@@ -38,7 +47,7 @@ namespace ClassLibraryCalculPret
         {
             Name = "";
             Capital = 00;
-            Periodicite = "Mensuelle";
+            Periodicite = Periode.Mensuelle.ToString();
             DureeEnMois = 1;
             Taux = 7;
         }
@@ -73,7 +82,7 @@ namespace ClassLibraryCalculPret
         /// <returns></returns>
         public int NombreDRemboursement()
         {
-                return DureeEnMois / NombreDeMoisDePeriodicite();
+            return DureeEnMois / NombreDeMoisDePeriodicite();
         }
 
 
@@ -90,7 +99,7 @@ namespace ClassLibraryCalculPret
         }
 
 
-
+        
 
         /// <summary>
         /// La méthode de claculer le nombre de mois selon la périodicité -----------------------------
@@ -102,19 +111,19 @@ namespace ClassLibraryCalculPret
             switch (this.Periodicite)
             {
                 case "Mensuelle":
-                    n = 1;
+                    n = (int)Periode.Mensuelle;
                     break;
                 case "Bimestrielle":
-                    n = 2;
+                    n = (int)Periode.Bimestrielle;
                     break;
                 case "Trimestrielle":
-                    n = 3;
+                    n = (int)Periode.Trimestrielle;
                     break;
                 case "Semestrielle":
-                    n = 6;
+                    n = (int)Periode.Semestrielle;
                     break;
                 case "Annuelle":
-                    n = 12;
+                    n = (int)Periode.Annuelle;
                     break;
                 default:
                     n = 1;
