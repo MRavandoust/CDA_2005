@@ -183,6 +183,7 @@ namespace ToutEmbal
             {
                 childForm.Close();
             }
+            toolStripStatusLabelSIdentifier.Text = fermerToutToolStripMenuItem.Text;
         }
 
         private void arrangeWindows(object sender, EventArgs e)
