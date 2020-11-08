@@ -1,6 +1,6 @@
 ﻿namespace Defilement
 {
-    partial class Form1
+    partial class FrmDefilement
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

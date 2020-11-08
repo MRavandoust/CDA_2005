@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CheckBoxEtRadioButton
 {
-    public partial class Form1 : Form
+    public partial class FrmCheckBox : Form
     {
-        public Form1()
+        public FrmCheckBox()
         {
             InitializeComponent();
+        }
+        public FrmCheckBox(string msg)
+        {
+            InitializeComponent();
+            txtPhrase.Text = msg;
         }
 
         string firstText = "";
@@ -130,6 +135,11 @@ namespace CheckBoxEtRadioButton
         private void rButtonMaj_CheckedChanged(object sender, EventArgs e)
         {
             lblResultat.Text = lblResultat.Text.ToUpper();
+        }
+
+        private void FrmCheckBox_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

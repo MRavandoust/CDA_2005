@@ -1,5 +1,4 @@
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.csprojAssemblyReference.cache
-D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.Form1.resources
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.Properties.Resources.resources
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.csproj.GenerateResource.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.csproj.CoreCompileInputs.cache
@@ -8,3 +7,4 @@ D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\bin\Debug\Calculatrice.exe
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\bin\Debug\Calculatrice.pdb
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.exe
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Calculatrice\obj\Debug\Calculatrice.FrmCalculatrice.resources

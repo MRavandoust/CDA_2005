@@ -1,0 +1,14 @@
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\bin\Debug\Saisie.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\bin\Debug\Saisie.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\bin\Debug\Saisie.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\bin\Debug\CheckBoxEtRadioButton.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\bin\Debug\CheckBoxEtRadioButton.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\bin\Debug\CheckBoxEtRadioButton.exe.config
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.FrmSaisie.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.exe
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Saisie\obj\Debug\Saisie.pdb

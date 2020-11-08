@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Defilement
 {
-    public partial class Form1 : Form
+    public partial class FrmDefilement : Form
     {
         private Color couleurChoisie;
-        public Form1()
+        public FrmDefilement()
         {
             InitializeComponent();
             couleurChoisie = Color.FromArgb(0, 0, 0);

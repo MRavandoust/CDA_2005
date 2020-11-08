@@ -1,6 +1,6 @@
 ﻿namespace Calculatrice
 {
-    partial class Form1
+    partial class FrmCalculatrice
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -46,7 +46,7 @@
             // btnCalculer
             // 
             this.btnCalculer.Location = new System.Drawing.Point(194, 241);
-            this.btnCalculer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalculer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalculer.Name = "btnCalculer";
             this.btnCalculer.Size = new System.Drawing.Size(104, 37);
             this.btnCalculer.TabIndex = 0;
@@ -57,11 +57,11 @@
             // btnValider
             // 
             this.btnValider.Location = new System.Drawing.Point(29, 241);
-            this.btnValider.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnValider.Margin = new System.Windows.Forms.Padding(2);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(104, 37);
             this.btnValider.TabIndex = 2;
-            this.btnValider.Text = "Valider";
+            this.btnValider.Text = "Vider";
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -176,7 +176,7 @@
             this.txtAffichage.Size = new System.Drawing.Size(269, 73);
             this.txtAffichage.TabIndex = 4;
             // 
-            // Form1
+            // FrmCalculatrice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,8 +194,9 @@
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.btnCalculer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FrmCalculatrice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Additionneur";
             this.Load += new System.EventHandler(this.Additionneur_Load);
             this.ResumeLayout(false);

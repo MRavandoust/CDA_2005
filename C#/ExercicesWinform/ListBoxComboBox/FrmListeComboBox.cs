@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ListBoxComboBox
 {
-    public partial class Form1 : Form
+    public partial class FrmListeComboBox : Form
     {
-        public Form1()
+        public FrmListeComboBox()
         {
             InitializeComponent();
             if (comboSource.Items.Count == 0) btnDroiteAll.Enabled = false;
