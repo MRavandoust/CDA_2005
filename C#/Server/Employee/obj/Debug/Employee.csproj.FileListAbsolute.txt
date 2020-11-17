@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\Server\Employee\bin\Debug\Employee.exe.config
+D:\GitHub\CDA_2005\C#\Server\Employee\bin\Debug\Employee.exe
+D:\GitHub\CDA_2005\C#\Server\Employee\bin\Debug\Employee.pdb
+D:\GitHub\CDA_2005\C#\Server\Employee\obj\Debug\Employee.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Server\Employee\obj\Debug\Employee.Frm_Employee.resources
+D:\GitHub\CDA_2005\C#\Server\Employee\obj\Debug\Employee.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\Server\Employee\obj\Debug\Employee.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\Server\Employee\obj\Debug\Employee.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Server\Employee\obj\Debug\Employee.exe
+D:\GitHub\CDA_2005\C#\Server\Employee\obj\Debug\Employee.pdb

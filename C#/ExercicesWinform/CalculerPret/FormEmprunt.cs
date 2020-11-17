@@ -16,13 +16,19 @@ namespace CalculerPret
     public partial class FormEmprunt : Form
     {
         private Pret cp;
+        string filePath = Path.GetTempPath() + "\\emprunt.txt";
+
 
         public FormEmprunt()
         {
             InitializeComponent();
             cp = new Pret();
+            if (!File.Exists(Path.GetTempPath() + "\\emprunt.txt"))
+                File.Create(Path.GetTempPath() + "\\emprunt.txt").Dispose();
             MettreAJourLIHM();
         }
+
+        
 
         public FormEmprunt(Pret _pretAModifier)
         {
@@ -44,15 +50,15 @@ namespace CalculerPret
             if(cp.Taux == 7) radioButton7.Checked = true;
             if(cp.Taux == 8) radioButton8.Checked = true;
             if(cp.Taux == 9) radioButton9.Checked = true;
-            lblMontant.Text = cp.MontanDRemboursement();
+            lblMontant.Text = cp.MontanDRemboursement().ToString();
             
             //configure le scrollbar en fct de la periodicite
             lblScroll.Text = ChiffreDuree();
 
             //mise a jour des resultats
-            lblNombreDRembours.Text = cp.NombreDRemboursement().ToString();
+            lblNombreDRembours.Text = cp.NombreDRemboursement().ToString("N");
             CalculTaux();
-            lblMontant.Text = cp.MontanDRemboursement();
+            lblMontant.Text = cp.MontanDRemboursement().ToString("N");
             double montant = cp.Capital * (cp.Taux / (1 - Math.Pow((1 + cp.Taux), -cp.NombreDRemboursement())));
             lblTotal.Text = (cp.NombreDRemboursement() * montant).ToString("N")  + "€";
         }
@@ -223,9 +229,9 @@ namespace CalculerPret
             }
             else
             {
-                //-----------  Enregistrer les informations de la forme dans le fochier texte ------
+                //-----------  Enregistrer les informations de la forme dans le fichier texte ------
                 MettreAJourLIHM();
-                string filePath = @"D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\emprunt.txt";
+                //string filePath = Path.GetTempPath() + "\\emprunt.txt";
                 List<string> emprunts = new List<string>();
                 if (cbArchive.FindString(txtName.Text) == -1)
                 {
@@ -238,7 +244,6 @@ namespace CalculerPret
                 }
                 else
                     MessageBox.Show(txtName.Text + " exsite dans le liste");
-                
             }
 
             
@@ -302,21 +307,20 @@ namespace CalculerPret
         private void FormEmprunt_Load(object sender, EventArgs e)
         {
             LoadArchive();
-
         }
 
 
         //----------------------- La méthode d'initialisation de ComboBox en chargher la feuil ---------------------
         private void LoadArchive()
         {
-            string filePath = @"D:\GitHub\CDA_2005\C#\ExercicesWinform\CalculerPret\emprunt.txt";
-            List<string> emprunts = new List<string>();
-            emprunts = File.ReadAllLines(filePath).ToList();
-            foreach (string emprunt in emprunts)
-            {
-                string[] items = emprunt.Split('-');
+                List<string> emprunts = new List<string>();
+                emprunts = File.ReadAllLines(filePath).ToList();
+                foreach (string emprunt in emprunts)
+                {
+                    string[] items = emprunt.Split('-');
                     cbArchive.Items.Add(items[0] + "-" + items[1] + "-" + items[2] + "-" + items[3] + "-" + items[4]);
-            }
+                }
+      
             MettreAJourLIHM();
         }
 

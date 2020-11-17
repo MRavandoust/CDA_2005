@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\Server\Customer\bin\Debug\Customer.exe.config
+D:\GitHub\CDA_2005\C#\Server\Customer\bin\Debug\Customer.exe
+D:\GitHub\CDA_2005\C#\Server\Customer\bin\Debug\Customer.pdb
+D:\GitHub\CDA_2005\C#\Server\Customer\obj\Debug\Customer.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Server\Customer\obj\Debug\Customer.Frm_Customer.resources
+D:\GitHub\CDA_2005\C#\Server\Customer\obj\Debug\Customer.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\Server\Customer\obj\Debug\Customer.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\Server\Customer\obj\Debug\Customer.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Server\Customer\obj\Debug\Customer.exe
+D:\GitHub\CDA_2005\C#\Server\Customer\obj\Debug\Customer.pdb

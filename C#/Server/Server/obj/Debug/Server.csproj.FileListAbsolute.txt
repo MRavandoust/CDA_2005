@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\Server\Server\bin\Debug\Server.exe.config
+D:\GitHub\CDA_2005\C#\Server\Server\bin\Debug\Server.exe
+D:\GitHub\CDA_2005\C#\Server\Server\bin\Debug\Server.pdb
+D:\GitHub\CDA_2005\C#\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Server\Server\obj\Debug\Server.Frm_Server.resources
+D:\GitHub\CDA_2005\C#\Server\Server\obj\Debug\Server.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\Server\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Server\Server\obj\Debug\Server.exe
+D:\GitHub\CDA_2005\C#\Server\Server\obj\Debug\Server.pdb

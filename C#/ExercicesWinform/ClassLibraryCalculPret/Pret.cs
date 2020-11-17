@@ -92,10 +92,10 @@ namespace ClassLibraryCalculPret
         /// La méthode de calculer le montante de remnoursement --------------------------------------
         /// </summary>
         /// <returns></returns>
-        public string MontanDRemboursement()
+        public double MontanDRemboursement()
         {
             double montant = Capital * (Taux / (1 - Math.Pow((1 + Taux), -NombreDRemboursement())));
-            return montant.ToString("N") + "€";
+            return montant;
         }
 
 
