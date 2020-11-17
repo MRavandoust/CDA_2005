@@ -12,13 +12,13 @@ namespace ClassLibraryCalculPret
     {
         private string name;
         private int capital;
-        private string periodicite;
+        private Periode periodicite;
         private int dureeEnMois;
         private double taux;
 
 
 
-        private enum Periode
+        public enum Periode
         {
             Mensuelle = 1,
             Bimestrielle = 2,
@@ -32,7 +32,7 @@ namespace ClassLibraryCalculPret
         /// </summary>
         public string Name { get => name; set => name = value; }
         public int Capital { get => capital; set => capital = value; }
-        public string Periodicite { get => periodicite; set => periodicite = value; }
+        public Periode Periodicite { get => periodicite; set => periodicite = value; }
         public int DureeEnMois { get => dureeEnMois; set => dureeEnMois = value; }
         public double Taux { get => taux; set => taux = value; }
 
@@ -47,7 +47,7 @@ namespace ClassLibraryCalculPret
         {
             Name = "";
             Capital = 00;
-            Periodicite = Periode.Mensuelle.ToString();
+            Periodicite = Periode.Mensuelle;
             DureeEnMois = 1;
             Taux = 7;
         }
@@ -63,7 +63,7 @@ namespace ClassLibraryCalculPret
         /// <param name="_periodicite"></param>
         /// <param name="_dureeEnMois"></param>
         /// <param name="_taux"></param>
-        public Pret(string _name, int _capital, string _periodicite, int _dureeEnMois, float _taux)
+        public Pret(string _name, int _capital, Periode _periodicite, int _dureeEnMois, float _taux)
         {
             Name = _name;
             Capital = _capital;
@@ -82,7 +82,7 @@ namespace ClassLibraryCalculPret
         /// <returns></returns>
         public int NombreDRemboursement()
         {
-            return DureeEnMois / NombreDeMoisDePeriodicite();
+            return DureeEnMois / (int)Periodicite;
         }
 
 
@@ -94,43 +94,27 @@ namespace ClassLibraryCalculPret
         /// <returns></returns>
         public double MontanDRemboursement()
         {
-            double montant = Capital * (Taux / (1 - Math.Pow((1 + Taux), -NombreDRemboursement())));
+            double montant = Capital * (CalculTaux() / (1 - Math.Pow((1 + CalculTaux()), -NombreDRemboursement())));
             return montant;
         }
 
 
-        
 
-        /// <summary>
-        /// La méthode de claculer le nombre de mois selon la périodicité -----------------------------
-        /// </summary>
-        /// <returns></returns>
-        public int NombreDeMoisDePeriodicite()
+        public double Total()
         {
-            int n;
-            switch (this.Periodicite)
-            {
-                case "Mensuelle":
-                    n = (int)Periode.Mensuelle;
-                    break;
-                case "Bimestrielle":
-                    n = (int)Periode.Bimestrielle;
-                    break;
-                case "Trimestrielle":
-                    n = (int)Periode.Trimestrielle;
-                    break;
-                case "Semestrielle":
-                    n = (int)Periode.Semestrielle;
-                    break;
-                case "Annuelle":
-                    n = (int)Periode.Annuelle;
-                    break;
-                default:
-                    n = 1;
-                    break;
-            }
-            return n;
+            return MontanDRemboursement() * NombreDRemboursement();
         }
+
+
+
+        public double CalculTaux()
+        {
+            double m = Taux * (int)Periodicite / 1200;
+            return m;
+        }
+
+
+
         public override string ToString()
         {
             return name + "-" + capital + "-" + periodicite + "-" + dureeEnMois + "-" + taux;

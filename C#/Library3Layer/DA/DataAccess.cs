@@ -28,11 +28,11 @@ namespace DA
 
         public void Link()
         {
-            con.ConnectionString = "Data Source=DESKTOP-EV6M1K5;Initial Catalog=DB_Library;Integrated Security=True";
+            con.ConnectionString = "Data Source=.;Initial Catalog=DBLogin;Integrated Security=True";
             con.Open();
         }
-
-
+        //Data Source=.;Initial Catalog=DBLogin;Integrated Security=True
+        //Data Source=DESKTOP-EV6M1K5;Initial Catalog=DB_Library;Integrated Security=True
         public void UnLink()
         {
             con.Close();

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ClassLibraryCalculPret;
 using System.Text.RegularExpressions;
 using System.IO;
+using static ClassLibraryCalculPret.Pret;
 
 namespace CalculerPret
 {
@@ -17,15 +18,21 @@ namespace CalculerPret
     {
         private Pret cp;
         string filePath = Path.GetTempPath() + "\\emprunt.txt";
-
+        string path = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\emprunt.txt";
 
         public FormEmprunt()
         {
             InitializeComponent();
+            this.listBoxPeriodicite.Items.Add(Periode.Mensuelle);
+            this.listBoxPeriodicite.Items.Add(Periode.Bimestrielle);
+            this.listBoxPeriodicite.Items.Add(Periode.Trimestrielle);
+            this.listBoxPeriodicite.Items.Add(Periode.Semestrielle);
+            this.listBoxPeriodicite.Items.Add(Periode.Annuelle);
             cp = new Pret();
-            if (!File.Exists(Path.GetTempPath() + "\\emprunt.txt"))
-                File.Create(Path.GetTempPath() + "\\emprunt.txt").Dispose();
+            if (!File.Exists(path))
+                File.Create(path).Dispose();
             MettreAJourLIHM();
+            radioButton7.Checked = true;
         }
 
         
@@ -38,8 +45,6 @@ namespace CalculerPret
         }
 
 
-
-
         //----------------------- Mettre à jour de l'IHM en fct de l'etat de Cp ----------------------
         public void MettreAJourLIHM()
         {
@@ -47,20 +52,14 @@ namespace CalculerPret
             txtCapital.Text = cp.Capital.ToString();
             lblScroll.Text=cp.DureeEnMois.ToString();
             listBoxPeriodicite.SelectedItem = cp.Periodicite;
-            if(cp.Taux == 7) radioButton7.Checked = true;
-            if(cp.Taux == 8) radioButton8.Checked = true;
-            if(cp.Taux == 9) radioButton9.Checked = true;
-            lblMontant.Text = cp.MontanDRemboursement().ToString();
-            
+            lblMontant.Text = cp.MontanDRemboursement().ToString("N") + "€";
+
             //configure le scrollbar en fct de la periodicite
             lblScroll.Text = ChiffreDuree();
 
             //mise a jour des resultats
-            lblNombreDRembours.Text = cp.NombreDRemboursement().ToString("N");
-            CalculTaux();
-            lblMontant.Text = cp.MontanDRemboursement().ToString("N");
-            double montant = cp.Capital * (cp.Taux / (1 - Math.Pow((1 + cp.Taux), -cp.NombreDRemboursement())));
-            lblTotal.Text = (cp.NombreDRemboursement() * montant).ToString("N")  + "€";
+            lblNombreDRembours.Text = cp.NombreDRemboursement().ToString();
+            lblTotal.Text = cp.Total().ToString("N")  + "€";
         }
 
 
@@ -71,7 +70,7 @@ namespace CalculerPret
         {
             if (txtCapital.Text != "")
             {
-                switch (cp.NombreDeMoisDePeriodicite())
+                switch ((int)cp.Periodicite)
                 {
                     case 1:
                         hScrollBarDureeMois.LargeChange = 1; hScrollBarDureeMois.SmallChange = 1; 
@@ -104,11 +103,6 @@ namespace CalculerPret
         //--- Calculer le montant de remboursement et mise à jour de la vue en chengement de la périodicité -------
         private void listBoxPeriodicite_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            
-            
-
-
             if (txtCapital.Text == "")
             {
                 MessageBox.Show("Ce champs ne peut pas être vide");
@@ -136,13 +130,15 @@ namespace CalculerPret
                             break;
                     }
                 }
-                cp.Periodicite = listBoxPeriodicite.SelectedItem.ToString();
+                cp.Periodicite = (Periode)listBoxPeriodicite.SelectedItem;
                 cp.DureeEnMois = hScrollBarDureeMois.Value;
                 MettreAJourLIHM();
 
             }
             
         }
+
+        
 
 
         //--- Calculer le montant de remboursement et mise à jour de la vue en selection de RadioButtons -------
@@ -154,9 +150,9 @@ namespace CalculerPret
             }
             else
             {
+                cp.Taux = 7;
                 MettreAJourLIHM();
             }
-            
         }
 
 
@@ -170,9 +166,9 @@ namespace CalculerPret
             }
             else
             {
+                cp.Taux = 8;
                 MettreAJourLIHM();
             }
-            
         }
 
 
@@ -180,41 +176,24 @@ namespace CalculerPret
         //--- Calculer le montant de remboursement et mise à jour de la vue en selection de RadioButtons -------
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
+            
             if (txtCapital.Text == "")
             {
                 MessageBox.Show("Ce champs ne peut pas être vide");
             }
             else
             {
+                cp.Taux = 9;
                 MettreAJourLIHM();
-                
             }
-            
         }
-
-
-
-
-        //------------------------------------ Obtenir le taux de RadioButton ---------------------------------------
-        public double CalculTaux()
-        {
-            double n = 0;
-            if (radioButton7.Checked) n = 0.07;
-            if (radioButton8.Checked) n = 0.08;
-            if (radioButton9.Checked) n = 0.09;
-            double m = n * cp.NombreDeMoisDePeriodicite() / 12;
-            cp.Taux = m;
-            return m;
-
-        }
-
 
 
 
         //------------------------- Calculer le chiffre de durée en mois selon la périodicité ------------------------ 
         private string ChiffreDuree()
         {
-            return (hScrollBarDureeMois.Value - hScrollBarDureeMois.Value % cp.NombreDeMoisDePeriodicite()).ToString();
+            return (hScrollBarDureeMois.Value - hScrollBarDureeMois.Value % (int)cp.Periodicite).ToString();
         }
 
 
@@ -236,7 +215,7 @@ namespace CalculerPret
                 if (cbArchive.FindString(txtName.Text) == -1)
                 {
                     emprunts.Add(cp.ToString());
-                    File.AppendAllLines(filePath, emprunts);
+                    File.AppendAllLines(path, emprunts);
                     cbArchive.Items.Clear();
                     LoadArchive();
                     cbArchive.Text = "";
@@ -245,8 +224,6 @@ namespace CalculerPret
                 else
                     MessageBox.Show(txtName.Text + " exsite dans le liste");
             }
-
-            
         }
 
 
@@ -314,7 +291,7 @@ namespace CalculerPret
         private void LoadArchive()
         {
                 List<string> emprunts = new List<string>();
-                emprunts = File.ReadAllLines(filePath).ToList();
+                emprunts = File.ReadAllLines(path).ToList();
                 foreach (string emprunt in emprunts)
                 {
                     string[] items = emprunt.Split('-');
@@ -333,11 +310,30 @@ namespace CalculerPret
             txtName.Text = emprunts[0];
             txtCapital.Text = emprunts[1];
             listBoxPeriodicite.SelectedItem = emprunts[2];
-            cp.Periodicite = emprunts[2];
+            if (emprunts[2]== "Mensuelle")
+                cp.Periodicite = Periode.Mensuelle;
+            if (emprunts[2] == "Bimestrielle")
+                cp.Periodicite = Periode.Bimestrielle;
+            if (emprunts[2] == "Trimestrielle")
+                cp.Periodicite = Periode.Trimestrielle;
+            if (emprunts[2] == "Semestrielle")
+                cp.Periodicite = Periode.Semestrielle;
+            if (emprunts[2] == "Annuelle")
+                cp.Periodicite = Periode.Annuelle;
+
             hScrollBarDureeMois.Value = int.Parse(emprunts[3]);
             lblScroll.Text = emprunts[3];
             cp.DureeEnMois = int.Parse(emprunts[3]);
-            cp.Taux = Convert.ToInt32(Convert.ToDouble(emprunts[4])*1200/ cp.NombreDeMoisDePeriodicite());
+            int rb = Convert.ToInt32(Convert.ToDouble(emprunts[4])*1200/ (int)cp.Periodicite);
+            switch (rb)
+            {
+                case 7: radioButton7.Checked = true;
+                    break;
+                case 8: radioButton8.Checked = true;
+                    break;
+                default: radioButton9.Checked = true;
+                    break;
+            }
             MettreAJourLIHM();
             cbArchive.Text = "";
         }

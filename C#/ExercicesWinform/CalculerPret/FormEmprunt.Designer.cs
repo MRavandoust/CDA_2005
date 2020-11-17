@@ -115,12 +115,6 @@
             this.listBoxPeriodicite.Cursor = System.Windows.Forms.Cursors.Default;
             this.listBoxPeriodicite.FormattingEnabled = true;
             this.listBoxPeriodicite.ItemHeight = 16;
-            this.listBoxPeriodicite.Items.AddRange(new object[] {
-            "Mensuelle",
-            "Bimestrielle",
-            "Trimestrielle",
-            "Semestrielle",
-            "Annuelle"});
             this.listBoxPeriodicite.Location = new System.Drawing.Point(21, 243);
             this.listBoxPeriodicite.Name = "listBoxPeriodicite";
             this.listBoxPeriodicite.Size = new System.Drawing.Size(310, 84);
