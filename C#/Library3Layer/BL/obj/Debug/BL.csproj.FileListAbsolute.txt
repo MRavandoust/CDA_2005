@@ -1,0 +1,9 @@
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\bin\Debug\BL.dll
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\bin\Debug\BL.pdb
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\bin\Debug\DA.dll
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\bin\Debug\DA.pdb
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\obj\Debug\BL.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\obj\Debug\BL.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\obj\Debug\BL.dll
+D:\GitHub\CDA_2005\C#\Library3Layer\BL\obj\Debug\BL.pdb
