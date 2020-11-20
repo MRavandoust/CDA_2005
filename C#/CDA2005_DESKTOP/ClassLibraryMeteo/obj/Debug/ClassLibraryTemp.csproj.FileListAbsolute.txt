@@ -1,0 +1,6 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryMeteo\bin\Debug\ClassLibraryTemp.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryMeteo\bin\Debug\ClassLibraryTemp.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryMeteo\obj\Debug\ClassLibraryTemp.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryMeteo\obj\Debug\ClassLibraryTemp.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryMeteo\obj\Debug\ClassLibraryTemp.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ClassLibraryMeteo\obj\Debug\ClassLibraryTemp.pdb

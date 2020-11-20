@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\bin\Debug\ConsoleAppHumain.exe.config
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\bin\Debug\ConsoleAppHumain.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\bin\Debug\ConsoleAppHumain.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\bin\Debug\ClassLibraryTemp.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\bin\Debug\ClassLibraryTemp.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\obj\Debug\ConsoleAppHumain.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\obj\Debug\ConsoleAppHumain.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\obj\Debug\ConsoleAppHumain.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\obj\Debug\ConsoleAppHumain.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppHumain\obj\Debug\ConsoleAppHumain.pdb

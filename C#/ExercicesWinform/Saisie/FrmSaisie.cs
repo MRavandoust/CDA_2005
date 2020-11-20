@@ -24,6 +24,7 @@ namespace Saisie
             checkB.MdiParent = this.MdiParent ;
             checkB.Show();
             txtSaisie.Text = "";
+            this.Close();
         }
     }
 }

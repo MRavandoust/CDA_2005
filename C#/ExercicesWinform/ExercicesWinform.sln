@@ -39,13 +39,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Defilement", "Defilement", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculerPret", "CalculerPret\CalculerPret.csproj", "{252932EC-7E14-4CF9-A007-37E66ECAD892}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Synthese", "Synthese", "{4AAA972E-7E9B-411D-9D48-E75F8AA9F34A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CalculPret", "CalculPret", "{4AAA972E-7E9B-411D-9D48-E75F8AA9F34A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCalculPret", "ClassLibraryCalculPret\ClassLibraryCalculPret.csproj", "{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Phase 4", "Phase 4", "{6DE912EE-E750-40D5-B189-1761F6DAED6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToutEmbal", "ToutEmbal\ToutEmbal.csproj", "{61DBF42F-1B7E-444A-8954-5C9467D314F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synthese", "ToutEmbal\Synthese.csproj", "{61DBF42F-1B7E-444A-8954-5C9467D314F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saisie", "Saisie\Saisie.csproj", "{F8F8EC87-673A-4F03-A3DF-9342D35D6E59}"
 EndProject

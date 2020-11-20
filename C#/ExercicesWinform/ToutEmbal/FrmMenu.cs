@@ -17,24 +17,39 @@ using System.Windows.Forms;
 using ValidationSaisie;
 
 
+
 namespace ToutEmbal
 {
+
+    
+    
+
+
     public partial class FrmMenu : Form
     {
+
+        Login log = new Login();
         public FrmMenu()
         {
             InitializeComponent();
-            toolStripStatusLabelDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            toolStripStatusLabelDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
+        
         private void sidentifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenue");
-            LoadWindows();
+           
+           log.ShowDialog();
+            if (log.IdentificationOk)
+            {
+                MessageBox.Show("Bienvenue");
+                LoadWindows();
+            }
 
         }
 
-        private void LoadWindows()
+
+        public void LoadWindows()
         {
             phase1ToolStripMenuItem.Enabled = true;
             phase2ToolStripMenuItem.Enabled = true;
@@ -60,8 +75,12 @@ namespace ToutEmbal
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenue");
-            LoadWindows();
+            log.ShowDialog();
+            if (log.IdentificationOk)
+            {
+                MessageBox.Show("Bienvenue");
+                LoadWindows();
+            }
         }
 
         int childNumber = 1;
@@ -77,14 +96,14 @@ namespace ToutEmbal
         int childNumber1 = 1;
         private void saisieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmValidation child = new FrmValidation();
+            FrmSaisie child = new FrmSaisie();
             child.MdiParent = this;
             child.Text += " N° " + childNumber1++;
             child.Show();
-            toolStripStatusLabelSIdentifier.Text = saisieToolStripMenuItem.Text;
-
-
+            toolStripStatusLabelSIdentifier.Text = toolStripButtonSaisie.Text;
         }
+
+
         int childNumber2 = 1;
         private void checkBoxToolStripMenuItem_Click(object sender, EventArgs e)
         {
