@@ -22,9 +22,9 @@ namespace ConsoleAppMeteo
                 t.Diminuer();
             }
 
-
-
         }
+
+
 
         private static void RentrerPlantes()
         {
