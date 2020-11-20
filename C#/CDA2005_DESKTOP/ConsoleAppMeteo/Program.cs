@@ -28,7 +28,8 @@ namespace ConsoleAppMeteo
 
         private static void RentrerPlantes()
         {
-            Console.WriteLine("Je rentre les plantes !");
+            Console.WriteLine("Je rentre les plantes car il fait froid!\nLa temperature est 0°");
+            Console.ReadLine();
         }
     }
 }

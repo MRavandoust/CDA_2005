@@ -16,11 +16,9 @@ namespace ClassLibraryTemp
 
         public delegate void DelTemp();
         public event DelTemp ChangementTemp;
-        /// <summary>
-        /// evenement qui se produit quand risque de gel 0
-        /// evenement qui se produit quand a de la fievre 38
-        /// </summary>
 
+        // evenement qui se produit quand risque de gel 0
+        // evenement qui se produit quand a de la fievre 38
 
         public Temperature()
         {
@@ -31,7 +29,7 @@ namespace ClassLibraryTemp
         public void Monter()
         {
             Tempe++;
-            if (Tempe == 38)
+            if (Tempe == 38 && ChangementTemp != null)
                 ChangementTemp();
         }
 
@@ -39,7 +37,7 @@ namespace ClassLibraryTemp
         public void Diminuer()
         {
             Tempe--;
-            if (Tempe == 0)
+            if (Tempe == 0 && ChangementTemp != null)
                 ChangementTemp();
         }
 

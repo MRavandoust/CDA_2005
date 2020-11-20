@@ -31,7 +31,7 @@ namespace ConsoleAppHumain
 
         private static void PrendrRDV()
         {
-            Console.WriteLine("Je prend un RDV chez mon medcin");
+            Console.WriteLine("Je prend un RDV chez mon medcin! \nMa temperature est 38°");
             Console.ReadLine();
         }
 
