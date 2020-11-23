@@ -109,7 +109,7 @@ namespace CalculerPret
             }
             else
             {
-                if (Convert.ToInt32(lblScroll.Text) < 12)
+                if (Convert.ToInt32(lblScroll.Text) <= 12)
                 {
                     switch (listBoxPeriodicite.SelectedIndex)
                     {

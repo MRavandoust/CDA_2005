@@ -13,7 +13,6 @@ namespace ToutEmbal
 {
     public partial class Login : Form
     {
-
         private bool identificationOk;
 
 
@@ -24,8 +23,6 @@ namespace ToutEmbal
             InitializeComponent();
         }
 
-
-        
 
 
         private void btnIdentifier_Click(object sender, EventArgs e)

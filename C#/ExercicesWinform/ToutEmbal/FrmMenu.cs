@@ -21,21 +21,19 @@ using ValidationSaisie;
 namespace ToutEmbal
 {
 
-    
-    
-
-
     public partial class FrmMenu : Form
     {
-
+        
         Login log = new Login();
+        
+
         public FrmMenu()
         {
             InitializeComponent();
             toolStripStatusLabelDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
-        
+
         private void sidentifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
@@ -58,6 +56,7 @@ namespace ToutEmbal
             toolStripSplitButtonPhase3.Enabled = true;
             toolStripButtonSaisie.Enabled = true;
             toolStripStatusLabelSIdentifier.Text = "S'identifier";
+            
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
