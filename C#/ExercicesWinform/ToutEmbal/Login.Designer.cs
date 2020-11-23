@@ -1,5 +1,5 @@
 ﻿
-namespace ToutEmbal
+namespace Synthese
 {
     partial class Login
     {

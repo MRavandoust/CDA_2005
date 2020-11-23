@@ -1,4 +1,4 @@
-﻿namespace ToutEmbal
+﻿namespace Synthese
 {
     partial class MDIParent1
     {

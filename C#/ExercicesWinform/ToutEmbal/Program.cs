@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ToutEmbal
+namespace Synthese
 {
     static class Program
     {

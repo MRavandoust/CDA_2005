@@ -1,6 +1,6 @@
-D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryToolsVerification\obj\Debug\ClassLibraryToolsVerification.csprojAssemblyReference.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryToolsVerification\obj\Debug\ClassLibraryToolsVerification.csproj.CoreCompileInputs.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryToolsVerification\bin\Debug\ClassLibraryToolsVerification.dll
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryToolsVerification\bin\Debug\ClassLibraryToolsVerification.pdb
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryToolsVerification\obj\Debug\ClassLibraryToolsVerification.dll
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryToolsVerification\obj\Debug\ClassLibraryToolsVerification.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryToolsVerification\obj\Debug\ClassLibraryToolsVerification.csprojAssemblyReference.cache

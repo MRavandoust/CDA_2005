@@ -1,10 +1,10 @@
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\bin\Debug\Defilement.exe.config
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\bin\Debug\Defilement.exe
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\bin\Debug\Defilement.pdb
-D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.csprojAssemblyReference.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.Properties.Resources.resources
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.csproj.GenerateResource.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.csproj.CoreCompileInputs.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.exe
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.pdb
 D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.FrmDefilement.resources
+D:\GitHub\CDA_2005\C#\ExercicesWinform\Defilement\obj\Debug\Defilement.csprojAssemblyReference.cache

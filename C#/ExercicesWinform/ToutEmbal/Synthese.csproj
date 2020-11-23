@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{61DBF42F-1B7E-444A-8954-5C9467D314F9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ToutEmbal</RootNamespace>
-    <AssemblyName>ToutEmbal</AssemblyName>
+    <RootNamespace>Synthese</RootNamespace>
+    <AssemblyName>Synthese</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaisieTexe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaisieTexe.Designer.cs">
+      <DependentUpon>SaisieTexe.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,7 +89,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SaisieTexe.resx">
+      <DependentUpon>SaisieTexe.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -121,10 +131,6 @@
     <ProjectReference Include="..\ListBoxComboBox\ListBoxComboBox.csproj">
       <Project>{a1e858de-aa2f-433d-bc61-1cc291d5e746}</Project>
       <Name>ListBoxComboBox</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Saisie\Saisie.csproj">
-      <Project>{f8f8ec87-673a-4f03-a3df-9342d35d6e59}</Project>
-      <Name>Saisie</Name>
     </ProjectReference>
     <ProjectReference Include="..\ValidationSaisie\ValidationSaisie.csproj">
       <Project>{41c6a739-2612-4c54-a5b2-194b34ae4d65}</Project>

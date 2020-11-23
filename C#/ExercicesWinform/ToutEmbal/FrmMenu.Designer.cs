@@ -1,4 +1,4 @@
-﻿namespace ToutEmbal
+﻿namespace Synthese
 {
     partial class FrmMenu
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,10 +60,11 @@
             this.listeComboBoxToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.syntheseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonSaisie = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSIdentifier = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripButtonSaisie = new System.Windows.Forms.ToolStripButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -281,35 +283,35 @@
             // checkBoxToolStripMenuItem1
             // 
             this.checkBoxToolStripMenuItem1.Name = "checkBoxToolStripMenuItem1";
-            this.checkBoxToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.checkBoxToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.checkBoxToolStripMenuItem1.Text = "CheckBox";
             this.checkBoxToolStripMenuItem1.Click += new System.EventHandler(this.checkBoxToolStripMenuItem1_Click);
             // 
             // desListesToolStripMenuItem1
             // 
             this.desListesToolStripMenuItem1.Name = "desListesToolStripMenuItem1";
-            this.desListesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.desListesToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.desListesToolStripMenuItem1.Text = "Des Listes";
             this.desListesToolStripMenuItem1.Click += new System.EventHandler(this.desListesToolStripMenuItem1_Click);
             // 
             // defilementToolStripMenuItem1
             // 
             this.defilementToolStripMenuItem1.Name = "defilementToolStripMenuItem1";
-            this.defilementToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.defilementToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.defilementToolStripMenuItem1.Text = "Defilement";
             this.defilementToolStripMenuItem1.Click += new System.EventHandler(this.defilementToolStripMenuItem1_Click);
             // 
             // listeComboBoxToolStripMenuItem1
             // 
             this.listeComboBoxToolStripMenuItem1.Name = "listeComboBoxToolStripMenuItem1";
-            this.listeComboBoxToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listeComboBoxToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.listeComboBoxToolStripMenuItem1.Text = "Liste ComboBox";
             this.listeComboBoxToolStripMenuItem1.Click += new System.EventHandler(this.listeComboBoxToolStripMenuItem1_Click);
             // 
             // syntheseToolStripMenuItem1
             // 
             this.syntheseToolStripMenuItem1.Name = "syntheseToolStripMenuItem1";
-            this.syntheseToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.syntheseToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.syntheseToolStripMenuItem1.Text = "Synthese";
             this.syntheseToolStripMenuItem1.Click += new System.EventHandler(this.syntheseToolStripMenuItem1_Click);
             // 
@@ -317,6 +319,17 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButtonSaisie
+            // 
+            this.toolStripButtonSaisie.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonSaisie.Enabled = false;
+            this.toolStripButtonSaisie.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSaisie.Image")));
+            this.toolStripButtonSaisie.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSaisie.Name = "toolStripButtonSaisie";
+            this.toolStripButtonSaisie.Size = new System.Drawing.Size(40, 22);
+            this.toolStripButtonSaisie.Text = "Saisie";
+            this.toolStripButtonSaisie.Click += new System.EventHandler(this.toolStripButtonSaisie_Click);
             // 
             // statusStrip1
             // 
@@ -339,17 +352,6 @@
             // 
             this.toolStripStatusLabelSIdentifier.Name = "toolStripStatusLabelSIdentifier";
             this.toolStripStatusLabelSIdentifier.Size = new System.Drawing.Size(0, 17);
-            // 
-            // toolStripButtonSaisie
-            // 
-            this.toolStripButtonSaisie.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonSaisie.Enabled = false;
-            this.toolStripButtonSaisie.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonSaisie.Image")));
-            this.toolStripButtonSaisie.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSaisie.Name = "toolStripButtonSaisie";
-            this.toolStripButtonSaisie.Size = new System.Drawing.Size(40, 22);
-            this.toolStripButtonSaisie.Text = "Saisie";
-            this.toolStripButtonSaisie.Click += new System.EventHandler(this.toolStripButtonSaisie_Click);
             // 
             // FrmMenu
             // 
@@ -413,6 +415,7 @@
         private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fermerToutToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButtonSaisie;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

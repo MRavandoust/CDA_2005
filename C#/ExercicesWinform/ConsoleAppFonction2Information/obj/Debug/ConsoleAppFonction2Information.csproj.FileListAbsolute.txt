@@ -1,7 +1,6 @@
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ConsoleAppFonction2Information\bin\Debug\ConsoleAppFonction2Information.exe.config
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ConsoleAppFonction2Information\bin\Debug\ConsoleAppFonction2Information.exe
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ConsoleAppFonction2Information\bin\Debug\ConsoleAppFonction2Information.pdb
-D:\GitHub\CDA_2005\C#\ExercicesWinform\ConsoleAppFonction2Information\obj\Debug\ConsoleAppFonction2Information.csprojAssemblyReference.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ConsoleAppFonction2Information\obj\Debug\ConsoleAppFonction2Information.csproj.CoreCompileInputs.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ConsoleAppFonction2Information\obj\Debug\ConsoleAppFonction2Information.exe
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ConsoleAppFonction2Information\obj\Debug\ConsoleAppFonction2Information.pdb

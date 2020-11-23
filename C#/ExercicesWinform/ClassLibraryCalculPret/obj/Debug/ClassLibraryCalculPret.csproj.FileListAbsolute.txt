@@ -3,3 +3,4 @@ D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryCalculPret\bin\Debug\ClassLib
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryCalculPret\obj\Debug\ClassLibraryCalculPret.csproj.CoreCompileInputs.cache
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryCalculPret\obj\Debug\ClassLibraryCalculPret.dll
 D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryCalculPret\obj\Debug\ClassLibraryCalculPret.pdb
+D:\GitHub\CDA_2005\C#\ExercicesWinform\ClassLibraryCalculPret\obj\Debug\ClassLibraryCalculPret.csprojAssemblyReference.cache

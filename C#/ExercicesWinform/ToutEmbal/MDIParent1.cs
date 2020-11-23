@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ToutEmbal
+namespace Synthese
 {
     public partial class MDIParent1 : Form
     {

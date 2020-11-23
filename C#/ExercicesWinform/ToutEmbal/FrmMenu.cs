@@ -4,7 +4,6 @@ using CheckBoxEtRadioButton;
 using Defilement;
 using LesListesEtProprietes;
 using ListBoxComboBox;
-using Saisie;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,26 +17,26 @@ using ValidationSaisie;
 
 
 
-namespace ToutEmbal
+namespace Synthese
 {
 
     public partial class FrmMenu : Form
     {
-        
         Login log = new Login();
-        
+
 
         public FrmMenu()
         {
             InitializeComponent();
             toolStripStatusLabelDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            
         }
 
 
         private void sidentifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-           log.ShowDialog();
+
+            log.ShowDialog();
             if (log.IdentificationOk)
             {
                 MessageBox.Show("Bienvenue");
@@ -56,7 +55,7 @@ namespace ToutEmbal
             toolStripSplitButtonPhase3.Enabled = true;
             toolStripButtonSaisie.Enabled = true;
             toolStripStatusLabelSIdentifier.Text = "S'identifier";
-            
+
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,13 +94,26 @@ namespace ToutEmbal
         int childNumber1 = 1;
         private void saisieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmSaisie child = new FrmSaisie();
+            SaisieTexe child = new SaisieTexe();
             child.MdiParent = this;
             child.Text += " N° " + childNumber1++;
             child.Show();
+
             toolStripStatusLabelSIdentifier.Text = toolStripButtonSaisie.Text;
         }
 
+        public void OpenForm(string str)
+        {
+            FrmCheckBox checkB = new FrmCheckBox(str);
+            checkB.MdiParent = this.MdiParent ;
+            checkB.Show();
+        }
+        //{
+        //FrmCheckBox checkB = new FrmCheckBox(txtSaisie.Text);
+        //checkB.MdiParent = this.MdiParent ;
+        //    checkB.Show();
+        //}
+        //FrmChec}kBox
 
         int childNumber2 = 1;
         private void checkBoxToolStripMenuItem_Click(object sender, EventArgs e)
@@ -224,7 +236,7 @@ namespace ToutEmbal
 
         private void toolStripButtonSaisie_Click(object sender, EventArgs e)
         {
-            FrmSaisie child = new FrmSaisie();
+            SaisieTexe child = new SaisieTexe();
             child.MdiParent = this;
             child.Text += " N° " + childNumber1++;
             child.Show();

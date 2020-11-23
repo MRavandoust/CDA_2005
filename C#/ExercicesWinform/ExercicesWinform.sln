@@ -47,8 +47,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Phase 4", "Phase 4", "{6DE9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synthese", "ToutEmbal\Synthese.csproj", "{61DBF42F-1B7E-444A-8954-5C9467D314F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saisie", "Saisie\Saisie.csproj", "{F8F8EC87-673A-4F03-A3DF-9342D35D6E59}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,10 +101,6 @@ Global
 		{61DBF42F-1B7E-444A-8954-5C9467D314F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61DBF42F-1B7E-444A-8954-5C9467D314F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61DBF42F-1B7E-444A-8954-5C9467D314F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8F8EC87-673A-4F03-A3DF-9342D35D6E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8F8EC87-673A-4F03-A3DF-9342D35D6E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8F8EC87-673A-4F03-A3DF-9342D35D6E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8F8EC87-673A-4F03-A3DF-9342D35D6E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,7 +123,6 @@ Global
 		{4AAA972E-7E9B-411D-9D48-E75F8AA9F34A} = {D7891986-C0A6-4E6A-B2FD-DD2099159ABB}
 		{A0CBEC46-7E42-4A30-9B6A-D6A655A99FF1} = {4AAA972E-7E9B-411D-9D48-E75F8AA9F34A}
 		{61DBF42F-1B7E-444A-8954-5C9467D314F9} = {6DE912EE-E750-40D5-B189-1761F6DAED6F}
-		{F8F8EC87-673A-4F03-A3DF-9342D35D6E59} = {6DE912EE-E750-40D5-B189-1761F6DAED6F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18FB61CE-8F67-48AB-A760-0D1F1BD00CD1}
