@@ -2,9 +2,9 @@ D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\bin\Debug\Test_Thread.exe.conf
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\bin\Debug\Test_Thread.exe
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\bin\Debug\Test_Thread.pdb
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.csprojAssemblyReference.cache
-D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.Form1.resources
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.Properties.Resources.resources
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.csproj.GenerateResource.cache
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.csproj.CoreCompileInputs.cache
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.exe
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Test_Thread\obj\Debug\Test_Thread.Frm_Thread.resources

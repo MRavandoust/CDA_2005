@@ -1,0 +1,2 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppThread\obj\Debug\ConsoleAppThread.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ConsoleAppThread\obj\Debug\ConsoleAppThread.csproj.CoreCompileInputs.cache

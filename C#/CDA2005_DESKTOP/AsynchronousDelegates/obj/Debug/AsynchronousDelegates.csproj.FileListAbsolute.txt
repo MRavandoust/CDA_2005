@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\bin\Debug\AsynchronousDelegates.exe.config
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\bin\Debug\AsynchronousDelegates.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\bin\Debug\AsynchronousDelegates.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\obj\Debug\AsynchronousDelegates.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\obj\Debug\AsynchronousDelegates.MainForm.resources
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\obj\Debug\AsynchronousDelegates.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\obj\Debug\AsynchronousDelegates.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\obj\Debug\AsynchronousDelegates.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\obj\Debug\AsynchronousDelegates.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\AsynchronousDelegates\obj\Debug\AsynchronousDelegates.pdb

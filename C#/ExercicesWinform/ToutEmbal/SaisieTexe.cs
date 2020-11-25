@@ -12,6 +12,7 @@ namespace Synthese
 {
     public partial class SaisieTexe : Form
     {
+        FrmMenu fm = new FrmMenu();
         public SaisieTexe()
         {
             InitializeComponent();
@@ -23,10 +24,8 @@ namespace Synthese
 
         private void btnValider_Click_1(object sender, EventArgs e)
         {
-            //FrmCheckBox checkB = new FrmCheckBox(txtSaisie.Text);
-            //checkB.MdiParent = this.MdiParent ;
-            //checkB.Show();
-
+            
+            fm.Do(txtSaisie.Text);
             txtSaisie.Text = "";
             this.Close();
         }

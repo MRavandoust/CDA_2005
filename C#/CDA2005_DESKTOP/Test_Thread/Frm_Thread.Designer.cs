@@ -1,7 +1,7 @@
 ﻿
 namespace Test_Thread
 {
-    partial class Form1
+    partial class Frm_Thread
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

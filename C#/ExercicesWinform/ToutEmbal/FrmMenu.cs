@@ -23,15 +23,20 @@ namespace Synthese
     public partial class FrmMenu : Form
     {
         Login log = new Login();
-
+        public delegate void LoadForm(string str);
+        public event LoadForm lf;
 
         public FrmMenu()
         {
             InitializeComponent();
             toolStripStatusLabelDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            
+            lf += new LoadForm(OpenForm);
         }
 
+        public void Do(string str)
+        {
+            lf(str);
+        }
 
         private void sidentifierToolStripMenuItem_Click(object sender, EventArgs e)
         {

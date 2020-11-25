@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Test_Thread
 {
-    public partial class Form1 : Form
+    public partial class Frm_Thread : Form
     {
-        public Form1()
+        public Frm_Thread()
         {
             InitializeComponent();
         }
