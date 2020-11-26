@@ -8,3 +8,6 @@ D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal.csproj.CoreC
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal.exe
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal.pdb
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal.Frm_ToutEmbal.resources
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\bin\Debug\ProductionCaisses.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\bin\Debug\ProductionCaisses.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal.csproj.CopyComplete
