@@ -18,12 +18,6 @@ namespace ToutEmbal
         public Frm_ToutEmbal()
         {
             InitializeComponent();
-            txtTauxDefautDDemarrage_A.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautHeure_A.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautDDemarrage_B.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautHeure_B.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautDDemarrage_C.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautHeure_C.Text = rnd.NextDouble().ToString("N4");
         }
         
         Caisse caisseA = new Caisse(ProductionCaisses.Type.A);
@@ -35,18 +29,24 @@ namespace ToutEmbal
         {
             progressBar_A.Increment(1);
             txtNombr_A.Text = (progressBar_A.Value*caisseA.Rythme()).ToString();
+            txtTauxDefautDDemarrage_A.Text = rnd.NextDouble().ToString("N4");
+            txtTauxDefautHeure_A.Text = rnd.NextDouble().ToString("N4");
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             progressBar_B.Increment(1);
             txtNombr_B.Text = (progressBar_B.Value * caisseB.Rythme()).ToString();
+            txtTauxDefautDDemarrage_B.Text = rnd.NextDouble().ToString("N4");
+            txtTauxDefautHeure_B.Text = rnd.NextDouble().ToString("N4");
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
             progressBar_C.Increment(1);
             txtNombr_C.Text = (progressBar_C.Value * caisseC.Rythme()).ToString();
+            txtTauxDefautDDemarrage_C.Text = rnd.NextDouble().ToString("N4");
+            txtTauxDefautHeure_C.Text = rnd.NextDouble().ToString("N4");
         }
 
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
