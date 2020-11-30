@@ -24,29 +24,64 @@ namespace ToutEmbal
         Caisse caisseB = new Caisse(ProductionCaisses.Type.B);
         Caisse caisseC = new Caisse(ProductionCaisses.Type.C);
         
+        public void ResetIHM()
+        {
+
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBar_A.Increment(1);
-            txtNombr_A.Text = (progressBar_A.Value*caisseA.Rythme()).ToString();
-            txtTauxDefautDDemarrage_A.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautHeure_A.Text = rnd.NextDouble().ToString("N4");
+            if (progressBar_A.Value == 100)
+            {
+                timer1.Stop();
+                aToolStripMenuItem.Enabled = true;
+                aToolStripMenuItem1.Enabled = false;
+                aToolStripMenuItem2.Enabled = false;
+            }
+            else
+            {
+                progressBar_A.Increment(1);
+                txtNombr_A.Text = (progressBar_A.Value * caisseA.Rythme()).ToString();
+                txtTauxDefautDDemarrage_A.Text = rnd.NextDouble().ToString("N4");
+                txtTauxDefautHeure_A.Text = rnd.NextDouble().ToString("N4");
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            progressBar_B.Increment(1);
-            txtNombr_B.Text = (progressBar_B.Value * caisseB.Rythme()).ToString();
-            txtTauxDefautDDemarrage_B.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautHeure_B.Text = rnd.NextDouble().ToString("N4");
+            if(progressBar_B.Value == 100)
+            {
+                timer2.Stop();
+                bToolStripMenuItem.Enabled = true;
+                bToolStripMenuItem1.Enabled = false;
+                bToolStripMenuItem2.Enabled = false;
+            }
+            else
+            {
+                progressBar_B.Increment(1);
+                txtNombr_B.Text = (progressBar_B.Value * caisseB.Rythme()).ToString();
+                txtTauxDefautDDemarrage_B.Text = rnd.NextDouble().ToString("N4");
+                txtTauxDefautHeure_B.Text = rnd.NextDouble().ToString("N4");
+            }
+            
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            progressBar_C.Increment(1);
-            txtNombr_C.Text = (progressBar_C.Value * caisseC.Rythme()).ToString();
-            txtTauxDefautDDemarrage_C.Text = rnd.NextDouble().ToString("N4");
-            txtTauxDefautHeure_C.Text = rnd.NextDouble().ToString("N4");
+            if (progressBar_C.Value == 100)
+            {
+                timer3.Stop();
+                cToolStripMenuItem.Enabled = true;
+                cToolStripMenuItem1.Enabled = false;
+                cToolStripMenuItem2.Enabled = false;
+            }
+            else
+            {
+                progressBar_C.Increment(1);
+                txtNombr_C.Text = (progressBar_C.Value * caisseC.Rythme()).ToString();
+                txtTauxDefautDDemarrage_C.Text = rnd.NextDouble().ToString("N4");
+                txtTauxDefautHeure_C.Text = rnd.NextDouble().ToString("N4");
+            }
         }
 
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
