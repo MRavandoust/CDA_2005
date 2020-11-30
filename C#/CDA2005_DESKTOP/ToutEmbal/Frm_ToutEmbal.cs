@@ -18,15 +18,18 @@ namespace ToutEmbal
         public Frm_ToutEmbal()
         {
             InitializeComponent();
+            production.Add(new ProductionCaisse("A", 1000));
+            production.Add(new ProductionCaisse("B", 5000));
+            production.Add(new ProductionCaisse("C", 10000));
         }
+
+        List<ProductionCaisse> production = new List<ProductionCaisse>();
+
         
-        Caisse caisseA = new Caisse(ProductionCaisses.Type.A);
-        Caisse caisseB = new Caisse(ProductionCaisses.Type.B);
-        Caisse caisseC = new Caisse(ProductionCaisses.Type.C);
-        
+
         public void ResetIHM()
         {
-
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -41,7 +44,7 @@ namespace ToutEmbal
             else
             {
                 progressBar_A.Increment(1);
-                txtNombr_A.Text = (progressBar_A.Value * caisseA.Rythme()).ToString();
+                txtNombr_A.Text = (progressBar_A.Value * production[0].Rythme()).ToString();
                 txtTauxDefautDDemarrage_A.Text = rnd.NextDouble().ToString("N4");
                 txtTauxDefautHeure_A.Text = rnd.NextDouble().ToString("N4");
             }
@@ -59,7 +62,7 @@ namespace ToutEmbal
             else
             {
                 progressBar_B.Increment(1);
-                txtNombr_B.Text = (progressBar_B.Value * caisseB.Rythme()).ToString();
+                txtNombr_B.Text = (progressBar_B.Value * production[1].Rythme()).ToString();
                 txtTauxDefautDDemarrage_B.Text = rnd.NextDouble().ToString("N4");
                 txtTauxDefautHeure_B.Text = rnd.NextDouble().ToString("N4");
             }
@@ -78,7 +81,7 @@ namespace ToutEmbal
             else
             {
                 progressBar_C.Increment(1);
-                txtNombr_C.Text = (progressBar_C.Value * caisseC.Rythme()).ToString();
+                txtNombr_C.Text = (progressBar_C.Value * production[2].Rythme()).ToString();
                 txtTauxDefautDDemarrage_C.Text = rnd.NextDouble().ToString("N4");
                 txtTauxDefautHeure_C.Text = rnd.NextDouble().ToString("N4");
             }

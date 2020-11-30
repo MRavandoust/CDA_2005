@@ -6,29 +6,24 @@ using System.Threading.Tasks;
 
 namespace ProductionCaisses
 {
-    public enum Type
-    {
-        A = 1000,
-        B = 5000,
-        C = 10000
-    }
 
-    public class Caisse
+    public class ProductionCaisse
     {
-        public Type CaisseType { get ; set; }
+        public int TotalNumberOfBox { get ; set; }
         public int NombreDeCaisse { get; set; }
-        public float Price { get; set; }
+        public string Type { get; set; }
 
 
-        public Caisse(Type type)
+
+        public ProductionCaisse(string type, int totalNumber)
         {
-            this.CaisseType = type;
+            Type = type;
+            TotalNumberOfBox = totalNumber;
         }
-
 
         public double Rythme()   // Rythme par dix mili secendes
         {
-            return  (int)CaisseType / 100;
+            return TotalNumberOfBox / 100;
         }
 
         public int NomreDeProduit(int secends)
