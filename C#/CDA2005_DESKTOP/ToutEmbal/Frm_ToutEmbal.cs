@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProductionCaisses;
+using ProductionCaisse;
 
 
-namespace ToutEmbal
+namespace ToutEmbal_v2
 {
     public partial class Frm_ToutEmbal : Form
     {
@@ -18,12 +18,12 @@ namespace ToutEmbal
         public Frm_ToutEmbal()
         {
             InitializeComponent();
-            production.Add(new ProductionCaisse("A", 1000));
-            production.Add(new ProductionCaisse("B", 5000));
-            production.Add(new ProductionCaisse("C", 10000));
+            production.Add(new ProductionCaissess.ProductionCaisse("A", 1000));
+            production.Add(new ProductionCaissess.ProductionCaisse("B", 5000));
+            production.Add(new ProductionCaissess.ProductionCaisse("C", 10000));
         }
 
-        List<ProductionCaisse> production = new List<ProductionCaisse>();
+        List<ProductionCaissess.ProductionCaisse> production = new List<ProductionCaissess.ProductionCaisse>();
 
         
 

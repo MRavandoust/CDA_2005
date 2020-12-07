@@ -7,8 +7,8 @@
     <ProjectGuid>{0A3F596D-147A-4957-A442-ABB6D2D8C8AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProductionCaisses</RootNamespace>
-    <AssemblyName>ProductionCaisses</AssemblyName>
+    <RootNamespace>ProductionCaissess</RootNamespace>
+    <AssemblyName>ProductionCaissess</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

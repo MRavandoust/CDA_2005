@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ToutEmbal
+namespace ToutEmbal_v2
 {
     static class Program
     {

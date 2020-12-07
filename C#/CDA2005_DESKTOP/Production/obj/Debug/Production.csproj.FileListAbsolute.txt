@@ -1,0 +1,6 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Production\bin\Debug\ProductionCaisses.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Production\bin\Debug\ProductionCaisses.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Production\obj\Debug\Production.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Production\obj\Debug\Production.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Production\obj\Debug\ProductionCaisses.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\Production\obj\Debug\ProductionCaisses.pdb

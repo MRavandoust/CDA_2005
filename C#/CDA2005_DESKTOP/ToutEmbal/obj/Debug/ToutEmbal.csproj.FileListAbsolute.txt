@@ -11,3 +11,4 @@ D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal.Frm_ToutEmba
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\bin\Debug\ProductionCaisses.dll
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\bin\Debug\ProductionCaisses.pdb
 D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal\obj\Debug\ToutEmbal_v2.Frm_ToutEmbal.resources

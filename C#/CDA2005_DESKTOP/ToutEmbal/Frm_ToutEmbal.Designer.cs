@@ -1,5 +1,5 @@
 ﻿
-namespace ToutEmbal
+namespace ToutEmbal_v2
 {
     partial class Frm_ToutEmbal
     {

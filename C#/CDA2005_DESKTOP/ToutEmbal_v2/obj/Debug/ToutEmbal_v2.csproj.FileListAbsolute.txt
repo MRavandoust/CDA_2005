@@ -1,0 +1,15 @@
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\bin\Debug\ToutEmbal_v2.exe.config
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\bin\Debug\ToutEmbal_v2.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\bin\Debug\ToutEmbal_v2.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\bin\Debug\ProductionCaisses.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\bin\Debug\ProductionCaisses.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.Frm_ToutEmbal_v2.resources
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.exe
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\obj\Debug\ToutEmbal_v2.pdb
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\bin\Debug\ProductionCaissess.dll
+D:\GitHub\CDA_2005\C#\CDA2005_DESKTOP\ToutEmbal_v2\bin\Debug\ProductionCaissess.pdb
