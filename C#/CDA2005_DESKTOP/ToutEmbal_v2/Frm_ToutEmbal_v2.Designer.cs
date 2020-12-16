@@ -725,52 +725,59 @@ namespace ToutEmbal_v2
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(63, 19);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(60, 19);
             this.toolStripStatusLabel1.Text = "Caisse A :  ";
             // 
             // toolStripStatusLabel_A
             // 
+            this.toolStripStatusLabel_A.AutoSize = false;
             this.toolStripStatusLabel_A.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripStatusLabel_A.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabel_A.Name = "toolStripStatusLabel_A";
-            this.toolStripStatusLabel_A.Size = new System.Drawing.Size(79, 19);
+            this.toolStripStatusLabel_A.Size = new System.Drawing.Size(100, 19);
             this.toolStripStatusLabel_A.Text = "NonDemarré";
             // 
             // toolStripStatusLabel2
             // 
+            this.toolStripStatusLabel2.AutoSize = false;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(62, 19);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(60, 19);
             this.toolStripStatusLabel2.Text = "Caisse B :  ";
             // 
             // toolStripStatusLabel_B
             // 
+            this.toolStripStatusLabel_B.AutoSize = false;
             this.toolStripStatusLabel_B.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripStatusLabel_B.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabel_B.Name = "toolStripStatusLabel_B";
-            this.toolStripStatusLabel_B.Size = new System.Drawing.Size(79, 19);
+            this.toolStripStatusLabel_B.Size = new System.Drawing.Size(100, 19);
             this.toolStripStatusLabel_B.Text = "NonDemarre";
             // 
             // toolStripStatusLabel3
             // 
+            this.toolStripStatusLabel3.AutoSize = false;
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(66, 19);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(60, 19);
             this.toolStripStatusLabel3.Text = "Caisse C :   ";
             // 
             // toolStripStatusLabel_C
             // 
+            this.toolStripStatusLabel_C.AutoSize = false;
             this.toolStripStatusLabel_C.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.toolStripStatusLabel_C.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabel_C.Name = "toolStripStatusLabel_C";
-            this.toolStripStatusLabel_C.Size = new System.Drawing.Size(79, 19);
+            this.toolStripStatusLabel_C.Size = new System.Drawing.Size(100, 19);
             this.toolStripStatusLabel_C.Text = "NonDemarré";
             // 
             // toolStripStatusLabel_Time
             // 
+            this.toolStripStatusLabel_Time.AutoSize = false;
             this.toolStripStatusLabel_Time.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripStatusLabel_Time.Name = "toolStripStatusLabel_Time";
             this.toolStripStatusLabel_Time.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStripStatusLabel_Time.Size = new System.Drawing.Size(46, 19);
+            this.toolStripStatusLabel_Time.Size = new System.Drawing.Size(80, 19);
             this.toolStripStatusLabel_Time.Text = "hh:mm";
             this.toolStripStatusLabel_Time.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
