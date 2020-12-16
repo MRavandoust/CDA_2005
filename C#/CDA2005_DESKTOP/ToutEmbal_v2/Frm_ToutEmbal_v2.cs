@@ -18,6 +18,7 @@ namespace ToutEmbal_v2
 
         List<Production> production = new List<Production>();
         Random rnd = new Random();
+        
         public Frm_ToutEmbal_v2()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace ToutEmbal_v2
             production[0].NbCaisseChange += Production_NbCaisseChange;
             production[1].NbCaisseChange += Production_NbCaisseChange;
             production[2].NbCaisseChange += Production_NbCaisseChange;
+
         }
 
 
@@ -36,7 +38,7 @@ namespace ToutEmbal_v2
             ResetIHM();
         }
 
- 
+
 
 
         //private void MiseAjourIHM()
@@ -50,11 +52,12 @@ namespace ToutEmbal_v2
         //    this.AvancementAJour();
         //}
 
-        
+
         public void ResetIHM()
         {
             ResetProgressBar();
             ResetNbCaisseDDemarrage();
+            StatusLabelUpdate();
         }
 
 
@@ -73,9 +76,15 @@ namespace ToutEmbal_v2
         }
 
 
+        private void StatusLabelUpdate()
+        {
+            toolStripStatusLabel_A.Text = production[0].StatutPrd.ToString();
+            toolStripStatusLabel_B.Text = production[1].StatutPrd.ToString();
+            toolStripStatusLabel_C.Text = production[2].StatutPrd.ToString();
+        }
 
 
-        private void aToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AToolStripMenuItem_Click(object sender, EventArgs e)
         {
             production[0].Demarrer();
             ResetIHM();
@@ -143,56 +152,81 @@ namespace ToutEmbal_v2
 
         private void btn_Green_A_Click(object sender, EventArgs e)
         {
-
+            tabControlA.SelectedTab = tabPage1;
+            production[0].Demarrer();
+            ResetIHM();
             btn_Green_A.Enabled = false;
             btn_Red_A.Enabled = true;
         }
 
         private void btn_Red_A_Click(object sender, EventArgs e)
         {
-
+            tabControlA.SelectedTab = tabPage1;
+            production[0].Suspendre();
+            ResetIHM();
             btn_Red_A.Enabled = false;
             btn_Yellow_A.Enabled = true;
         }
 
         private void btn_Yellow_A_Click(object sender, EventArgs e)
         {
+            tabControlA.SelectedTab = tabPage1;
+            production[0].Demarrer();
+            ResetIHM();
             btn_Yellow_A.Enabled = false;
             btn_Red_A.Enabled = true;
         }
 
         private void btn_Green_B_Click(object sender, EventArgs e)
         {
+            tabControlA.SelectedTab = tabPage2;
+            production[1].Demarrer();
+            ResetIHM();
             btn_Green_B.Enabled = false;
             btn_Red_B.Enabled = true;
         }
 
         private void btn_Red_B_Click(object sender, EventArgs e)
         {
+            tabControlA.SelectedTab = tabPage2;
+            production[1].Suspendre();
+            ResetIHM();
             btn_Red_B.Enabled = false;
             btn_Yellow_B.Enabled = true;
         }
 
         private void btn_Yellow_B_Click(object sender, EventArgs e)
         {
+            tabControlA.SelectedTab = tabPage2;
+            production[1].Demarrer();
+            ResetIHM();
             btn_Yellow_B.Enabled = false;
             btn_Red_B.Enabled = true;
         }
 
         private void btn_Green_C_Click(object sender, EventArgs e)
         {
+            tabControlA.SelectedTab = tabPage3;
+            production[2].Demarrer();
+            ResetIHM();
             btn_Green_C.Enabled = false;
             btn_Red_C.Enabled = true;
         }
 
         private void btn_Red_C_Click(object sender, EventArgs e)
         {
+            tabControlA.SelectedTab = tabPage3;
+            production[2].Suspendre();
+            ResetIHM();
             btn_Red_C.Enabled = false;
             btn_Yellow_C.Enabled = true;
         }
 
         private void btn_Yellow_C_Click(object sender, EventArgs e)
         {
+            tabControlA.SelectedTab = tabPage3;
+            production[2].Demarrer();
+            ResetIHM();
             btn_Yellow_C.Enabled = false;
             btn_Red_C.Enabled = true;
         }
@@ -213,6 +247,12 @@ namespace ToutEmbal_v2
             {
                 e.Cancel = true;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime time = DateTime.Now;
+            toolStripStatusLabel_Time.Text = time.ToString("HH:mm:ss");
         }
     }
 }

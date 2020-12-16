@@ -91,8 +91,8 @@ namespace ToutEmbal_v2
             this.btn_Red_C = new System.Windows.Forms.Button();
             this.btn_Yellow_C = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel_A = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel_A = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel_B = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -158,7 +158,7 @@ namespace ToutEmbal_v2
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
             this.aToolStripMenuItem.Text = "A";
-            this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
+            this.aToolStripMenuItem.Click += new System.EventHandler(this.AToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
@@ -224,7 +224,7 @@ namespace ToutEmbal_v2
             this.aToolStripMenuItem2.Name = "aToolStripMenuItem2";
             this.aToolStripMenuItem2.Size = new System.Drawing.Size(82, 22);
             this.aToolStripMenuItem2.Text = "A";
-            this.aToolStripMenuItem2.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
+            this.aToolStripMenuItem2.Click += new System.EventHandler(this.AToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem2
             // 
@@ -292,21 +292,21 @@ namespace ToutEmbal_v2
             // 
             // txtTauxDefautDDemarrage_A
             // 
-            this.txtTauxDefautDDemarrage_A.Location = new System.Drawing.Point(348, 92);
+            this.txtTauxDefautDDemarrage_A.Location = new System.Drawing.Point(327, 92);
             this.txtTauxDefautDDemarrage_A.Name = "txtTauxDefautDDemarrage_A";
             this.txtTauxDefautDDemarrage_A.Size = new System.Drawing.Size(95, 24);
             this.txtTauxDefautDDemarrage_A.TabIndex = 1;
             // 
             // txtTauxDefautHeure_A
             // 
-            this.txtTauxDefautHeure_A.Location = new System.Drawing.Point(348, 56);
+            this.txtTauxDefautHeure_A.Location = new System.Drawing.Point(327, 56);
             this.txtTauxDefautHeure_A.Name = "txtTauxDefautHeure_A";
             this.txtTauxDefautHeure_A.Size = new System.Drawing.Size(95, 24);
             this.txtTauxDefautHeure_A.TabIndex = 1;
             // 
             // txtNombr_A
             // 
-            this.txtNombr_A.Location = new System.Drawing.Point(348, 20);
+            this.txtNombr_A.Location = new System.Drawing.Point(327, 20);
             this.txtNombr_A.Name = "txtNombr_A";
             this.txtNombr_A.Size = new System.Drawing.Size(95, 24);
             this.txtNombr_A.TabIndex = 1;
@@ -368,7 +368,7 @@ namespace ToutEmbal_v2
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(420, 136);
+            this.tabPage2.Size = new System.Drawing.Size(458, 136);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Type B";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -405,21 +405,21 @@ namespace ToutEmbal_v2
             // 
             // txtTauxDefautDDemarrage_B
             // 
-            this.txtTauxDefautDDemarrage_B.Location = new System.Drawing.Point(312, 92);
+            this.txtTauxDefautDDemarrage_B.Location = new System.Drawing.Point(327, 92);
             this.txtTauxDefautDDemarrage_B.Name = "txtTauxDefautDDemarrage_B";
             this.txtTauxDefautDDemarrage_B.Size = new System.Drawing.Size(95, 24);
             this.txtTauxDefautDDemarrage_B.TabIndex = 5;
             // 
             // txtTauxDefautHeure_B
             // 
-            this.txtTauxDefautHeure_B.Location = new System.Drawing.Point(312, 56);
+            this.txtTauxDefautHeure_B.Location = new System.Drawing.Point(327, 56);
             this.txtTauxDefautHeure_B.Name = "txtTauxDefautHeure_B";
             this.txtTauxDefautHeure_B.Size = new System.Drawing.Size(95, 24);
             this.txtTauxDefautHeure_B.TabIndex = 6;
             // 
             // txtNombr_B
             // 
-            this.txtNombr_B.Location = new System.Drawing.Point(312, 20);
+            this.txtNombr_B.Location = new System.Drawing.Point(327, 20);
             this.txtNombr_B.Name = "txtNombr_B";
             this.txtNombr_B.Size = new System.Drawing.Size(95, 24);
             this.txtNombr_B.TabIndex = 7;
@@ -465,7 +465,7 @@ namespace ToutEmbal_v2
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(420, 136);
+            this.tabPage3.Size = new System.Drawing.Size(458, 136);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Type C";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -502,21 +502,21 @@ namespace ToutEmbal_v2
             // 
             // txtTauxDefautDDemarrage_C
             // 
-            this.txtTauxDefautDDemarrage_C.Location = new System.Drawing.Point(312, 92);
+            this.txtTauxDefautDDemarrage_C.Location = new System.Drawing.Point(327, 92);
             this.txtTauxDefautDDemarrage_C.Name = "txtTauxDefautDDemarrage_C";
             this.txtTauxDefautDDemarrage_C.Size = new System.Drawing.Size(95, 24);
             this.txtTauxDefautDDemarrage_C.TabIndex = 5;
             // 
             // txtTauxDefautHeure_C
             // 
-            this.txtTauxDefautHeure_C.Location = new System.Drawing.Point(312, 56);
+            this.txtTauxDefautHeure_C.Location = new System.Drawing.Point(327, 56);
             this.txtTauxDefautHeure_C.Name = "txtTauxDefautHeure_C";
             this.txtTauxDefautHeure_C.Size = new System.Drawing.Size(95, 24);
             this.txtTauxDefautHeure_C.TabIndex = 6;
             // 
             // txtNombr_C
             // 
-            this.txtNombr_C.Location = new System.Drawing.Point(312, 20);
+            this.txtNombr_C.Location = new System.Drawing.Point(327, 20);
             this.txtNombr_C.Name = "txtNombr_C";
             this.txtNombr_C.Size = new System.Drawing.Size(95, 24);
             this.txtNombr_C.TabIndex = 7;
@@ -571,7 +571,9 @@ namespace ToutEmbal_v2
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btn_Yellow_A
             // 
@@ -621,7 +623,7 @@ namespace ToutEmbal_v2
             // 
             this.btn_Green_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Green_B.Image = global::ToutEmbal_v2.Properties.Resources.traffic_light_Vert;
-            this.btn_Green_B.Location = new System.Drawing.Point(108, 27);
+            this.btn_Green_B.Location = new System.Drawing.Point(118, 27);
             this.btn_Green_B.Name = "btn_Green_B";
             this.btn_Green_B.Size = new System.Drawing.Size(30, 75);
             this.btn_Green_B.TabIndex = 3;
@@ -636,7 +638,7 @@ namespace ToutEmbal_v2
             this.btn_Red_B.Enabled = false;
             this.btn_Red_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Red_B.Image = global::ToutEmbal_v2.Properties.Resources.traffic_light_Rouge;
-            this.btn_Red_B.Location = new System.Drawing.Point(137, 27);
+            this.btn_Red_B.Location = new System.Drawing.Point(147, 27);
             this.btn_Red_B.Name = "btn_Red_B";
             this.btn_Red_B.Size = new System.Drawing.Size(30, 75);
             this.btn_Red_B.TabIndex = 4;
@@ -651,7 +653,7 @@ namespace ToutEmbal_v2
             this.btn_Yellow_B.Enabled = false;
             this.btn_Yellow_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Yellow_B.Image = global::ToutEmbal_v2.Properties.Resources.traffic_light_Jaun;
-            this.btn_Yellow_B.Location = new System.Drawing.Point(166, 27);
+            this.btn_Yellow_B.Location = new System.Drawing.Point(176, 27);
             this.btn_Yellow_B.Name = "btn_Yellow_B";
             this.btn_Yellow_B.Size = new System.Drawing.Size(30, 75);
             this.btn_Yellow_B.TabIndex = 5;
@@ -665,7 +667,7 @@ namespace ToutEmbal_v2
             // 
             this.btn_Green_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Green_C.Image = global::ToutEmbal_v2.Properties.Resources.traffic_light_Vert;
-            this.btn_Green_C.Location = new System.Drawing.Point(199, 27);
+            this.btn_Green_C.Location = new System.Drawing.Point(218, 27);
             this.btn_Green_C.Name = "btn_Green_C";
             this.btn_Green_C.Size = new System.Drawing.Size(30, 75);
             this.btn_Green_C.TabIndex = 6;
@@ -680,7 +682,7 @@ namespace ToutEmbal_v2
             this.btn_Red_C.Enabled = false;
             this.btn_Red_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Red_C.Image = global::ToutEmbal_v2.Properties.Resources.traffic_light_Rouge;
-            this.btn_Red_C.Location = new System.Drawing.Point(228, 27);
+            this.btn_Red_C.Location = new System.Drawing.Point(247, 27);
             this.btn_Red_C.Name = "btn_Red_C";
             this.btn_Red_C.Size = new System.Drawing.Size(30, 75);
             this.btn_Red_C.TabIndex = 7;
@@ -695,7 +697,7 @@ namespace ToutEmbal_v2
             this.btn_Yellow_C.Enabled = false;
             this.btn_Yellow_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Yellow_C.Image = global::ToutEmbal_v2.Properties.Resources.traffic_light_Jaun;
-            this.btn_Yellow_C.Location = new System.Drawing.Point(257, 27);
+            this.btn_Yellow_C.Location = new System.Drawing.Point(276, 27);
             this.btn_Yellow_C.Name = "btn_Yellow_C";
             this.btn_Yellow_C.Size = new System.Drawing.Size(30, 75);
             this.btn_Yellow_C.TabIndex = 8;
@@ -708,8 +710,8 @@ namespace ToutEmbal_v2
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel_A,
             this.toolStripStatusLabel1,
+            this.toolStripStatusLabel_A,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel_B,
             this.toolStripStatusLabel3,
@@ -721,19 +723,19 @@ namespace ToutEmbal_v2
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel_A
-            // 
-            this.toolStripStatusLabel_A.Name = "toolStripStatusLabel_A";
-            this.toolStripStatusLabel_A.Size = new System.Drawing.Size(63, 19);
-            this.toolStripStatusLabel_A.Text = "Caisse A :  ";
-            // 
             // toolStripStatusLabel1
             // 
-            this.toolStripStatusLabel1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.toolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(79, 19);
-            this.toolStripStatusLabel1.Text = "NonDemarré";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(63, 19);
+            this.toolStripStatusLabel1.Text = "Caisse A :  ";
+            // 
+            // toolStripStatusLabel_A
+            // 
+            this.toolStripStatusLabel_A.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.toolStripStatusLabel_A.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.toolStripStatusLabel_A.Name = "toolStripStatusLabel_A";
+            this.toolStripStatusLabel_A.Size = new System.Drawing.Size(79, 19);
+            this.toolStripStatusLabel_A.Text = "NonDemarré";
             // 
             // toolStripStatusLabel2
             // 
@@ -765,6 +767,7 @@ namespace ToutEmbal_v2
             // 
             // toolStripStatusLabel_Time
             // 
+            this.toolStripStatusLabel_Time.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripStatusLabel_Time.Name = "toolStripStatusLabel_Time";
             this.toolStripStatusLabel_Time.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.toolStripStatusLabel_Time.Size = new System.Drawing.Size(46, 19);
@@ -880,8 +883,8 @@ namespace ToutEmbal_v2
         private System.Windows.Forms.Button btn_Red_C;
         private System.Windows.Forms.Button btn_Yellow_C;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_A;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_A;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_B;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
