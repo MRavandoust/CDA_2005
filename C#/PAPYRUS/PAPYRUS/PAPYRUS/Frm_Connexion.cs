@@ -18,25 +18,23 @@ namespace PAPYRUS
     public partial class Frm_Connexion : Form
     {
         BL_Frm_Connexion M;
-        static string mainCon = ConfigurationManager.ConnectionStrings["DB_PAPYRUS"].ConnectionString;
-       
-
-        //Data Source=DESKTOP-EV6M1K5;Initial Catalog=DB_PAPYRUS;Integrated Security=True
 
         public Frm_Connexion()
         {
             InitializeComponent();
-            M = new BL_Frm_Connexion(mainCon);
+            M = new BL_Frm_Connexion();
         }
         
         
         private void btn_Connexion_Click(object sender, EventArgs e)
         {
-
+            M.Serveur = txt_Serveur.Text;
+            M.BaseDeDonnees = txt_BaseDeDonnees.Text;
+            SqlConnection con = M.Connexion();
             try
             {
-                M.Link();
-                lbl_Etat.Text = M.Con.State.ToString();
+                con.Open();
+                lbl_Etat.Text = con.State.ToString();
             }
             catch(SqlException se)
             {
@@ -44,19 +42,18 @@ namespace PAPYRUS
             }
             finally
             {
-                M.UnLink();
+                con.Close();
             }
-            
-            //txt_Serveur.Text = M.Con.DataSource.ToString();
-            //txt_BaseDeDonnees.Text = M.Con.Database.ToString();
+
         }
 
         private void btn_Deconnexion_Click(object sender, EventArgs e)
         {
-            M.UnLink();
-            lbl_Etat.Text = M.Con.State.ToString();
-            txt_Serveur.Clear();
-            txt_BaseDeDonnees.Clear();
+            SqlConnection con = M.Connexion();
+            con.Close();
+            lbl_Etat.Text = con.State.ToString();
+            //txt_Serveur.Clear();
+            //txt_BaseDeDonnees.Clear();
         }
 
         private void btn_Quitter_Click(object sender, EventArgs e)

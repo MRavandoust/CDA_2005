@@ -3,24 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 using DA_PAPYRUS;
 
 namespace BL_PAPYRUS
 {
-    public class BL_Frm_Connexion: DataAccess
+    public class BL_Frm_Connexion
     {
-        public string Code;
-        public string Nom;
-        public string Adresse;
-        public int CP;
-        public string Ville;
-        public string Contact;
-        public int Satisfaction;
+        public string Serveur;
+        public string BaseDeDonnees;
 
+        //DESKTOP-EV6M1K5
+        //PAPYRUS
 
-        public BL_Frm_Connexion(string confstring):base(confstring)
-        { 
-            //inistialiser autres attributs
+        //public BL_Frm_Connexion(string confstring):base(confstring)  
+        //{ 
+        //    //inistialiser autres attributs
+        //}
+
+        public SqlConnection Connexion()
+        {
+            string link = "Data Source='{0}';Initial Catalog='{1}';Integrated Security=True";
+            link = string.Format(link, Serveur, BaseDeDonnees);
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = link;
+            return con;
         }
     }
 }
