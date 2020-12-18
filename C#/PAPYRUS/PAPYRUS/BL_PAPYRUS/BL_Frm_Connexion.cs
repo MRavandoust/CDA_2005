@@ -17,11 +17,6 @@ namespace BL_PAPYRUS
         //DESKTOP-EV6M1K5
         //PAPYRUS
 
-        //public BL_Frm_Connexion(string confstring):base(confstring)  
-        //{ 
-        //    //inistialiser autres attributs
-        //}
-
         public SqlConnection Connexion()
         {
             string link = "Data Source='{0}';Initial Catalog='{1}';Integrated Security=True";
