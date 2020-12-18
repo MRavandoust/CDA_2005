@@ -43,6 +43,7 @@ namespace BL_PAPYRUS
             string Query = "update Fournisseurs set nom = N'{0}', vile = N'{1}', contact = N'{2}', satisfaction = '{3}', num_rue = '{4}', nom_rue = N'{5}', code_postal = '{6}' where id_F = '{7}' ";
             Query = string.Format(Query, Nom, Ville, Contact, Satisfaction, Num_Rue, Nom_Rue, CP, Code);
             base.CommandTex(Query);
+            
             base.UnLink();
         }
 
