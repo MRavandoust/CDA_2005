@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="~/css/main.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/1df9e1fae9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img id="logo" src="~/TP_Freelancer_logo.jpg" />
+            <a class="headlink devis" href="#"><i class="fas fa-calculator"> </i>  Devis & Factures</a>
+            <a class="headlink mission" href="#"><i class="fas fa-coffee"> </i>  Missions</a>
+            <a class="headlink mission" href="#"><i class="fas fa-users"> </i>  Clients</a>
+        </header>
+        <br><br>
+
+        @RenderBody()
+
+        <footer>
+            <p><i class="far fa-copyright"></i> Copyright 2021 <span class="point1">.</span> RAVANDOUST Masoud </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+    </html>*@
