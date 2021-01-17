@@ -1,23 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+#nullable disable
 
 namespace FreeLance.Models
 {
-    public class Job
+    public partial class Job
     {
-        public int Id { get; set; }
-        public string State { get; set; }
-        public string Title { get; set; }
-        public DateTime JobStart { get; set; }
-        public DateTime JobEnd{ get; set; }
-        public string JobDescription{ get; set; }
-        public Customer Customer_Id { get; set; }
-
         public Job()
         {
-
+            Quotes = new HashSet<Quote>();
         }
+
+        public int JobId { get; set; }
+        public string JobState { get; set; }
+        public string JobTitle { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime JobStart { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime JobEnd { get; set; }
+        public string JobDescription { get; set; }
+        public int CustomerId { get; set; }
+
+        public virtual Customer Customer { get; set; }
+        public virtual ICollection<Quote> Quotes { get; set; }
     }
 }

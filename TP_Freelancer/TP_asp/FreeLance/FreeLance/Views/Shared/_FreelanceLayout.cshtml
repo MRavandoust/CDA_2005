@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="~/css/main.css" rel="stylesheet" />
+    <!--<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />-->
     <script src="https://kit.fontawesome.com/1df9e1fae9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <img id="logo" src="~/TP_Freelancer_logo.jpg" />
-            <a class="headlink devis" href="#"><i class="fas fa-calculator"> </i>  Devis & Factures</a>
-            <a class="headlink mission" href="#"><i class="fas fa-coffee"> </i>  Missions</a>
-            <a class="headlink mission" href="#"><i class="fas fa-users"> </i>  Clients</a>
+            <a href ="@Url.Action("Index", "Home")"><img id="logo" src="~/TP_Freelancer_logo.jpg" /></a>
+            <a class="headlink devis" href="@Url.Action("Index", "Quotes")"><i class="fas fa-calculator"> </i>  Devis & Factures</a>
+            <a class="headlink mission" href="@Url.Action("Index", "Jobs")"><i class="fas fa-coffee"> </i>  Missions</a>
+            <a class="headlink mission" href="@Url.Action("Index", "Clients")"><i class="fas fa-users"> </i>  Clients</a>
         </header>
         <br><br>
 
@@ -26,7 +27,7 @@
         </footer>
 
     </div>
-
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>

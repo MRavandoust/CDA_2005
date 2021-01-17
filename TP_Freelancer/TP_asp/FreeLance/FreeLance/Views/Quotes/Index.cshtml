@@ -1,0 +1,59 @@
+﻿@model IEnumerable<FreeLance.Models.Quote>
+
+<div class="linkstyle">
+    <a asp-action="Create">Create New</a>
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuoteState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuoteDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuoteAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuoteFinalDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QuoteFinalAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Job)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuoteState)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuoteDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuoteAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuoteFinalDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QuoteFinalAmount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Job.JobState)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Quotes", new { id = @item.QuoteId })"><i class="fas fa-edit"></i></a>
+                        <a href="@Url.Action("Delete", "Quotes", new { id = @item.QuoteId })"><i class="fas fa-times"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

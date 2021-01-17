@@ -1,0 +1,61 @@
+﻿@model IEnumerable<FreeLance.Models.Job>
+
+
+<div class="linkstyle">
+    <a asp-action="Create">Create New</a>
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobState)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobStart)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobEnd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JobDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobState)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobStart)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobEnd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customer.Name)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Jobs", new { id = @item.JobId })"><i class="fas fa-edit"></i></a>
+                        <a href="@Url.Action("Delete", "Jobs", new { id = @item.JobId })"><i class="fas fa-times"></i></a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

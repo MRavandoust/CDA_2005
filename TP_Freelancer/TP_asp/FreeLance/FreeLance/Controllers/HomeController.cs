@@ -11,17 +11,20 @@ namespace FreeLance.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        FreeDBContext ctx;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(FreeDBContext ctx)
         {
-            _logger = logger;
+            this.ctx = ctx;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Customer> customers = ctx.Customers.ToList();
+            return View("Index", customers);
+            
         }
+
 
         public IActionResult Privacy()
         {
