@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FreeLance.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FreeLance.Controllers
 {
@@ -40,6 +41,7 @@ namespace FreeLance.Controllers
         // GET: ClientsController/Create
         public ActionResult Create()
         {
+            ViewBag.CatId = new SelectList(ctx.CustomersCats, "CatId", "CatName");
             return View();
         }
 
@@ -48,11 +50,17 @@ namespace FreeLance.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Customer customer)
         {
+            
             try
             {
-                ctx.Customers.Add(customer);
-                await ctx.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    ctx.Customers.Add(customer);
+                    await ctx.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                ViewBag.CatId = new SelectList(ctx.CustomersCats, "CatId", "CatName");
+                return View(customer);
             }
             catch
             {

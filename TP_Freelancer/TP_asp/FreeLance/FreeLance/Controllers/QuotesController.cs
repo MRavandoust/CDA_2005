@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FreeLance.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FreeLance.Controllers
 {
@@ -34,6 +35,7 @@ namespace FreeLance.Controllers
         // GET: QuotesController/Create
         public ActionResult Create()
         {
+            ViewBag.JobId = new SelectList(ctx.Jobs, "JobId", "JobState"); 
             return View();
         }
 
@@ -42,11 +44,17 @@ namespace FreeLance.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Quote quote)
         {
+            
             try
             {
+                if (ModelState.IsValid)
+                {
                 ctx.Quotes.Add(quote);
                 ctx.SaveChanges();
                 return RedirectToAction(nameof(Index));
+                }
+                ViewBag.JobId = new SelectList(ctx.Jobs, "JobId", "JobState", quote.JobId);
+                return View(quote);
             }
             catch
             {
