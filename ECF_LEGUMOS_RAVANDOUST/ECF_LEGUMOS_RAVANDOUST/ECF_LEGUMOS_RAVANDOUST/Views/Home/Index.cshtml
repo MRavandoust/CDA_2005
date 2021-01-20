@@ -10,13 +10,15 @@
     {
 
 
-
-        <div class="box">
+    
+    <div class="box">
+        <a asp-action="Details" asp-route-id="@item.SaleId">
             <h2>@Html.DisplayFor(modelItem => item.Vegetable.Name)</h2>
             <h2>(@Html.DisplayFor(modelItem => item.SaleWeight)KGS)</h2>
             <p>@Html.DisplayFor(modelItem => item.SaleDate)</p>
-        </div>
-
+        </a>
+    </div>
+    
     }
 
 

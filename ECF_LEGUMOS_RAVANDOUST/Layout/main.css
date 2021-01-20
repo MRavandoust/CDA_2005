@@ -12,15 +12,20 @@ nav {
     background-color: #0D8A59;
     color: white;
     margin-top: -3px;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul {
     text-align: center;
-    background-color: #0D8A59;
     padding-inline-start: 0px;
-    margin-block-start: 0px;
-    display: flex;
-    justify-content: space-around;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    padding: 0%;
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 

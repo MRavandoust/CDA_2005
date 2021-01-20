@@ -13,16 +13,22 @@ nav {
     background-color: #0D8A59;
     color: white;
     margin-top: -3px;
-}
-
-nav ul {
-    text-align: center;
-    background-color: #0D8A59;
-    padding-inline-start: 0px;
-    margin-block-start: 0px;
     display: flex;
     justify-content: space-around;
 }
+
+    nav ul {
+        text-align: center;
+        padding-inline-start: 0px;
+        margin-block-start: 0%;
+        margin-block-end: 0%;
+        padding: 0%;
+    }
+
+        nav ul li {
+            display: inline-block;
+        }
+
 
 
 /*
@@ -84,6 +90,12 @@ main {
     padding: 10px;
 }
 
+
+    .box a {
+        color: white;
+        text-decoration: none;
+    }
+
 .box h2 {
     margin: 0%;
 }
@@ -91,6 +103,7 @@ main {
 .box p {
     margin: 10px 0 0 0;
 }
+
 
 table {
     

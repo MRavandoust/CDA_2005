@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ECF_LEGUMOS_RAVANDOUST.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ECF_LEGUMOS_RAVANDOUST.Controllers
 {
@@ -34,9 +35,12 @@ namespace ECF_LEGUMOS_RAVANDOUST.Controllers
         }
 
         // GET: HomeController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
-            return View();
+            var item = ctx.Sales.ToList();
+            var it = item[item.Count - 1];
+            Sale sale = ctx.Sales.SingleOrDefault(x => x.SaleId == it.SaleId);
+            return View(sale);
         }
 
         // GET: HomeController/Create
@@ -60,19 +64,31 @@ namespace ECF_LEGUMOS_RAVANDOUST.Controllers
             }
         }
 
-        // GET: HomeController/Edit/5
+        // GET: SalesController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ViewBag.VegetableId = new SelectList(ctx.Vegetables, "Id", "Name");
+            Sale sale = ctx.Sales.SingleOrDefault(x => x.SaleId == id);
+            return View(sale);
         }
 
-        // POST: HomeController/Edit/5
+        // POST: SalesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Sale sale)
         {
+            ViewBag.VegetableId = new SelectList(ctx.Vegetables, "Id", "Name");
+            Sale sales = ctx.Sales.SingleOrDefault(x => x.SaleId == id);
             try
             {
+                if (sales != null)
+                {
+                    sales.SaleDate = sale.SaleDate;
+                    sales.SaleWeight = sale.SaleWeight;
+                    sales.SaleUnitPrice = sale.SaleUnitPrice;
+                    sales.SaleActive = sale.SaleActive;
+                    ctx.SaveChanges();
+                }
                 return RedirectToAction(nameof(Index));
             }
             catch
