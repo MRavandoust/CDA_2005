@@ -23,6 +23,13 @@ namespace ECF_LEGUMOS_RAVANDOUST.Controllers
         public ActionResult Index()
         {
             List<Sale> sales = ctx.Sales.ToList();
+
+            foreach (Sale sale in sales)
+            {
+                sale.Vegetable = ctx.Vegetables.FirstOrDefault(item => item.Id == sale.VegetableId);
+
+            }
+
             return View(sales);
         }
 
