@@ -1,0 +1,20 @@
+C:\Users\sophi\source\repos\ECF\TestConnexion\bin\Debug\TestConnexion.exe.config
+C:\Users\sophi\source\repos\ECF\TestConnexion\bin\Debug\TestConnexion.exe
+C:\Users\sophi\source\repos\ECF\TestConnexion\bin\Debug\TestConnexion.pdb
+C:\Users\sophi\source\repos\ECF\TestConnexion\bin\Debug\ClassLibraryPersistance.dll
+C:\Users\sophi\source\repos\ECF\TestConnexion\bin\Debug\ClassLibraryPersistance.pdb
+C:\Users\sophi\source\repos\ECF\TestConnexion\obj\Debug\TestConnexion.csprojAssemblyReference.cache
+C:\Users\sophi\source\repos\ECF\TestConnexion\obj\Debug\TestConnexion.csproj.CoreCompileInputs.cache
+C:\Users\sophi\source\repos\ECF\TestConnexion\obj\Debug\TestConnexion.csproj.CopyComplete
+C:\Users\sophi\source\repos\ECF\TestConnexion\obj\Debug\TestConnexion.exe
+C:\Users\sophi\source\repos\ECF\TestConnexion\obj\Debug\TestConnexion.pdb
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\bin\Debug\TestConnexion.exe.config
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\bin\Debug\TestConnexion.exe
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\bin\Debug\TestConnexion.pdb
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\bin\Debug\ClassLibraryPersistance.dll
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\bin\Debug\ClassLibraryPersistance.pdb
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\obj\Debug\TestConnexion.csprojAssemblyReference.cache
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\obj\Debug\TestConnexion.csproj.CoreCompileInputs.cache
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\obj\Debug\TestConnexion.csproj.CopyComplete
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\obj\Debug\TestConnexion.exe
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\TestConnexion\obj\Debug\TestConnexion.pdb

@@ -1,0 +1,11 @@
+C:\Users\sophi\source\repos\ECF\ClassLibraryPersistance\bin\Debug\ClassLibraryPersistance.dll
+C:\Users\sophi\source\repos\ECF\ClassLibraryPersistance\bin\Debug\ClassLibraryPersistance.pdb
+C:\Users\sophi\source\repos\ECF\ClassLibraryPersistance\obj\Debug\ClassLibraryPersistance.csproj.CoreCompileInputs.cache
+C:\Users\sophi\source\repos\ECF\ClassLibraryPersistance\obj\Debug\ClassLibraryPersistance.dll
+C:\Users\sophi\source\repos\ECF\ClassLibraryPersistance\obj\Debug\ClassLibraryPersistance.pdb
+C:\Users\sophi\source\repos\ECF\ClassLibraryPersistance\obj\Debug\ClassLibraryPersistance.csprojAssemblyReference.cache
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryPersistance\bin\Debug\ClassLibraryPersistance.dll
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryPersistance\bin\Debug\ClassLibraryPersistance.pdb
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryPersistance\obj\Debug\ClassLibraryPersistance.csproj.CoreCompileInputs.cache
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryPersistance\obj\Debug\ClassLibraryPersistance.dll
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryPersistance\obj\Debug\ClassLibraryPersistance.pdb

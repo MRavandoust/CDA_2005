@@ -1,0 +1,10 @@
+C:\Users\sophi\source\repos\ECF\ClassLibraryMetier\bin\Debug\ClassLibraryMetier.dll
+C:\Users\sophi\source\repos\ECF\ClassLibraryMetier\bin\Debug\ClassLibraryMetier.pdb
+C:\Users\sophi\source\repos\ECF\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.csproj.CoreCompileInputs.cache
+C:\Users\sophi\source\repos\ECF\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.dll
+C:\Users\sophi\source\repos\ECF\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.pdb
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\bin\Debug\ClassLibraryMetier.dll
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\bin\Debug\ClassLibraryMetier.pdb
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.csproj.CoreCompileInputs.cache
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.dll
+C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.pdb
