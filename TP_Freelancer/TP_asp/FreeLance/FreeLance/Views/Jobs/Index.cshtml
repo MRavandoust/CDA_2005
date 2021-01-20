@@ -48,7 +48,7 @@
                         @Html.DisplayFor(modelItem => item.JobDescription)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Customer.Name)
+                        @Html.DisplayFor(modelItem => item.CustomerId)
                     </td>
                     <td>
                         <a href="@Url.Action("Edit", "Jobs", new { id = @item.JobId })"><i class="fas fa-edit"></i></a>

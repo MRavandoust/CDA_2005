@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FreeLance.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace FreeLance.Controllers
 {
@@ -20,8 +22,13 @@ namespace FreeLance.Controllers
         // GET: JobsController
         public ActionResult Index()
         {
-            List<Job> jobs = jctx.Jobs.ToList();
+            //_context.Invoices.Include(x => x.Users).Include(x => x.Food).ToList();
+            //Job job = jctx.Jobs.SingleOrDefault(j => j.JobId == id);
+            //List<Job> jobs = jctx.Jobs.Include(x => x.JobState).Include(x => x.JobTitle).Include(x => x.JobStart).Include(x => x.JobEnd).Include(x => x.JobDescription).Include(x => x.CustomerId).ToList();
 
+
+
+            List<Job> jobs = jctx.Jobs.ToList();
             return View(jobs);
         }
 
@@ -34,6 +41,7 @@ namespace FreeLance.Controllers
         // GET: JobsController/Create
         public ActionResult Create()
         {
+            ViewBag.CustomerId = new SelectList(jctx.Customers, "Id", "Name");
             return View();
         }
 
@@ -44,9 +52,14 @@ namespace FreeLance.Controllers
         {
             try
             {
-                jctx.Jobs.Add(job);
-                jctx.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    jctx.Jobs.Add(job);
+                    jctx.SaveChanges();
+                    return RedirectToAction(nameof(Index));
+                }
+                ViewBag.CustomerId = new SelectList(jctx.Customers, "Id", "Name", job.CustomerId);
+                return RedirectToAction("Index");
             }
             catch
             {

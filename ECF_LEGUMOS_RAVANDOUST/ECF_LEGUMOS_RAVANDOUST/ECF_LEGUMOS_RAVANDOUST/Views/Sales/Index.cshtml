@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ECF_LEGUMOS_RAVANDOUST.Models.Sale>
+
+    
+    <h1>Liste des ventes</h1>
+
+
+<p class="create">
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleUnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vegetable)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleUnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vegetable.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SaleId">Editer</a> .
+                <a asp-action="Delete" asp-route-id="@item.SaleId">Supprimer</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

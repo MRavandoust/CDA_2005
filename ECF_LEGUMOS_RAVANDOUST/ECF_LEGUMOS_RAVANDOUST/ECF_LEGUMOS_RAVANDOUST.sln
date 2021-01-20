@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECF_LEGUMOS_RAVANDOUST", "ECF_LEGUMOS_RAVANDOUST\ECF_LEGUMOS_RAVANDOUST.csproj", "{9DA91266-BE87-4BFB-87C4-A035128CB7EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DA91266-BE87-4BFB-87C4-A035128CB7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA91266-BE87-4BFB-87C4-A035128CB7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA91266-BE87-4BFB-87C4-A035128CB7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA91266-BE87-4BFB-87C4-A035128CB7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7A4BBCC-89E0-4E9B-B3C9-B2C3544285FD}
+	EndGlobalSection
+EndGlobal

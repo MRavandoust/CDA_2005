@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faf7f5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    margin: 0;
+    background-color: #0D8A59;
+    color: white;
+    margin-top: -3px;
+}
+
+nav ul {
+    text-align: center;
+    background-color: #0D8A59;
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*
+.first {
+    flex-grow: 1;
+    flex-basis: 50px;
+}
+
+.second {
+    flex-grow: 2;
+    flex-basis: 200px;
+}
+
+*/
+
+nav ul li {
+    padding: 10px;
+    height: 50px;
+    line-height: 30px;
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 35px;
+}
+
+nav ul li:hover {
+    background-color: #0ab973;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+}
+
+.box {
+    background-color: #0D8A59;
+    color: white;
+    width: 30%;
+    height: 30%;
+    margin: 10px 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.box h2 {
+    margin: 0%;
+}
+
+.box p {
+    margin: 10px 0 0 0;
+}
+
+table {
+    border: solid 2px #111;
+    margin: auto;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #FAF7F5;
+}
+
+table tr td {
+    padding: 5px;
+}
+
+table tr th {
+    background-color: #111;
+    color: white;
+    text-align: left;
+    border: solid 2px #111;
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #0D8A59;
+    padding: 15px;
+    height: 100px;
+    line-height: 60px;
+    color: white;
+}
+
+footer p {
+    background-color: #0D8A59;
+    font-size: 12px;
+}

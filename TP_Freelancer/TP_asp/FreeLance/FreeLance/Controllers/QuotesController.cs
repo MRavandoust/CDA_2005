@@ -54,7 +54,7 @@ namespace FreeLance.Controllers
                 return RedirectToAction(nameof(Index));
                 }
                 ViewBag.JobId = new SelectList(ctx.Jobs, "JobId", "JobState", quote.JobId);
-                return View(quote);
+                return RedirectToAction("Index");
             }
             catch
             {
