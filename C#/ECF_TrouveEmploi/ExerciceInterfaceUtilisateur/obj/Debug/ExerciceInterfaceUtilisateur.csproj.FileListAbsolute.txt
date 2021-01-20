@@ -25,3 +25,17 @@ C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur
 C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.csproj.CopyComplete
 C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.exe
 C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.pdb
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\bin\Debug\ExerciceInterfaceUtilisateur.exe.config
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\bin\Debug\ExerciceInterfaceUtilisateur.exe
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\bin\Debug\ExerciceInterfaceUtilisateur.pdb
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\bin\Debug\ClassLibraryMetier.dll
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\bin\Debug\ClassLibraryMetier.pdb
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.FormDemandeurDEmploi.resources
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.FormDiplome.resources
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.exe
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ExerciceInterfaceUtilisateur\obj\Debug\ExerciceInterfaceUtilisateur.pdb

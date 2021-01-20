@@ -8,3 +8,9 @@ C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\bin\Debug
 C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.csproj.CoreCompileInputs.cache
 C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.dll
 C:\Users\Masoud RAVANDOUST\Desktop\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.pdb
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ClassLibraryMetier\bin\Debug\ClassLibraryMetier.dll
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ClassLibraryMetier\bin\Debug\ClassLibraryMetier.pdb
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.dll
+D:\GitHub\CDA_2005\C#\ECF_TrouveEmploi\ClassLibraryMetier\obj\Debug\ClassLibraryMetier.pdb
