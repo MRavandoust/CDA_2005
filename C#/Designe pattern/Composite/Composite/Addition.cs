@@ -8,14 +8,19 @@ namespace Composite
 {
     public class Addition : Binaire
     {
-        public Addition(Expression operantGauche, Expression operantDroite) : base(operantGauche, operantDroite)
+        public Addition(Expression _operandeGauche, Expression _operandeDroite) : base(_operandeGauche, _operandeDroite)
         {
 
         }
 
         public override int Evaluer()
         {
-            return _operantGauche.Evaluer() + _operantDroite.Evaluer();
+            return operandeGauche.Evaluer() + operandeDroite.Evaluer();
+        }
+
+        public override string FormateGauche()
+        {
+            return  operandeGauche.FormateGauche() + " + " + operandeDroite.FormateGauche();
         }
     }
 }

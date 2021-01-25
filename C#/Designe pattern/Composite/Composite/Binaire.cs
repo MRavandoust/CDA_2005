@@ -8,13 +8,13 @@ namespace Composite
 {
     public abstract class Binaire : Expression
     {
-        protected Expression _operantGauche;
-        protected Expression _operantDroite;
+        protected Expression operandeGauche;
+        protected Expression operandeDroite;
 
-        public Binaire(Expression operantGauche, Expression operantDroite)
+        public Binaire(Expression _operandeGauche, Expression _operandeDroite)
         {
-            _operantGauche = operantGauche;
-            _operantDroite = operantDroite;
+            operandeGauche = _operandeGauche;
+            operandeDroite = _operandeDroite;
         }
 
     }

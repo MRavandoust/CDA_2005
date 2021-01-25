@@ -20,6 +20,9 @@ namespace Composite
             return valeur; 
         }
 
-
+        public override string FormateGauche()
+        {
+            return valeur.ToString();
+        }
     }
 }

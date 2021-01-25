@@ -15,6 +15,13 @@ namespace Composite
     
         public abstract int Evaluer();
 
+        public abstract string FormateGauche();
+
+        public string Formate()
+        {
+            return FormateGauche() + " = " + Evaluer().ToString();
+        }
+
 
     }
 }
