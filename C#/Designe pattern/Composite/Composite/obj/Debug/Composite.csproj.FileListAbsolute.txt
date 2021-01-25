@@ -1,0 +1,7 @@
+D:\GitHub\CDA_2005\C#\Designe pattern\Composite\Composite\obj\Debug\Composite.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\Composite\Composite\obj\Debug\Composite.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\Composite\Composite\bin\Debug\Composite.exe.config
+D:\GitHub\CDA_2005\C#\Designe pattern\Composite\Composite\bin\Debug\Composite.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\Composite\Composite\bin\Debug\Composite.pdb
+D:\GitHub\CDA_2005\C#\Designe pattern\Composite\Composite\obj\Debug\Composite.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\Composite\Composite\obj\Debug\Composite.pdb
