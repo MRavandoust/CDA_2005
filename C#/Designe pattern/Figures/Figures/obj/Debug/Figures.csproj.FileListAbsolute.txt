@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\bin\Debug\Figures.exe.config
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\bin\Debug\Figures.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\bin\Debug\Figures.pdb
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\obj\Debug\Figures.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\obj\Debug\Figures.Form1.resources
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\obj\Debug\Figures.Properties.Resources.resources
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\obj\Debug\Figures.csproj.GenerateResource.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\obj\Debug\Figures.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\obj\Debug\Figures.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\Figures\Figures\obj\Debug\Figures.pdb

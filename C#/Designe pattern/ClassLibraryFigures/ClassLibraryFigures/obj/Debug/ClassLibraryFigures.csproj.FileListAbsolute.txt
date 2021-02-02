@@ -1,0 +1,6 @@
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ClassLibraryFigures\bin\Debug\ClassLibraryFigures.dll
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ClassLibraryFigures\bin\Debug\ClassLibraryFigures.pdb
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ClassLibraryFigures\obj\Debug\ClassLibraryFigures.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ClassLibraryFigures\obj\Debug\ClassLibraryFigures.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ClassLibraryFigures\obj\Debug\ClassLibraryFigures.dll
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ClassLibraryFigures\obj\Debug\ClassLibraryFigures.pdb

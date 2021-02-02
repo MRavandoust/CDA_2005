@@ -18,7 +18,7 @@ namespace ExerciceInterfaceUtilisateur
             var config = ConfigurationManager.OpenExeConfiguration(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
             var connectionStringSection = config.GetSection("connectionStrings") as ConnectionStringsSection;
-            if(connectionStringSection != null && !connectionStringSection.SectionInformation.IsProtected)
+            if (connectionStringSection != null && !connectionStringSection.SectionInformation.IsProtected)
             {
                 connectionStringSection.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
             }

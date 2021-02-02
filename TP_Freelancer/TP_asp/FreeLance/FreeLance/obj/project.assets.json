@@ -8783,7 +8783,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Masoud RAVANDOUST\\.nuget\\packages\\": {}
+    "C:\\Users\\MRavandoust\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -8791,11 +8791,11 @@
       "projectUniqueName": "D:\\GitHub\\CDA_2005\\TP_Freelancer\\TP_asp\\FreeLance\\FreeLance\\FreeLance.csproj",
       "projectName": "FreeLance",
       "projectPath": "D:\\GitHub\\CDA_2005\\TP_Freelancer\\TP_asp\\FreeLance\\FreeLance\\FreeLance.csproj",
-      "packagesPath": "C:\\Users\\Masoud RAVANDOUST\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\MRavandoust\\.nuget\\packages\\",
       "outputPath": "D:\\GitHub\\CDA_2005\\TP_Freelancer\\TP_asp\\FreeLance\\FreeLance\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Masoud RAVANDOUST\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MRavandoust\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

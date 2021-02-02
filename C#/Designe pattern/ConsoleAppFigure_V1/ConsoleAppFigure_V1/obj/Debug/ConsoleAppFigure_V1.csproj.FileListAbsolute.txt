@@ -1,0 +1,6 @@
+D:\GitHub\CDA_2005\C#\Designe pattern\ConsoleAppFigure_V1\ConsoleAppFigure_V1\bin\Debug\ConsoleAppFigure_V1.exe.config
+D:\GitHub\CDA_2005\C#\Designe pattern\ConsoleAppFigure_V1\ConsoleAppFigure_V1\bin\Debug\ConsoleAppFigure_V1.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\ConsoleAppFigure_V1\ConsoleAppFigure_V1\bin\Debug\ConsoleAppFigure_V1.pdb
+D:\GitHub\CDA_2005\C#\Designe pattern\ConsoleAppFigure_V1\ConsoleAppFigure_V1\obj\Debug\ConsoleAppFigure_V1.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\ConsoleAppFigure_V1\ConsoleAppFigure_V1\obj\Debug\ConsoleAppFigure_V1.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\ConsoleAppFigure_V1\ConsoleAppFigure_V1\obj\Debug\ConsoleAppFigure_V1.pdb

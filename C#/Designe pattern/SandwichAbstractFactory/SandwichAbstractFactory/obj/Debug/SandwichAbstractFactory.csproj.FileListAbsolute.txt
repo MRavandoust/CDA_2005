@@ -1,0 +1,7 @@
+D:\GitHub\CDA_2005\C#\Designe pattern\SandwichAbstractFactory\SandwichAbstractFactory\bin\Debug\SandwichAbstractFactory.exe.config
+D:\GitHub\CDA_2005\C#\Designe pattern\SandwichAbstractFactory\SandwichAbstractFactory\bin\Debug\SandwichAbstractFactory.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\SandwichAbstractFactory\SandwichAbstractFactory\bin\Debug\SandwichAbstractFactory.pdb
+D:\GitHub\CDA_2005\C#\Designe pattern\SandwichAbstractFactory\SandwichAbstractFactory\obj\Debug\SandwichAbstractFactory.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\SandwichAbstractFactory\SandwichAbstractFactory\obj\Debug\SandwichAbstractFactory.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\SandwichAbstractFactory\SandwichAbstractFactory\obj\Debug\SandwichAbstractFactory.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\SandwichAbstractFactory\SandwichAbstractFactory\obj\Debug\SandwichAbstractFactory.pdb

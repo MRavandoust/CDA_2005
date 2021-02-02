@@ -1,0 +1,10 @@
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\bin\Debug\ConsoleAppFigures.exe.config
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\bin\Debug\ConsoleAppFigures.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\bin\Debug\ConsoleAppFigures.pdb
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\bin\Debug\ClassLibraryFigures.dll
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\bin\Debug\ClassLibraryFigures.pdb
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\obj\Debug\ConsoleAppFigures.csprojAssemblyReference.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\obj\Debug\ConsoleAppFigures.csproj.CoreCompileInputs.cache
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\obj\Debug\ConsoleAppFigures.csproj.CopyComplete
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\obj\Debug\ConsoleAppFigures.exe
+D:\GitHub\CDA_2005\C#\Designe pattern\ClassLibraryFigures\ConsoleAppFigures\obj\Debug\ConsoleAppFigures.pdb
