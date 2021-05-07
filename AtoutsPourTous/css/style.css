@@ -17,9 +17,21 @@
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1185px) {
+@media screen and (min-width: 992px) and (max-width: 1220px) {
     .nav-top {
         width: 180px !important;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 1220px) {
+    .xx {
+        width: 100% !important;
+    }
+    .xxx {
+        width: 450px !important;
+    }
+    .rond {
+        margin: auto;
     }
 }
 
