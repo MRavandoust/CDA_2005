@@ -69,6 +69,9 @@ body {
     .single-text {
         padding: 30px 10px !important;
     }
+    .even-text {
+        height: fit-content !important;
+    }
 }
 
 html,
@@ -109,34 +112,33 @@ body {
 #login-form {
     width: 47rem;
     margin: auto;
-    padding: 20px 5px;
-}
-
-.btn-login {
-    border-radius: 0px !important;
-    /*background-color: #C2237A !important;*/
-    padding: 12px 20px !important;
-    width: 140px;
-    margin-right: 40px;
-    margin-top: 20px;
-}
-
-.btn-bg {
-    /*background-color: #C2237A !important;*/
-    box-shadow: none !important;
-    color: white !important;
-    font-size: 22px !important;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 900;
-    z-index: 2;
+    padding: 0px 5px;
 }
 
 .button-bg {
     width: 264px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
+}
+
+.login-btn {
+    position: absolute;
+    width: 240px;
+    height: 170px;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    border: none !important;
+}
+
+.login-icon {
+    color: white !important;
+    font-size: 22px !important;
+    width: 175px;
+    height: 120px;
+    float: right;
 }
 
 .form-label {
@@ -165,11 +167,9 @@ body {
     width: 200px;
     text-align: center;
     transition: .3s ease-in-out all !important;
-    color: rgb(34, 37, 37) !important;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
+    font-weight: 700 !important;
     font-size: 27px !important;
-    color: #C2237A !important;
     padding: 5px 10px !important;
 }
 
@@ -198,7 +198,7 @@ body {
 }
 
 .activity {
-    border: 10px solid #03989E;
+    border: 10px solid #C2237A;
     padding: 0px !important;
     position: relative;
 }
@@ -208,7 +208,7 @@ body {
     right: 0;
     margin-top: -22px !important;
     padding: 4px 25px;
-    background-color: #03989E;
+    background-color: #C2237A;
     color: white;
     font-family: 'Oxygen', sans-serif;
     z-index: 1;
@@ -289,7 +289,7 @@ body {
 }
 
 
-/* ====================== footer ====================*/
+/*********************** footer ************************/
 
 footer {
     margin-top: 120px;
@@ -313,13 +313,17 @@ footer {
     color: rgb(68, 65, 65);
 }
 
-.dropdown {
+
+/****************** Drop down menu *********************/
+
+.nav-item {
+    list-style: none;
     position: relative;
     display: inline-block;
     transition: .3s ease-in-out all !important;
 }
 
-.dropdown-content {
+.sub-menu {
     transition: .3s ease-in-out all !important;
     display: none;
     position: absolute;
@@ -329,32 +333,32 @@ footer {
     z-index: 1;
 }
 
-.dropdown-content li a {
+.sub-menu li a {
     display: block;
     transition: .3s ease-in-out all !important;
     padding: 10px 15px 10px 50px;
 }
 
-.dropdown-content li a:hover {
+.sub-menu li a:hover {
     color: white !important;
     transition: .3s ease-in-out all !important;
 }
 
-.dropdown-content li {
+.sub-menu li {
     list-style: none;
     margin-left: -32px;
     transition: .3s ease-in-out all !important;
 }
 
-.dropdown-content li:hover {
+.sub-menu li:hover {
     background-color: #ED7D31;
 }
 
-.dropdown-content p {
+.sub-menu p {
     margin-top: 0px;
 }
 
-.dropdown:hover .dropdown-content {
+.nav-item:hover .sub-menu {
     transition: .3s ease-in-out all !important;
     display: block;
 }
@@ -386,6 +390,7 @@ footer {
 }
 
 .even-text {
+    height: 50px;
     padding-top: 25px;
     text-align: left;
 }
@@ -407,4 +412,57 @@ footer {
 .single-text {
     text-align: left;
     padding: 40px 80px;
+}
+
+
+/* This targets the current page's menu item */
+
+.current-menu-item>a {
+    background-color: #ED7D31;
+    color: white !important;
+}
+
+
+/* This targets other menu items when you hover over them */
+
+.menu-item:hover>a {
+    background-color: #ED7D31;
+    color: white;
+}
+
+
+/** pills **/
+
+.tab-content button,
+.modal-content a[class~="active"] {
+    background-color: #ED7D31 !important;
+}
+
+input[class="form-check-input"] :checked {
+    background-color: #ED7D31 !important;
+    border-color: #ED7D31 !important;
+}
+
+
+/***************** Fome checked and link *******************/
+
+.form-check-input {
+    border: 1px solid #ED7D31 !important;
+}
+
+.form-check-input:checked {
+    background-color: #ED7D31 !important;
+}
+
+form a {
+    color: #C2237A !important;
+}
+
+
+/**********form input border color*********************/
+
+.form-control:focus~.form-notch .form-notch-leading,
+.form-control:focus~.form-notch .form-notch-middle,
+.form-control:focus~.form-notch .form-notch-trailing {
+    border-color: #ED7D31 !important;
 }
