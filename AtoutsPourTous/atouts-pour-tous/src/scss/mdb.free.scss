@@ -50,10 +50,12 @@
 @import './bootstrap-rtl-fix/helpers';
 
 // Utilities
+@import './free/utilities';
 @import './bootstrap-rtl-fix/utilities/api';
 
 // MDB CORE
 @import './free/mixins';
+@import './free/utilities';
 
 // MDB CORE COMPONENTS
 @import './free/root';

@@ -1,25 +1,39 @@
+@font-face {
+    font-family: "Nova";
+    src: url("../fonts/ProximaNova-Regular.otf")
+}
+
 body {
     font-family: "Ayar", serif;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    .rond {
-        width: 250px;
-        height: 250px;
-        margin: auto;
-        font-size: 14px;
+@media screen and (min-width: 200px) and (max-width: 400px) {
+    .text {
+        margin-top: 2px !important;
+        clear: both;
+        text-align: left !important;
+    }
+    .text :first-child {
+        margin-top: 2px !important;
+        text-align: left !important;
+    }
+    .logo {
+        margin-left: 0px !important;
+    }
+    .logo img {
+        height: 138px;
+        margin: 2px 5px 0px -5px !important;
     }
 }
 
 @media screen and (min-width: 200px) and (max-width: 635px) {
     .text {
         margin-top: 2px !important;
+        clear: both;
+        text-align: center;
     }
     .text :first-child {
         margin-top: 2px !important;
-        text-align: center;
-    }
-    .text {
         text-align: center;
     }
     .hdr {
@@ -32,7 +46,7 @@ body {
 
 @media screen and (min-width: 992px) and (max-width: 1220px) {
     .nav-top {
-        width: 180px !important;
+        width: 160px !important;
     }
 }
 
@@ -40,10 +54,21 @@ body {
     .xx {
         width: 100% !important;
     }
-    .xxx {
-        width: 450px !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1084px) {
+    .nav-top {
+        width: 140px !important;
     }
 }
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+    .conv {
+        margin-bottom: 60px !important;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {}
 
 @media screen and (min-width: 200px) and (max-width: 992px) {
     .navbar-nav {
@@ -87,17 +112,29 @@ body {
 }
 
 .logo img {
-    height: 115px;
+    height: 138px;
     float: left;
     margin: 5px 5px 0px 15px;
 }
 
+.logo-rond {
+    width: 130px;
+    border: 1px solid #ED7D31;
+    border-radius: 50%;
+    padding: 12px 0px;
+    margin: auto;
+}
+
+.logo-rond img {
+    width: 90px !important;
+}
+
 .text {
     float: left;
-    font: 16px 'Oxygen', sans-serif;
+    font: 17px 'Oxygen', sans-serif;
     font-weight: 650;
     color: #C2237A;
-    margin-top: 34px;
+    margin-top: 51px;
 }
 
 .text p {
@@ -133,19 +170,41 @@ body {
     border: none !important;
 }
 
-.login-icon {
-    color: white !important;
-    font-size: 22px !important;
-    width: 175px;
-    height: 120px;
-    float: right;
+.dropdown-menu li a {
+    padding: 0 0 0 5px !important;
+    color: white;
+    background: #C93081 !important;
+    font-size: 17px !important;
 }
 
-.form-label {
-    background-color: white !important;
-    z-index: 999;
-    margin-top: 1.5px !important;
-    padding: 0px 3px;
+.dropdown-divider {
+    color: white;
+    height: 2px !important;
+    width: 135px;
+}
+
+.dropdown-menu {
+    background: #C93081 !important;
+    width: 100px !important;
+    min-width: 8rem !important;
+    margin-left: 45px !important;
+}
+
+.login-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white !important;
+    font-size: 16px !important;
+    width: 175px;
+    float: right;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.login-icon .fa-user {
+    font-size: 19px !important;
+    margin-right: 8px;
 }
 
 .navbar-brand p {
@@ -154,27 +213,30 @@ body {
 }
 
 .navbar {
-    border-top: 3px solid #ED7D31 !important;
-    /* background-color: #C2237A; */
+    border-top: 3px solid #C93081 !important;
+    border-bottom: 3px solid #C93081 !important;
+    /* background-color: #ED7D31; */
 }
 
 .nav-top-height {
     padding: 0px !important;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 .nav-top {
-    width: 200px;
+    width: 170px;
     text-align: center;
     transition: .3s ease-in-out all !important;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700 !important;
-    font-size: 27px !important;
-    padding: 5px 10px !important;
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    padding: 3px 5px !important;
+    text-transform: uppercase;
+    color: rgb(58, 56, 56) !important;
 }
 
 .nav-top:hover {
-    background-color: #ED7D31;
+    background-color: #C93081 !important;
     color: white !important;
     transition: .3s ease-in-out all !important;
 }
@@ -190,24 +252,28 @@ body {
     color: white !important;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .top-titr h3 {
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.top-titr h1 {
+    font-size: 36px;
 }
 
 .activity {
     border: 10px solid #C2237A;
     padding: 0px !important;
-    position: relative;
 }
 
 .activity-header {
     position: absolute;
     right: 0;
-    margin-top: -22px !important;
-    padding: 4px 25px;
+    margin-top: -30px !important;
+    margin-right: 2px !important;
+    padding: 4px 15px;
     background-color: #C2237A;
     color: white;
     font-family: 'Oxygen', sans-serif;
@@ -234,7 +300,8 @@ body {
 }
 
 .card-title {
-    height: 45px;
+    font-size: 18px;
+    text-align: left;
 }
 
 
@@ -245,11 +312,7 @@ body {
     background-color: #EFF2F6;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 20%);
     margin-top: 100px;
-    padding: 20px 0;
-}
-
-.second-item {
-    margin-top: 0px;
+    padding: 35px 0;
 }
 
 .statistiques {
@@ -292,7 +355,7 @@ body {
 /*********************** footer ************************/
 
 footer {
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 .bg {
@@ -328,7 +391,7 @@ footer {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 200px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -418,7 +481,7 @@ footer {
 /* This targets the current page's menu item */
 
 .current-menu-item>a {
-    background-color: #ED7D31;
+    background-color: #C93081;
     color: white !important;
 }
 
@@ -444,14 +507,11 @@ input[class="form-check-input"] :checked {
 }
 
 
-/***************** Fome checked and link *******************/
-
-.form-check-input {
-    border: 1px solid #ED7D31 !important;
-}
+/***************** Form checked and link *******************/
 
 .form-check-input:checked {
     background-color: #ED7D31 !important;
+    border: 1px solid #ED7D31 !important;
 }
 
 form a {
@@ -465,4 +525,183 @@ form a {
 .form-control:focus~.form-notch .form-notch-middle,
 .form-control:focus~.form-notch .form-notch-trailing {
     border-color: #ED7D31 !important;
+}
+
+.form-control:focus~.form-label {
+    color: #ED7D31 !important;
+}
+
+.wp-social-login-provider {
+    color: white !important;
+}
+
+.modal-footer .btn {
+    background-color: #C2237A !important;
+}
+
+
+/**************************************************/
+
+.add_button1,
+.add_button2,
+.add_button3 {
+    background-color: #ED7D31 !important;
+    color: white !important;
+    font-size: 16px !important;
+    line-height: 38px !important;
+}
+
+.remove_button1,
+.remove_button2,
+.remove_button3 {
+    color: white !important;
+    font-size: 16px !important;
+    line-height: 38px !important;
+}
+
+
+/********************* Card underline hover **************************/
+
+.underline {
+    position: relative;
+    border-bottom: 8px solid #ED7D31 !important;
+}
+
+.underline:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 8px;
+    bottom: 0;
+    right: 0;
+    border-bottom: 8px solid #ED7D31;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: -8px;
+}
+
+.underline:hover:before {
+    border-bottom: 8px solid #C93081;
+    width: 100%;
+    left: 0;
+}
+
+
+/************************ Single ******************************/
+
+.single-wrapper {
+    min-height: 700px;
+    margin-top: 35px;
+    max-width: 960px !important;
+}
+
+.sngle-card {
+    padding: 30px 0px;
+    border-radius: 0 !important
+}
+
+.single-title {
+    text-align: left;
+    color: #003E79;
+    font-weight: bold;
+}
+
+.single-img {
+    max-height: 520px !important;
+    width: 100% !important;
+}
+
+.single-body {
+    padding: 0 !important;
+}
+
+
+/********************* Dropdown Multiselect *************************/
+
+
+/* class applies to select element itself, not a wrapper element */
+
+.select-css {
+    display: block;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    max-width: 100%;
+    /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #ED7D31;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+      for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+      
+    */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%, 0 0;
+    /* icon size, then gradient */
+    background-size: .65em auto, 100%;
+}
+
+
+/* Hide arrow icon in IE browsers */
+
+.select-css::-ms-expand {
+    display: none;
+}
+
+
+/* Hover style */
+
+.select-css:hover {
+    border-color: #888;
+}
+
+
+/* Focus style */
+
+.select-css:focus {
+    border-color: #aaa;
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    color: #222;
+    outline: none;
+}
+
+
+/* Set options to normal weight */
+
+.select-css option {
+    font-weight: normal;
+}
+
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+
+*[dir="rtl"] .select-css,
+ :root:lang(ar) .select-css,
+ :root:lang(iw) .select-css {
+    background-position: left .7em top 50%, 0 0;
+    padding: .6em .8em .5em 1.4em;
+}
+
+
+/* Disabled styles */
+
+.select-css:disabled,
+.select-css[aria-disabled=true] {
+    color: graytext;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+
+.select-css:disabled:hover,
+.select-css[aria-disabled=true] {
+    border-color: #aaa;
 }

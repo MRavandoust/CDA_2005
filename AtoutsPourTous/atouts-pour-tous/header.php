@@ -1,29 +1,62 @@
+<?php
+ob_start();
+
+$error = false;
+if (!empty($_POST)) {
+    $user = wp_signon($_POST);
+    if (is_wp_error($user)) {
+        $error = $user->get_error_message();
+    } else {
+        header('location:index.php');
+    }
+} else {
+    $user = wp_get_current_user();
+    if ($user->ID != 0) {
+        // header('location:profil');
+    }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title><?php bloginfo('name'); wp_title(); ?></title>
+    <title><?php bloginfo('name');
+            wp_title(); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/pagination.css">
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/logo.svg" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Oxygen&family=Lato:wght@700&family=Palanquin+Dark&family=Quicksand:wght@500;600&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Lato:wght@700&family=Palanquin+Dark&family=Quicksand:wght@500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- MDB -->
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/mdb.min.css" />
-<?php wp_head() ?>
+    <!-------- Actualiser partenaires--------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setInterval(function() {
+                $('#div_refresh').load(' #div_refresh');
+            }, 10000);
+        });
+    </script>
+    <!--------End - Actualiser partenaires--------->
+
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery-1.10.2.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery-ui.js"></script>
+
+    <?php wp_head() ?>
 </head>
 
 <body>
-    <!-- Start your project here-->
-
-
     <!------------------------------------ Header --------------------------------------->
 
     <header>
@@ -49,320 +82,295 @@
 
                 <section id="section-advanced-examples ">
 
+
+
                     <div class="container" style="position : relative">
+                        <?php $user = wp_get_current_user();
+                        if ($user->ID == 0) : ?>
+                            <button type="button" class="login-btn" style="background:url('<?php bloginfo('template_url'); ?>/images/button.svg'); background-size: cover;" data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal3">
+                                <div class="login-icon">
+                                    <i class="fas fa-user-alt" style="font-size: 13px;"></i>&nbsp Se connecter
+                                </div>
+                            </button>
 
-                        <button type="button" class="login-btn"
-                            style="background:url('<?php bloginfo('template_url'); ?>/images/button.svg'); background-size: cover;"
-                            data-mdb-toggle="modal" data-mdb-target="#exampleCentralModal3">
-                            <div class="login-icon">
-                                <i class="fas fa-user"></i> <br> Accès membres
-                            </div>
-                        </button>
+                        <?php else : ?>
 
-                        <!-- exampleCentralModal3 -->
-                        <div class="modal fade " id="exampleCentralModal3" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
+                            <button type="button" class="login-btn" style="background:url('<?php bloginfo('template_url'); ?>/images/button.svg'); background-size: cover;">
+                                <!-- Login dropdown  -->
+                                <a href="" class="login-icon dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-alt" style="font-size: 13px;"></i>&nbsp <?= $f = $user->first_name ?  ($user->first_name[0] . '. ')  : '';
+                                                                                                    echo  $l = $user->last_name ? $user->last_name : '';
+                                                                                                    if ($f == '' && $l == '') echo $user->user_login; ?>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?= bloginfo('url'); ?>/profil">Profil</a></li>
+                                    <li><a class="dropdown-item" href="<?= bloginfo('url'); ?>/cv">Mon CV</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li><a class="dropdown-item" href="<?= bloginfo('url'); ?>/logout">Se déconnecter</a></li>
+                                </ul>
+
+                            </button>
+
+                        <?php endif ?>
+
+
+
+
+
+
+                        <div class="modal fade " id="exampleCentralModal3" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+
+                                <!-- Modal content -->
                                 <div class="modal-content">
-                                    <div class="modal-body p-4">
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+
                                         <!-- Pills navs -->
-                                        <ul class="nav nav-pills justify-content-between  mb-3 pill" id="ex1"
-                                            role="tablist">
-                                            <li class="nav-item flex-fill text-center" role="presentation ">
-                                                <a class="nav-link active" id="mdb-tab-login" data-mdb-toggle="pill"
-                                                    href="#pills-login" role="tab" aria-controls="pills-login"
-                                                    aria-selected="true">Login</a>
+                                        <ul class="nav nav-pills nav-justified mb-3">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link show active" data-mdb-toggle="pill" href="#navbarLogin-login" role="tab" aria-selected="true">Login</a>
                                             </li>
-                                            <li class="nav-item flex-fill text-center" role="presentation">
-                                                <a class="nav-link" id="mdb-tab-register" data-mdb-toggle="pill"
-                                                    href="#pills-register" role="tab" aria-controls="pills-register"
-                                                    aria-selected="false">Register</a>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" data-mdb-toggle="pill" href="#navbarLogin-signup" role="tab" aria-selected="false">Register</a>
                                             </li>
                                         </ul>
-                                        <!-- Pills navs -->
 
-                                        <!-- Pills content -->
+                                        <!-- Pills panels -->
                                         <div class="tab-content">
-                                            <div class="tab-pane fade show active" id="pills-login" role="tabpanel"
-                                aria-labelledby="mdb-tab-login">
 
-<?php                                        
-global $user_ID;
-if(!$user_ID){
- $err = '';
- $success = '';
- 
- if(isset($_POST['submit']))
- {
-     
-  //We shall SQL escape all inputs to avoid sql injection.
-  $username = esc_sql($_POST['username']);
-  $password = esc_sql($_POST['password']);
-  $remember = esc_sql($_POST['remember']);
+                                            <!--Panel 1-->
+                                            <div class="tab-pane fade in active show" id="navbarLogin-login" role="tabpanel">
 
 
-  if( $username == "" || $password == "" ) {
-     
-   $err = 'Please don\'t leave the required field.';
-  } else {
-    
-   $user_data = array();
-   $user_data['user_login'] = $username;
-   $user_data['user_password'] = $password;
-   $user_data['remember'] = $remember;
-   $user = wp_signon( $user_data, true );
+                                                <!---------------------------------- Default form login  --------------------------------------->
 
-   if ( is_wp_error($user) ) {
-      
-    $err = $user->get_error_message();
-    exit();
-   } else {
-    
-    wp_set_current_user( $user->ID, $username );
-    do_action('set_current_user');
+                                                <form id="login" class="text-center" action="<?= $_SERVER['REQUEST_URI'] ?>" method="post" novalidate="novalidate">
 
-die("*******************************");
+                                                    <?php if ($error) : ?>
+                                                        <p><?= $error ?></p>
+                                                    <?php endif ?>
 
 
-    echo '<script language="Javascript">
-    <!--
-    document.location.replace("index.php");
-    // -->
-    </script>';
+                                                    <input type="hidden" id="security" name="security" value="b9b4f8b86d"><input type="hidden" name="_wp_http_referer" value="/wp-admin/admin-ajax.php?p=0">
+                                                    <p class="status"></p>
 
-  
-    //echo '<script type="text/javascript"> window.location.replace("index.php"); </script>';
-    exit();
-   }
-  }
- 
-}else{
-                                                
-?>
 
-                                                <form method="post">
+                                                    <div class="text-center mb-3">
+                                                        <!---- Message  ---->
+                                                    </div>
+
 
 
                                                     <!-- Email input -->
-                                                    <div class="form-outline mb-4">
-                                                        <input type="text" id="loginName" class="form-control" name="username">
-                                                        <label class="form-label" for="loginName"
-                                                            style="margin-left: 0px;">Email or username</label>
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="text" id="user_login" class="form-control" name="user_login">
+                                                        <label class="form-label" for="user_login" style="margin-left: 0px;"> Email ou identifiant</label>
                                                         <div class="form-notch">
                                                             <div class="form-notch-leading" style="width: 9px;"></div>
-                                                            <div class="form-notch-middle" style="width: 114.4px;">
+                                                            <div class="form-notch-middle" style="width: 146.4px;">
                                                             </div>
                                                             <div class="form-notch-trailing"></div>
                                                         </div>
                                                     </div>
 
                                                     <!-- Password input -->
-                                                    <div class="form-outline mb-4">
-                                                        <input type="password" id="loginPassword" class="form-control" name="password">
-                                                        <label class="form-label" for="loginPassword"
-                                                            style="margin-left: 0px;">Password</label>
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="password" id="user_password" class="form-control" name="user_password" autocomplete="off">
+                                                        <label class="form-label" for="user_password" style="margin-left: 0px;">Mot de pass</label>
                                                         <div class="form-notch">
                                                             <div class="form-notch-leading" style="width: 9px;"></div>
-                                                            <div class="form-notch-middle" style="width: 64.8px;"></div>
+                                                            <div class="form-notch-middle" style="width: 92.8px;"></div>
                                                             <div class="form-notch-trailing"></div>
                                                         </div>
                                                     </div>
 
                                                     <!-- 2 column grid layout for inline styling -->
-                                                    <div class="row mb-4">
-                                                        <div class="col d-flex justify-content-center">
-                                                            <!-- Checkbox -->
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="" name ="remember"
-                                                                    id="loginCheck" checked="">
-                                                                <label class="form-check-label" for="loginCheck">
-                                                                    Remember
-                                                                    me </label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col">
-                                                            <!-- Simple link -->
-                                                            <a href="#!">Forgot password?</a>
-                                                        </div>
+                                                    <div class="justify-content-center mb-4">
+                                                        <a href="<?= bloginfo('url'); ?>/forgotPassword" type="submit">Mot de pass oublié?</a>
                                                     </div>
 
-                                                    <!-- Submit button -->
-                                                    <button type="submit" class="btn btn-primary btn-block mb-4" name="submit">Sign
-                                                        in</button>
+                                                    <button class="btn btn-primary btn-block mb-4" type="submit" name="login" value="LOGIN">Se connecter</button>
 
                                                     <!-- Register buttons -->
                                                     <div class="text-center">
-                                                        <p class="mb-1">Not a member? <a href="#!">Register</a></p>
+                                                        <p>Not a member? <a href="#" class="auth-modal-toggle" data-auth-modal-tab="sign-up">Register</a></p>
                                                     </div>
-</form>                                            
-<?php  } } ?>
+
+                                                </form>
+                                                <!-- Default form login -->
+
                                             </div>
-                                            <div class="tab-pane fade" id="pills-register" role="tabpanel"
-                                                aria-labelledby="mdb-tab-register">
+                                            <!--/.Panel 1-->
+
+                                            <!--Panel 2-->
+                                            <div class="tab-pane fade" id="navbarLogin-signup" role="tabpanel">
 
 
-<?php                                               
-if(!$user_ID){
-if (isset($_POST['register'])) {
-    
-    $username = esc_sql($_POST['username']);
-    $email = esc_sql($_POST['email']);
-    $password = esc_sql($_POST['password']);
-    $ConfPassword = esc_sql($_POST['password1']);
-    
-    $error = array();
-    if (strpos($username, ' ') !== FALSE) {
-        
-        $error['username_space'] = "Username has Space";
-    }
+                                                <!---------------------------------- traitement de form register   --------------------------------------->
+                                                <?php
+                                                $err = false;
+                                                if (!empty($_POST)) {
+                                                    $d = $_POST;
+                                                    if ($d['user_pass'] != $d['user_pass2']) {
+                                                        $err = 'Les 2 moyt de pass ne coresspendent pas!';
+                                                    } else {
+                                                        if (!is_email($d['user_email'])) {
+                                                            $err = 'Veuillez entrer un email valid';
+                                                        } else {
+                                                            $user = wp_insert_user(array(
+                                                                'first_name' => $d['first_name'],
+                                                                'last_name' => $d['last_name'],
+                                                                'user_login' => $d['user_login'],
+                                                                'user_email' => $d['user_email'],
+                                                                'user_pass' => $d['user_pass'],
+                                                                'user_registered' => date('Y-m-d H:i:s')
+                                                            ));
+                                                            if (is_wp_error($user)) {
+                                                                $err = $user->get_error_message();
+                                                            } else {
+                                                                $msg = 'Vous êtes maintenant inscrit.';
+                                                                $header = 'From : ' . get_option('admin_email') . "\r\n";
+                                                                wp_mail($d['user_email'], 'Inscription réussie', $msg, $header);
+                                                                $d = array();
+                                                                wp_signon($_POST);
+                                                                header('Location:profil');
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                ?>
 
-    if (empty($username)) {
-        $error['username_empty'] = "Needed Username must";
-    }
+                                                <!---------------------------------- Default form register  --------------------------------------->
+                                                <form id="register" class="text-center" action="register" method="post" novalidate="novalidate">
 
-    if (username_exists($username)) {
-        $error['username_exists'] = "Username already exists";
-    }
-
-    if (!is_email($email)) {
-        $error['email_valid'] = "Email has no valid value";
-    }
-
-    if (email_exists($email)) {
-        $error['email_existence'] = "Email already exists";
-    }
-
-    if (strcmp($password, $ConfPassword) !== 0) {
-        $error['password'] = "Password didn't match";
-    }
-
-    if (count($error) == 0) {
-        
-        $new_user = wp_create_user($username, $password, $email);
-        /* echo "User Created Successfully";
-        exit();*/
-
-        
+                                                    <input type="hidden" id="signonsecurity" name="signonsecurity" value="c388596795"><input type="hidden" name="_wp_http_referer" value="/wp-admin/admin-ajax.php?p=0">
 
 
-
-        if($new_user_id){
-            wp_new_user_notification( $new_user->ID );
-
-            wp_clear_auth_cookie(  );
-            wp_set_current_user( $new_user->ID );
-            wp_set_auth_cookie( $new_user->ID );
-
-            wp_safe_redirect(home_url());
-            exit();
-        }
-
-        echo '<script language="Javascript">
-        <!--
-        document.location.replace("index.php");
-        // -->
-        </script>';
+                                                    <div class="text-center mb-3">
+                                                        <!---- Message  ---->
+                                                        <?php if ($err) : ?>
+                                                            <p style="color: red;"><?= $err ?></p>
+                                                        <?php endif ?>
+                                                    </div>
 
 
-    }else{
-        
-        print_r($error);
-        
-    }
-}else{                                                         
-?>
-                                                
-                                                
-                                                <form method="post" >
-
-
-                                                    <!-- Name input -->
-                                                    <div class="form-outline mb-4">
-                                                        <input type="text" id="registerName" class="form-control" name="name">
-                                                        <label class="form-label" for="registerName"
-                                                            style="margin-left: 0px;">Name</label>
+                                                    <!-- First name input -->
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="text" id="first_name" class="form-control" name="first_name" value="<?= isset($d['first_name']) ? $d['first_name'] : ''; ?>">
+                                                        <label for="first_name" class="form-label" style="margin-left: 0px;">Prenom</label>
                                                         <div class="form-notch">
                                                             <div class="form-notch-leading" style="width: 9px;"></div>
-                                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
+                                                            <div class="form-notch-trailing"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Last name input -->
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="text" id="last_name" class="form-control" name="last_name" value="<?= isset($d['last_name']) ? $d['last_name'] : ''; ?>">
+                                                        <label for="last_name" class="form-label" style="margin-left: 0px;">Nom</label>
+                                                        <div class="form-notch">
+                                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                                            <div class="form-notch-middle" style="width: 68.8px;"></div>
                                                             <div class="form-notch-trailing"></div>
                                                         </div>
                                                     </div>
 
                                                     <!-- Username input -->
-                                                    <div class="form-outline mb-4">
-                                                        <input type="text" id="registerUsername" class="form-control" name="username">
-                                                        <label class="form-label" for="registerUsername"
-                                                            style="margin-left: 0px;">Username</label>
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="text" id="user_login" class="form-control" name="user_login" value="<?= isset($d['user_login']) ? $d['user_login'] : ''; ?>">
+                                                        <label for="user_login" class="form-label" style="margin-left: 0px;">Identifiant</label>
                                                         <div class="form-notch">
                                                             <div class="form-notch-leading" style="width: 9px;"></div>
-                                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                                            <div class="form-notch-middle" style="width: 93.6px;"></div>
                                                             <div class="form-notch-trailing"></div>
                                                         </div>
                                                     </div>
 
                                                     <!-- Email input -->
-                                                    <div class="form-outline mb-4">
-                                                        <input type="email" id="registerEmail" class="form-control" name="email">
-                                                        <label class="form-label" for="registerEmail"
-                                                            style="margin-left: 0px;">Email</label>
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="email" id="user_email" class="form-control" name="user_email" value="<?= isset($d['user_email']) ? $d['user_email'] : ''; ?>">
+                                                        <label for="user_email" class="form-label" style="margin-left: 0px;">Email</label>
                                                         <div class="form-notch">
                                                             <div class="form-notch-leading" style="width: 9px;"></div>
-                                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                                            <div class="form-notch-middle" style="width: 68px;"></div>
                                                             <div class="form-notch-trailing"></div>
                                                         </div>
                                                     </div>
 
                                                     <!-- Password input -->
-                                                    <div class="form-outline mb-4">
-                                                        <input type="password" id="registerPassword"
-                                                            class="form-control" name="password">
-                                                        <label class="form-label" for="registerPassword"
-                                                            style="margin-left: 0px;">Password</label>
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="password" id="user_pass" class="form-control" name="user_pass" autocomplete="off" aria-autocomplete="list" value="<?= isset($d['user_pass']) ? $d['user_pass'] : ''; ?>">
+                                                        <label for="user_pass" class="form-label" style="margin-left: 0px;">Mot de pass</label>
                                                         <div class="form-notch">
                                                             <div class="form-notch-leading" style="width: 9px;"></div>
-                                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                                            <div class="form-notch-middle" style="width: 92.8px;"></div>
                                                             <div class="form-notch-trailing"></div>
                                                         </div>
                                                     </div>
 
                                                     <!-- Repeat Password input -->
-                                                    <div class="form-outline mb-4">
-                                                        <input type="password" id="registerRepeatPassword"
-                                                            class="form-control" name="password1">
-                                                        <label class="form-label" for="registerRepeatPassword"
-                                                            style="margin-left: 0px;">Repeat password</label>
+                                                    <div class="form-outline form-auth-mdb mb-4">
+                                                        <input type="password" id="user_pass2" class="form-control" name="user_pass2" autocomplete="off" value="<?= isset($d['user_pass2']) ? $d['user_pass2'] : ''; ?>">
+                                                        <label for="user_pass2" class="form-label" style="margin-left: 0px;">Confirmez mot de pas</label>
                                                         <div class="form-notch">
                                                             <div class="form-notch-leading" style="width: 9px;"></div>
-                                                            <div class="form-notch-middle" style="width: 8px;"></div>
+                                                            <div class="form-notch-middle" style="width: 106.4px;">
+                                                            </div>
                                                             <div class="form-notch-trailing"></div>
                                                         </div>
                                                     </div>
 
-                                                    <!-- Checkbox -->
-                                                    <div class="form-check d-flex justify-content-center mb-4">
-                                                        <input class="form-check-input me-2" type="checkbox" value=""
-                                                            id="registerCheck" checked=""
-                                                            aria-describedby="registerCheckHelpText">
-                                                        <label class="form-check-label" for="registerCheck">
-                                                            I have read and agree to the terms
-                                                        </label>
+
+                                                    <div class="d-none">
+
+
+                                                        <!-- Subscribe checkbox -->
+                                                        <div class="form-check d-flex justify-content-center">
+                                                            <input type="checkbox" class="form-check-input me-1" id="newsletter" name="newsletter" value="subscribe">
+                                                            <label class="form-check-label" for="newsletter">I agree to
+                                                                sign up for MDB account notifications and
+                                                                newsletter</label>
+                                                        </div>
+
+                                                        <!-- Subscribe checkbox -->
+
+                                                        <div class="form-text text-center small text-muted mb-4">
+                                                            By signing up you agree to data processing by the
+                                                            administrator: StartupFlow s.c. located in Kijowska 7,
+                                                            Warsaw. The administrator processes data following the <a target="_blank" href="https://mdbootstrap.com/privacy-policy/">Privacy
+                                                                Policy</a>.
+                                                        </div>
+
                                                     </div>
 
-                                                    <!-- Submit button -->
-                                                    <button type="submit" class="btn btn-primary btn-block mb-1" name="register">Sign
-                                                        in</button>
-</form>
-<?php  } }?>
+
+
+                                                    <button class="btn btn-primary btn-block mb-3" id="AJAXAuthRegisterBtn" type="submit" value="SIGNUP">
+                                                        S'inscrire </button>
+
+                                                </form>
+                                                <!-- Default form register  -->
+
                                             </div>
+                                            <!--/.Panel 2-->
+
                                         </div>
-                                        <!-- Pills content -->
+                                        <!-- Pills panels -->
+
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                                            Fermer </button>
                                     </div>
                                 </div>
+                                <!-- Modal content -->
                             </div>
                         </div>
-                    </div>
-                    <!-- exampleCentralModal3 -->
                 </section>
                 <!------------------------------------ End ofLogin button--------------------------------------->
             </div>
@@ -379,8 +387,7 @@ if (isset($_POST['register'])) {
 
     <nav class="navbar navbar-expand-lg navbar-light  nav-top-height">
         <div class="nav-bar container">
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -393,6 +400,5 @@ if (isset($_POST['register'])) {
             </div>
         </div>
     </nav>
-
 
     <!------------------------------------ End of Navbar --------------------------------------->

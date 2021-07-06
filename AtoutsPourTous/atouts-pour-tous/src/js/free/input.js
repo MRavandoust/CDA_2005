@@ -147,6 +147,10 @@ class Input {
   }
 
   _showCounter() {
+    const counters = SelectorEngine.find('.form-counter', this._element);
+    if (counters.length > 0) {
+      return;
+    }
     this._counterElement = document.createElement('div');
     Manipulator.addClass(this._counterElement, CLASSNAME_COUNTER);
     const actualLength = this.input.value.length;
@@ -341,7 +345,14 @@ EventHandler.on(window, 'shown.bs.dropdown', (e) => {
 });
 
 EventHandler.on(window, 'shown.bs.tab', (e) => {
-  const targetId = e.target.href.split('#')[1];
+  let targetId;
+
+  if (e.target.href) {
+    targetId = e.target.href.split('#')[1];
+  } else {
+    targetId = Manipulator.getDataAttribute(e.target, 'target').split('#')[1];
+  }
+
   const target = SelectorEngine.findOne(`#${targetId}`);
   SelectorEngine.find(SELECTOR_OUTLINE_INPUT, target).forEach((element) => {
     const instance = Input.getInstance(element.parentNode);

@@ -1,5 +1,5 @@
 /*!
- * Bootstrap toast.js v5.0.0-beta3 (https://getbootstrap.com/)
+ * Bootstrap toast.js v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -32,15 +32,6 @@
   var Manipulator__default = /*#__PURE__*/ _interopDefaultLegacy(Manipulator);
   var BaseComponent__default = /*#__PURE__*/ _interopDefaultLegacy(BaseComponent);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): util/index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
-  const MILLISECONDS_MULTIPLIER = 1000;
-  const TRANSITION_END = 'transitionend'; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
-
   const toType = (obj) => {
     if (obj === null || obj === undefined) {
       return `${obj}`;
@@ -52,49 +43,16 @@
       .toLowerCase();
   };
 
-  const getTransitionDurationFromElement = (element) => {
-    if (!element) {
-      return 0;
-    } // Get transition-duration of the element
-
-    let { transitionDuration, transitionDelay } = window.getComputedStyle(element);
-    const floatTransitionDuration = Number.parseFloat(transitionDuration);
-    const floatTransitionDelay = Number.parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
-
-    if (!floatTransitionDuration && !floatTransitionDelay) {
-      return 0;
-    } // If multiple durations are defined, take the first
-
-    transitionDuration = transitionDuration.split(',')[0];
-    transitionDelay = transitionDelay.split(',')[0];
-    return (
-      (Number.parseFloat(transitionDuration) + Number.parseFloat(transitionDelay)) *
-      MILLISECONDS_MULTIPLIER
-    );
-  };
-
-  const triggerTransitionEnd = (element) => {
-    element.dispatchEvent(new Event(TRANSITION_END));
-  };
-
-  const isElement = (obj) => (obj[0] || obj).nodeType;
-
-  const emulateTransitionEnd = (element, duration) => {
-    let called = false;
-    const durationPadding = 5;
-    const emulatedDuration = duration + durationPadding;
-
-    function listener() {
-      called = true;
-      element.removeEventListener(TRANSITION_END, listener);
+  const isElement = (obj) => {
+    if (!obj || typeof obj !== 'object') {
+      return false;
     }
 
-    element.addEventListener(TRANSITION_END, listener);
-    setTimeout(() => {
-      if (!called) {
-        triggerTransitionEnd(element);
-      }
-    }, emulatedDuration);
+    if (typeof obj.jquery !== 'undefined') {
+      obj = obj[0];
+    }
+
+    return typeof obj.nodeType !== 'undefined';
   };
 
   const typeCheckConfig = (componentName, config, configTypes) => {
@@ -105,9 +63,7 @@
 
       if (!new RegExp(expectedTypes).test(valueType)) {
         throw new TypeError(
-          `${componentName.toUpperCase()}: ` +
-            `Option "${property}" provided type "${valueType}" ` +
-            `but expected type "${expectedTypes}".`
+          `${componentName.toUpperCase()}: Option "${property}" provided type "${valueType}" but expected type "${expectedTypes}".`
         );
       }
     });
@@ -133,12 +89,13 @@
     }
   };
 
-  const defineJQueryPlugin = (name, plugin) => {
+  const defineJQueryPlugin = (plugin) => {
     onDOMContentLoaded(() => {
       const $ = getjQuery();
       /* istanbul ignore if */
 
       if ($) {
+        const name = plugin.NAME;
         const JQUERY_NO_CONFLICT = $.fn[name];
         $.fn[name] = plugin.jQueryInterface;
         $.fn[name].Constructor = plugin;
@@ -153,7 +110,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.0.0-beta3): toast.js
+   * Bootstrap (v5.0.1): toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -167,6 +124,10 @@
   const DATA_KEY = 'bs.toast';
   const EVENT_KEY = `.${DATA_KEY}`;
   const EVENT_CLICK_DISMISS = `click.dismiss${EVENT_KEY}`;
+  const EVENT_MOUSEOVER = `mouseover${EVENT_KEY}`;
+  const EVENT_MOUSEOUT = `mouseout${EVENT_KEY}`;
+  const EVENT_FOCUSIN = `focusin${EVENT_KEY}`;
+  const EVENT_FOCUSOUT = `focusout${EVENT_KEY}`;
   const EVENT_HIDE = `hide${EVENT_KEY}`;
   const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
   const EVENT_SHOW = `show${EVENT_KEY}`;
@@ -197,6 +158,8 @@
       super(element);
       this._config = this._getConfig(config);
       this._timeout = null;
+      this._hasMouseInteraction = false;
+      this._hasKeyboardInteraction = false;
 
       this._setListeners();
     } // Getters
@@ -209,8 +172,8 @@
       return Default;
     }
 
-    static get DATA_KEY() {
-      return DATA_KEY;
+    static get NAME() {
+      return NAME;
     } // Public
 
     show() {
@@ -233,11 +196,7 @@
 
         EventHandler__default['default'].trigger(this._element, EVENT_SHOWN);
 
-        if (this._config.autohide) {
-          this._timeout = setTimeout(() => {
-            this.hide();
-          }, this._config.delay);
-        }
+        this._maybeScheduleHide();
       };
 
       this._element.classList.remove(CLASS_NAME_HIDE);
@@ -246,13 +205,7 @@
 
       this._element.classList.add(CLASS_NAME_SHOWING);
 
-      if (this._config.animation) {
-        const transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler__default['default'].one(this._element, 'transitionend', complete);
-        emulateTransitionEnd(this._element, transitionDuration);
-      } else {
-        complete();
-      }
+      this._queueCallback(complete, this._element, this._config.animation);
     }
 
     hide() {
@@ -274,13 +227,7 @@
 
       this._element.classList.remove(CLASS_NAME_SHOW);
 
-      if (this._config.animation) {
-        const transitionDuration = getTransitionDurationFromElement(this._element);
-        EventHandler__default['default'].one(this._element, 'transitionend', complete);
-        emulateTransitionEnd(this._element, transitionDuration);
-      } else {
-        complete();
-      }
+      this._queueCallback(complete, this._element, this._config.animation);
     }
 
     dispose() {
@@ -290,9 +237,7 @@
         this._element.classList.remove(CLASS_NAME_SHOW);
       }
 
-      EventHandler__default['default'].off(this._element, EVENT_CLICK_DISMISS);
       super.dispose();
-      this._config = null;
     } // Private
 
     _getConfig(config) {
@@ -305,12 +250,66 @@
       return config;
     }
 
+    _maybeScheduleHide() {
+      if (!this._config.autohide) {
+        return;
+      }
+
+      if (this._hasMouseInteraction || this._hasKeyboardInteraction) {
+        return;
+      }
+
+      this._timeout = setTimeout(() => {
+        this.hide();
+      }, this._config.delay);
+    }
+
+    _onInteraction(event, isInteracting) {
+      switch (event.type) {
+        case 'mouseover':
+        case 'mouseout':
+          this._hasMouseInteraction = isInteracting;
+          break;
+
+        case 'focusin':
+        case 'focusout':
+          this._hasKeyboardInteraction = isInteracting;
+          break;
+      }
+
+      if (isInteracting) {
+        this._clearTimeout();
+
+        return;
+      }
+
+      const nextElement = event.relatedTarget;
+
+      if (this._element === nextElement || this._element.contains(nextElement)) {
+        return;
+      }
+
+      this._maybeScheduleHide();
+    }
+
     _setListeners() {
       EventHandler__default['default'].on(
         this._element,
         EVENT_CLICK_DISMISS,
         SELECTOR_DATA_DISMISS,
         () => this.hide()
+      );
+      EventHandler__default['default'].on(this._element, EVENT_MOUSEOVER, (event) =>
+        this._onInteraction(event, true)
+      );
+      EventHandler__default['default'].on(this._element, EVENT_MOUSEOUT, (event) =>
+        this._onInteraction(event, false)
+      );
+      EventHandler__default['default'].on(this._element, EVENT_FOCUSIN, (event) =>
+        this._onInteraction(event, true)
+      );
+      EventHandler__default['default'].on(this._element, EVENT_FOCUSOUT, (event) =>
+        this._onInteraction(event, false)
       );
     }
 
@@ -346,7 +345,7 @@
    * add .Toast to jQuery only if jQuery is present
    */
 
-  defineJQueryPlugin(NAME, Toast);
+  defineJQueryPlugin(Toast);
 
   return Toast;
 });
